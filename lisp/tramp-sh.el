@@ -4110,7 +4110,8 @@ whether it exists and if so, it is added to the environment
 variable PATH."
   (let ((command
 	 (format
-	  "PATH=%s && export PATH" (string-join (tramp-get-remote-path vec) ":")))
+	  "PATH=%s && export PATH"
+	  (string-join (tramp-get-remote-path vec) ":")))
 	(pipe-buf
 	 (with-tramp-connection-property vec "pipe-buf"
 	   (tramp-send-command-and-read

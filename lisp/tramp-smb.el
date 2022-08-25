@@ -1897,7 +1897,8 @@ are listed.  Result is the list (LOCALNAME MODE SIZE MTIME)."
 		(member
 		 "pathnames"
 		 (split-string
-		  (buffer-substring (point) (line-end-position)) nil 'omit)))))))))
+		  (buffer-substring (point) (line-end-position))
+		  nil 'omit)))))))))
 
 (defun tramp-smb-get-stat-capability (vec)
   "Check whether the SMB server supports the `stat' command."

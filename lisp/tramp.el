@@ -64,7 +64,8 @@
 (declare-function netrc-parse "netrc")
 (defvar auto-save-file-name-transforms)
 
-;; Reload `tramp-compat' when we reload `tramp-autoloads' of the GNU ELPA package.
+;; Reload `tramp-compat' when we reload `tramp-autoloads' of the GNU
+;; ELPA package.
 ;;;###autoload (when (featurep 'tramp-compat)
 ;;;###autoload   (load "tramp-compat" 'noerror 'nomessage))
 
@@ -1102,7 +1103,8 @@ See `tramp-file-name-structure'."
    (rx (regexp tramp-prefix-regexp)
        (? (group (+ (regexp tramp-remote-file-name-spec-regexp)
 		    (regexp tramp-postfix-hop-regexp))))
-       (regexp tramp-remote-file-name-spec-regexp) (regexp tramp-postfix-host-regexp)
+       (regexp tramp-remote-file-name-spec-regexp)
+       (regexp tramp-postfix-host-regexp)
        (group (regexp tramp-localname-regexp)))
    5 6 7 8 1))
 
@@ -2747,7 +2749,8 @@ If Emacs is compiled --with-threads, the body is protected by a mutex."
 				  (catch 'suppress
 				    (apply foreign operation args))))
 			  ;; (tramp-message
-			  ;;  v 4 "Running `%s'...`%s'" (cons operation args) result)
+			  ;;  v 4 "Running `%s'...`%s'"
+			  ;;  (cons operation args) result)
 			  (cond
 			   ((eq result 'non-essential)
 			    (tramp-message
@@ -3353,7 +3356,8 @@ Host is always \"localhost\"."
    "Return a (group host) tuple allowed to access.
 Host is always \"localhost\"."
    (let (result
-	 (split (split-string (buffer-substring (point) (line-end-position)) ":")))
+	 (split
+	  (split-string (buffer-substring (point) (line-end-position)) ":")))
      (when (member (user-login-name) (split-string (nth 3 split) "," 'omit))
        (setq result (list (nth 0 split) "localhost")))
      (forward-line 1)
@@ -3995,7 +3999,8 @@ Let-bind it when necessary.")
 	  ;; links.
 	  (when-let ((symlink (file-symlink-p filename)))
 	    (and (stringp symlink)
-		 (file-readable-p (concat (file-remote-p filename) symlink))))))))
+		 (file-readable-p
+		  (concat (file-remote-p filename) symlink))))))))
 
 (defun tramp-handle-file-regular-p (filename)
   "Like `file-regular-p' for Tramp files."
@@ -4166,7 +4171,8 @@ Let-bind it when necessary.")
 			  (point) (line-end-position) 'dired-filename t))
 	      (delete-region
 	       start
-	       (or (text-property-any start (line-end-position) 'dired-filename t)
+	       (or (text-property-any
+		    start (line-end-position) 'dired-filename t)
 		   (line-end-position)))
 	      (if (= (line-beginning-position) (line-end-position))
 		  ;; Empty line.
