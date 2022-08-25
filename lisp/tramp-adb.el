@@ -1192,7 +1192,7 @@ FMT and ARGS are passed to `error'."
 	  (let ((inhibit-read-only t))
 	    (goto-char (point-min))
 	    ;; ADB terminal sends "^H" sequences.
-	    (when (re-search-forward (rx "<" (+ "\b")) (point-at-eol) t)
+	    (when (re-search-forward (rx "<" (+ "\b")) (line-end-position) t)
 	      (forward-line 1)
 	      (delete-region (point-min) (point)))
 	    ;; Delete the prompt.

@@ -529,8 +529,9 @@ host runs a restricted shell, it shall be added to this list, too."
 ;;;###tramp-autoload
 (defcustom tramp-local-host-regexp
   (rx bos
-      (group (| "localhost" "localhost4" "localhost6"
-		(literal tramp-system-name) "127.0.0.1" "::1"))
+      (regexp (regexp-opt
+	       `("localhost" "localhost4" "localhost6"
+		 ,tramp-system-name "127.0.0.1" "::1")))
       eos)
   "Host names which are regarded as local host.
 If the local host runs a chrooted environment, set this to nil."
@@ -3244,7 +3245,7 @@ Either user or host may be nil."
 	 (regexp
 	  (rx bol (group (regexp tramp-host-regexp))
 	      (? (+ space) (group (regexp tramp-user-regexp))))))
-     (when (re-search-forward regexp (point-at-eol) t)
+     (when (re-search-forward regexp (line-end-position) t)
        (setq result (append (list (match-string 2) (match-string 1)))))
      (forward-line 1)
      result))
@@ -3331,7 +3332,7 @@ Host is always \"localhost\"."
 Host is always \"localhost\"."
    (let (result
 	 (regexp (rx bol (group (regexp tramp-user-regexp)) ":")))
-     (when (re-search-forward regexp (point-at-eol) t)
+     (when (re-search-forward regexp (line-end-position) t)
        (setq result (list (match-string 1) "localhost")))
      (forward-line 1)
      result))
@@ -3387,7 +3388,7 @@ User is always nil."
 User is always nil."
    (let (result
 	 (regexp (rx (literal registry) "\\" (group (+ nonl)))))
-     (when (re-search-forward regexp (point-at-eol) t)
+     (when (re-search-forward regexp (line-end-position) t)
        (setq result (list nil (match-string 1))))
      (forward-line 1)
      result))
@@ -3820,7 +3821,10 @@ Let-bind it when necessary.")
 
 (defun tramp-handle-file-directory-p (filename)
   "Like `file-directory-p' for Tramp files."
-  (eq (file-attribute-type (file-attributes (file-truename filename))) t))
+  ;; `file-truename' could raise an error, for example due to a cyclic
+  ;; symlink.
+  (ignore-errors
+    (eq (file-attribute-type (file-attributes (file-truename filename))) t)))
 
 (defun tramp-handle-file-equal-p (filename1 filename2)
   "Like `file-equalp-p' for Tramp files."

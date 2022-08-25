@@ -20,6 +20,7 @@
 	(tramp-completion-file-name-regexp-alist): Remove.
 	(tramp-build-completion-file-name-regexp): Rwrite.
 	(tramp-make-tramp-file-name): Use `tramp-archive-method'.
+	(tramp-handle-file-directory-p): Ignore errors.
 	(tramp-handle-find-backup-file-name, tramp-handle-lock-file)
 	(tramp-handle-make-auto-save-file-name): Use `eval-when-compile'.
 
@@ -34,6 +35,9 @@
 	* tramp-gvfs.el (tramp-dbus-function): Fix typo.
 	(tramp-zeroconf-parse-device-names): Use `tramp-prefix-port-format'.
 
+	* tramp-sh.el (tramp-open-shell, tramp-find-shell):
+	Use `eval-when-compile'.
+
 	* tramp.el:
 	* tramp-adb.el:
 	* tramp-archive.el:
@@ -45,7 +49,10 @@
 	* tramp-fuse.el:
 	* tramp-gvfs.el:
 	* tramp-integration.el:
-	* tramp-rclone.el: Use `rx' where possible.
+	* tramp-rclone.el:
+	* tramp-sh.el:
+	* tramp-smb.el:
+	* tramp-sudoedit.el: Use `rx' where possible.
 
 2022-08-18  Michael Albinus  <michael.albinus@gmx.de>
 
