@@ -4598,7 +4598,10 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 
 (defun tramp--test-shell-file-name ()
   "Return default remote shell."
-  (if (tramp--test-adb-p) "/system/bin/sh" "/bin/sh"))
+  (if (file-exists-p
+       (concat
+	(file-remote-p tramp-test-temporary-file-directory) "/system/bin/sh"))
+      "/system/bin/sh" "/bin/sh"))
 
 (ert-deftest tramp-test28-process-file ()
   "Check `process-file'."
