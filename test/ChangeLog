@@ -1,5 +1,8 @@
 2022-08-25  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp-archive-tests.el:
+	* tramp-tests.el: Use `rx' where possible.
+
 	* tramp-tests.el (tramp--test-deftest-with-stat)
 	(tramp--test-deftest-with-perl)
 	(tramp--test-deftest-with-ls): Skip if underlying test didn't run
