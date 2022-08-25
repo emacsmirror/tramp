@@ -5,6 +5,7 @@
 	(tramp--test-deftest-with-ls): Skip if underlying test didn't run
 	or lasted too long.
 	(tramp--test-shell-file-name): Do not depend on `tramp--test-adb-p'.
+	(tramp-test01-file-name-syntax): Adapt test.
 
 2022-08-11  Michael Albinus  <michael.albinus@gmx.de>
 

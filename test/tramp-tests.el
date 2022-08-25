@@ -387,15 +387,17 @@ Also see `ignore'."
 	  ;; `tramp-ignored-file-name-regexp' suppresses Tramp.
 	  (let ((tramp-ignored-file-name-regexp "^/method:user@host:"))
 	    (should-not (tramp-tramp-file-p "/method:user@host:")))
-	  ;; Methods shall be at least two characters on MS Windows,
-	  ;; except the default method.
+	  ;; Methods shall be at least two characters, except the
+	  ;; default method.
 	  (let ((system-type 'windows-nt))
 	    (should-not (tramp-tramp-file-p "/c:/path/to/file"))
 	    (should-not (tramp-tramp-file-p "/c::/path/to/file"))
-	    (should (tramp-tramp-file-p "/-::/path/to/file")))
+	    (should (tramp-tramp-file-p "/-::/path/to/file"))
+	    (should (tramp-tramp-file-p "/mm::/path/to/file")))
 	  (let ((system-type 'gnu/linux))
+	    (should-not (tramp-tramp-file-p "/m::/path/to/file"))
 	    (should (tramp-tramp-file-p "/-:h:/path/to/file"))
-	    (should (tramp-tramp-file-p "/m::/path/to/file"))))
+	    (should (tramp-tramp-file-p "/mm::/path/to/file"))))
 
       ;; Exit.
       (tramp-change-syntax syntax))))
