@@ -1,3 +1,52 @@
+2022-08-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-prefix-format, tramp-prefix-regexp)
+	(tramp-method-regexp, tramp-postfix-method-format)
+	(tramp-postfix-method-regexp, tramp-prefix-ipv6-format)
+	(tramp-prefix-ipv6-regexp, tramp-postfix-ipv6-format)
+	(tramp-postfix-ipv6-regexp, tramp-postfix-host-format)
+	(tramp-postfix-host-regexp, tramp-remote-file-name-spec-regexp)
+	(tramp-file-name-structure, tramp-file-name-regexp)
+	(tramp-completion-method-regexp)
+	(tramp-completion-file-name-regexp): Declare.
+	(tramp-set-syntax): Set also `tramp-completion-method-regexp'.
+	(tramp-volume-letter-regexp, tramp-completion-method-regexp-alist):
+	New defconsts.
+	(tramp-build-completion-method-regexp): New defun.
+	(tramp-completion-method-regexp): New defvar.
+	(tramp-completion-file-name-regexp-default)
+	(tramp-completion-file-name-regexp-simplified)
+	(tramp-completion-file-name-regexp-separate)
+	(tramp-completion-file-name-regexp-alist): Remove.
+	(tramp-build-completion-file-name-regexp): Rwrite.
+	(tramp-make-tramp-file-name): Use `tramp-archive-method'.
+	(tramp-handle-find-backup-file-name, tramp-handle-lock-file)
+	(tramp-handle-make-auto-save-file-name): Use `eval-when-compile'.
+
+	* tramp-adb.el (tramp-adb-handle-set-file-times):
+	Use `eval-when-compile'.
+	(tramp-adb-maybe-open-connection): Use file-property for "/".  Use
+	`eval-when-compile'.
+
+	* tramp-cmds.el (mm-7bit-chars): Declare.
+	(tramp-reporter-dump-variable): Simplify point movement.
+
+	* tramp-gvfs.el (tramp-dbus-function): Fix typo.
+	(tramp-zeroconf-parse-device-names): Use `tramp-prefix-port-format'.
+
+	* tramp.el:
+	* tramp-adb.el:
+	* tramp-archive.el:
+	* tramp-cache.el:
+	* tramp-cmds.el:
+	* tramp-compat.el:
+	* tramp-crypt.el:
+	* tramp-ftp.el:
+	* tramp-fuse.el:
+	* tramp-gvfs.el:
+	* tramp-integration.el:
+	* tramp-rclone.el: Use `rx' where possible.
+
 2022-08-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-file-local-copy): Compute inline
