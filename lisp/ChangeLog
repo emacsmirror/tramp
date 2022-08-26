@@ -1,3 +1,7 @@
+2022-08-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-open-shell): Improve sanity check.
+
 2022-08-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-prefix-format, tramp-prefix-regexp)

@@ -4255,16 +4255,21 @@ file exists and nonzero exit status otherwise."
 
     ;; Sanity check.
     (tramp-barf-if-no-shell-prompt
-     (tramp-get-connection-process vec) 10
+     (tramp-get-connection-process vec) 60
      "Couldn't find remote shell prompt for %s" shell)
     (unless
 	(tramp-check-for-regexp
 	 (tramp-get-connection-process vec) (rx (literal tramp-end-of-output)))
+      (tramp-wait-for-output (tramp-get-connection-process vec))
       (tramp-message vec 5 "Setting shell prompt")
       (tramp-send-command
        vec (format "PS1=%s PS2='' PS3='' PROMPT_COMMAND=''"
 		   (tramp-shell-quote-argument tramp-end-of-output))
-       t))
+       t t)
+      (tramp-barf-if-no-shell-prompt
+       (tramp-get-connection-process vec) 60
+       "Couldn't find remote shell prompt for %s" shell))
+    (tramp-wait-for-output (tramp-get-connection-process vec))
 
     ;; Check proper HISTFILE setting.  We give up when not working.
     (when (and (stringp tramp-histfile-override)
