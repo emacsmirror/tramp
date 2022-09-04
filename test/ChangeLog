@@ -1,3 +1,9 @@
+2022-09-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test17-insert-directory):
+	* tramp-tests.el (tramp-test17-insert-directory)
+	(tramp--test-share-p): Simplify rx forms.
+
 2022-08-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el:
