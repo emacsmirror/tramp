@@ -1,3 +1,38 @@
+2022-09-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-rename-files, tramp-rename-these-files):
+	Use rx.
+
+	* tramp-gvfs.el (tramp-gvfs-password-tcrypt): New defonst.
+	(tramp-gvfs-handle-file-attributes): Use `number-to-string'.
+
+	* tramp.el (tramp-handle-find-backup-file-name)
+	(tramp-handle-lock-file, tramp-handle-make-auto-save-file-name):
+	* tramp-adb.el (tramp-adb-handle-set-file-times)
+	(tramp-adb-maybe-open-connection):
+	* tramp-gvfs.el (tramp-gvfs-file-attributes-with-gvfs-ls-regexp):
+	* tramp-sh.el (tramp-open-shell, tramp-find-shell): Do not use
+	`eval-when-compile'.
+
+	* tramp.el (tramp-restricted-shell-hosts-alist)
+	(tramp-local-host-regexp, tramp-echoed-echo-mark-regexp)
+	(tramp-login-prompt-regexp, tramp-terminal-prompt-regexp)
+	(tramp-antispoof-regexp)
+	(tramp-build-completion-file-name-regexp)
+	(tramp-debug-outline-regexp)
+	(tramp-use-absolute-autoload-file-names)
+	(tramp-lock-file-info-regexp, tramp-shell-quote-argument):
+	* tramp-adb.el (tramp-do-parse-file-attributes-with-ls)
+	* tramp-cache.el (tramp-flush-file-function):
+	* tramp-gvfs.el (tramp-gvfs-file-name):
+	* tramp-integration.el (tramp-rfn-eshadow-update-overlay-regexp)
+	(info-lookup-maybe-add-help):
+	* tramp-sh.el (tramp-default-user-alist, tramp-sunos-unames)
+	(tramp-scp-direct-remote-copying, tramp-get-remote-locale):
+	* tramp-smb.el (tramp-smb-prompt, tramp-smb-wrong-passwd-regexp)
+	(tramp-smb-errors, tramp-smb-get-localname)
+	(tramp-smb-read-file-entry): Simplify rx forms.
+
 2022-08-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-open-shell): Improve sanity check.
