@@ -1,3 +1,37 @@
+2022-09-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-check-cached-permissions): Check also for
+	secondary groups.  (Bug#57044)
+	(tramp-get-remote-groups):
+	* tramp-adb.el (tramp-adb-handle-get-remote-groups):
+	* tramp-sh.el (tramp-sh-handle-get-remote-groups):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-get-remote-groups):
+	New defuns.
+
+	* tramp.el (tramp-file-name-for-operation):
+	* tramp-adb.el (tramp-adb-file-name-handler-alist):
+	* tramp-archive.el (tramp-archive-file-name-handler-alist):
+	* tramp-crypt.el (tramp-crypt-file-name-handler-alist):
+	* tramp-gvfs.el (tramp-gvfs-file-name-handler-alist):
+	* tramp-rclone.el (tramp-rclone-file-name-handler-alist):
+	* tramp-sh.el (tramp-sh-file-name-handler-alist):
+	* tramp-smb.el (tramp-smb-file-name-handler-alist):
+	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist):
+	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
+	Add `tramp-get-remote-groups'.
+
+	* tramp.el:
+	* tramp-adb.el:
+	* tramp-cache.el:
+	* tramp-crypt.el:
+	* tramp-fuse.el:
+	* tramp-gvfs.el:
+	* tramp-integration.el:
+	* tramp-rclone.el:
+	* tramp-sh.el:
+	* tramp-smb.el:
+	* tramp-sudoedit.el: Use `blank' in `rx' forms.
+
 2022-09-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cmds.el (tramp-rename-files, tramp-rename-these-files):
@@ -770,7 +804,7 @@
 2022-04-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-for-operation):
-	Add 'list-system-processes' and `process-attributes'.
+	Add `list-system-processes' and `process-attributes'.
 	(tramp-process-attributes-ps-args)
 	(tramp-process-attributes-ps-format): New defconsts.
 	(tramp-ps-time, tramp-get-process-attributes)
@@ -797,7 +831,7 @@
 	* tramp-smb.el (tramp-smb-file-name-handler-alist):
 	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist):
 	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
-	Add 'list-system-processes' and `process-attributes'.
+	Add `list-system-processes' and `process-attributes'.
 
 2022-03-29  Michael Albinus  <michael.albinus@gmx.de>
 
@@ -878,25 +912,25 @@
 	* tramp-archive.el (tramp-archive-file-name-handler-alist):
 	* tramp-rclone.el (tramp-rclone-file-name-handler-alist):
 	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist):
-	Add 'tramp-get-home-directory'.
+	Add `tramp-get-home-directory'.
 
 	* tramp-gvfs.el (tramp-gvfs-file-name-handler-alist):
-	Add 'tramp-get-home-directory'.
+	Add `tramp-get-home-directory'.
 	(tramp-gvfs-handle-expand-file-name): Rewrite tilde handling.
 	(tramp-gvfs-handle-get-home-directory): New defun.
 
 	* tramp-sh.el (tramp-sh-file-name-handler-alist):
-	Add 'tramp-get-home-directory'.
+	Add `tramp-get-home-directory'.
 	(tramp-sh-handle-get-home-directory): New defun.
 	(tramp-sh-handle-expand-file-name): Rewrite tilde handling.
 
 	* tramp-smb.el (tramp-smb-file-name-handler-alist):
-	Add 'tramp-get-home-directory'.
+	Add `tramp-get-home-directory'.
 	(tramp-smb-handle-expand-file-name): Rewrite tilde handling.
 	(tramp-smb-handle-get-home-directory): New defun.
 
 	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
-	Add 'tramp-get-home-directory'.
+	Add `tramp-get-home-directory'.
 	(tramp-sudoedit-handle-expand-file-name): Rewrite tilde handling.
 	(tramp-sudoedit-handle-get-home-directory): New defun.
 
@@ -1211,7 +1245,7 @@
 2021-11-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-gvfs.el (tramp-gvfs-file-name-handler-alist):
-	Add 'abbreviate-file-name'.
+	Add `abbreviate-file-name'.
 	(tramp-gvfs-handle-expand-file-name):
 	* tramp.el (tramp-handle-expand-file-name): Handle case that tilde
 	cannot be expanded.
@@ -1248,7 +1282,7 @@
 	* tramp-sh.el (tramp-sh-file-name-handler-alist):
 	* tramp-smb.el (tramp-smb-file-name-handler-alist):
 	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
-	Add 'abbreviate-file-name'.
+	Add `abbreviate-file-name'.
 
 2021-11-14  Michael Albinus  <michael.albinus@gmx.de>
 
@@ -3480,7 +3514,7 @@
 
 2020-02-24  Paul Eggert  <eggert@cs.ucla.edu>
 
-	Add 'nofollow' flag to set-file-modes etc.
+	Add `nofollow' flag to set-file-modes etc.
 
 	This avoids some race conditions (Bug#39683).  E.g., if some other
 	program changes a file to a symlink between the time Emacs creates
