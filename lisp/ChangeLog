@@ -1,3 +1,39 @@
+2022-09-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-check-cached-permissions):
+	Call `tramp-get-remote-groups' only if needed.
+	(tramp-get-remote-groups): Do not return default value.
+	(tramp-read-id-output): New defun.
+
+	* tramp-adb.el (tramp-adb-handle-file-exists-p): New defun.
+	(tramp-adb-file-name-handler-alist): Use it.
+	(tramp-adb-handle-file-executable-p)
+	(tramp-adb-handle-file-readable-p)
+	(tramp-adb-handle-file-writable-p)
+	(tramp-adb-handle-get-remote-uid)
+	(tramp-adb-handle-get-remote-gid)
+	(tramp-adb-handle-get-remote-groups): Use caches consequently.
+
+	* tramp-sh.el (tramp-perl-id, tramp-python-id): New defconsts.
+	(tramp-sh-handle-get-remote-uid, tramp-sh-handle-get-remote-gid)
+	(tramp-sh-handle-get-remote-groups): Use caches consequently.
+	(tramp-sh-handle-file-writable-p): Use `file-writable-p'.
+	(tramp-expand-script): Handle also "python" expansion.
+	(tramp-get-remote-id): Do not set connection property anymore,
+	this is done differently now.
+	(tramp-get-remote-uid-with-id, tramp-get-remote-uid-with-perl)
+	(tramp-get-remote-uid-with-python, tramp-get-remote-gid-with-id)
+	(tramp-get-remote-gid-with-perl)
+	(tramp-get-remote-gid-with-python): Remove.
+
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-executable-p)
+	(tramp-sudoedit-handle-file-exists-p)
+	(tramp-sudoedit-handle-file-readable-p)
+	(tramp-sudoedit-handle-file-writable-p):
+	(tramp-sudoedit-handle-get-remote-uid)
+	(tramp-sudoedit-handle-get-remote-gid)
+	(tramp-sudoedit-handle-get-remote-groups): Use caches consequently.
+
 2022-09-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-check-cached-permissions): Check also for
