@@ -1,3 +1,8 @@
+2022-09-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-deftest-with-perl): Suppress also
+	remote `id'.
+
 2022-09-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el:
