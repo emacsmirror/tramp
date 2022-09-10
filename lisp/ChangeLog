@@ -1,3 +1,55 @@
+2022-09-10  Michael Albinus  <michael.albinus@gmx.de>
+
+222022-09-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-directory-files)
+	(tramp-skeleton-directory-files-and-attributes)
+	(tramp-skeleton-set-file-modes-times-uid-gid)
+	(tramp-handle-add-name-to-file, tramp-handle-file-exists-p)
+	(tramp-handle-file-readable-p, tramp-handle-file-writable-p):
+	* tramp-adb.el (tramp-adb-handle-file-executable-p)
+	(tramp-adb-handle-file-exists-p)
+	(tramp-adb-handle-file-readable-p)
+	(tramp-adb-handle-file-writable-p)
+	* tramp-gvfs.el (tramp-gvfs-info, tramp-gvfs-handle-delete-file)
+	(tramp-gvfs-get-directory-attributes)
+	(tramp-gvfs-get-root-attributes)
+	(tramp-gvfs-handle-file-executable-p):
+	* tramp-sh.el (tramp-sh-handle-make-symbolic-link)
+	(tramp-sh-handle-file-exists-p)
+	(tramp-sh-handle-set-visited-file-modtime)
+	(tramp-sh-handle-file-selinux-context)
+	(tramp-sh-handle-set-file-selinux-context)
+	(tramp-sh-handle-file-acl, tramp-sh-handle-file-executable-p)
+	(tramp-sh-handle-file-readable-p)
+	(tramp-sh-handle-file-directory-p)
+	(tramp-sh-handle-file-writable-p)
+	(tramp-sh-handle-file-ownership-preserved-p)
+	(tramp-sh-handle-add-name-to-file)
+	(tramp-sh-handle-copy-directory, tramp-sh-handle-delete-file)
+	(tramp-sh-handle-dired-compress-file):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-add-name-to-file)
+	(tramp-sudoedit-handle-delete-file)
+	(tramp-sudoedit-handle-file-acl)
+	(tramp-sudoedit-handle-file-executable-p)
+	(tramp-sudoedit-handle-file-exists-p)
+	(tramp-sudoedit-handle-file-readable-p)
+	(tramp-sudoedit-handle-file-selinux-context)
+	(tramp-sudoedit-handle-file-writable-p)
+	(tramp-sudoedit-handle-make-symbolic-link)
+	(tramp-sudoedit-handle-set-file-selinux-context):
+	Use `expand-file-name'.   (Bug#57572)
+
+	* tramp-cache.el (tramp-flush-file-function):
+	Expand `buffer-file-name'.  (Bug#57676)
+
+	* tramp.el (tramp-file-name-unify): Extend error message.
+
+	* tramp-sh.el (tramp-sh-handle-make-symbolic-link):
+	* tramp-smb.el (tramp-smb-handle-make-symbolic-link):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-make-symbolic-link):
+	Do not check remoteness of TARGET anymore.
+
 2022-09-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (tramp-compat-rx--runtime-params): New defvar.
