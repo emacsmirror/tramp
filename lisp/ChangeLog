@@ -1,7 +1,5 @@
 2022-09-10  Michael Albinus  <michael.albinus@gmx.de>
 
-222022-09-10  Michael Albinus  <michael.albinus@gmx.de>
-
 	* tramp.el (tramp-skeleton-directory-files)
 	(tramp-skeleton-directory-files-and-attributes)
 	(tramp-skeleton-set-file-modes-times-uid-gid)
