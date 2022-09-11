@@ -1,11 +1,14 @@
 2022-09-11  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-connectable-p): Add ;;;###tramp-autoload cookie.
+	* tramp.el (tramp-file-name-unify): Return `tramp-cache-undefined'
+	if LOCALNAME is a relative file name.
 
 	* tramp-cache.el (tramp-get-file-property)
-	(tramp-set-file-property, tramp-flush-file-property)
-	(tramp-flush-file-upper-properties, tramp-flush-file-properties):
-	Check, whether connection can be established.
+	(tramp-set-file-property, tramp-file-property-p)
+	(tramp-flush-file-property, tramp-flush-file-upper-properties)
+	(tramp-flush-file-properties): Handle KEY being
+	`tramp-cache-undefined'.
+	(tramp-flush-file-function): Revert last change.
 
 2022-09-10  Michael Albinus  <michael.albinus@gmx.de>
 

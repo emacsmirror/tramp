@@ -1504,23 +1504,21 @@ If nil, return `tramp-default-port'."
 ;;;###tramp-autoload
 (defun tramp-file-name-unify (vec &optional localname)
   "Unify VEC by removing localname and hop from `tramp-file-name' structure.
-If LOCALNAME is a string, set it as localname.
+If LOCALNAME is an absolute file name, set it as localname.  If
+LOCALNAME is a relative file name, return `tramp-cache-undefined'.
 Objects returned by this function compare `equal' if they refer to the
 same connection.  Make a copy in order to avoid side effects."
-  (when (tramp-file-name-p vec)
-    (setq vec (copy-tramp-file-name vec))
-    (setf (tramp-file-name-localname vec)
-	  (and (stringp localname)
-	       ;; FIXME: This is a sanity check.  When this error
-	       ;; doesn't happen for a while, it can be removed.
-	       (or (file-name-absolute-p localname)
-		   (tramp-error
-		    vec 'file-error
-		    "File `%s' must be absolute, please report a bug!"
-		    localname))
-	       (tramp-compat-file-name-unquote (directory-file-name localname)))
-	  (tramp-file-name-hop vec) nil))
-  vec)
+  (if (and (stringp localname)
+	   (not (file-name-absolute-p localname)))
+      (setq vec tramp-cache-undefined)
+    (when (tramp-file-name-p vec)
+      (setq vec (copy-tramp-file-name vec))
+      (setf (tramp-file-name-localname vec)
+	    (and (stringp localname)
+		 (tramp-compat-file-name-unquote
+		  (directory-file-name localname)))
+	    (tramp-file-name-hop vec) nil))
+    vec))
 
 (put #'tramp-file-name-unify 'tramp-suppress-trace t)
 
@@ -2969,7 +2967,6 @@ whether HANDLER is to be called.  Add operations defined in
 They are completed by \"M-x TAB\" only if the current buffer is remote."
   (tramp-tramp-file-p (tramp-get-default-directory buffer)))
 
-;;;###tramp-autoload
 (defun tramp-connectable-p (vec-or-filename)
   "Check, whether it is possible to connect the remote host w/o side-effects.
 This is true, if either the remote host is already connected, or if we are
