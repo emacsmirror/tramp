@@ -2969,6 +2969,7 @@ whether HANDLER is to be called.  Add operations defined in
 They are completed by \"M-x TAB\" only if the current buffer is remote."
   (tramp-tramp-file-p (tramp-get-default-directory buffer)))
 
+;;;###tramp-autoload
 (defun tramp-connectable-p (vec-or-filename)
   "Check, whether it is possible to connect the remote host w/o side-effects.
 This is true, if either the remote host is already connected, or if we are
