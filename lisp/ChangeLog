@@ -1,3 +1,8 @@
+2022-09-12  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-rx):
+	Add `tramp-autoload' function property.
+
 2022-09-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-unify): Return `tramp-cache-undefined'

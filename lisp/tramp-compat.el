@@ -245,6 +245,11 @@ CONDITION can also be a list of error conditions."
   (defmacro tramp-compat-rx (&rest items)
     (tramp-compat-rx--transform items)))
 
+;; This is needed for compilation in the Emacs source tree.
+;;;###autoload (defalias 'tramp-compat-rx #'rx)
+
+(put #'tramp-compat-rx 'tramp-autoload t)
+
 ;; `file-modes', `set-file-modes' and `set-file-times' got argument
 ;; FLAG in Emacs 28.1.
 (defalias 'tramp-compat-file-modes
