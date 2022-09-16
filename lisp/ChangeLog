@@ -1,3 +1,8 @@
+2022-09-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-file-notify-rm-watch): Suppress errors
+	when reading process output.
+
 2022-09-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (tramp-compat-rx):
