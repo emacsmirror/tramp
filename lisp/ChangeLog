@@ -1,7 +1,10 @@
 2022-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp-compat.el (tramp-compat-rx): Declare.
+
 	* tramp-integration.el (tramp-eshell-directory-change):
 	Respect local `default-directory'.  (Bug#57556)
+	(info-lookup-maybe-add-help): Fix `rx' call.
 
 2022-09-17  Michael Albinus  <michael.albinus@gmx.de>
 
