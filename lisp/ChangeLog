@@ -1,3 +1,8 @@
+2022-09-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-file-notify-add-watch):
+	Revert use of "-P", it doesn't exist in older inotifywait versions.
+
 2022-09-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (tramp-compat-rx): Declare.
