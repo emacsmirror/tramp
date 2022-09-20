@@ -1,3 +1,8 @@
+2022-09-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (max-specpdl-size):
+	* tramp-gvfs.el (max-specpdl-size): Wrap with `with-no-warnings'.
+
 2022-09-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-file-notify-add-watch):
