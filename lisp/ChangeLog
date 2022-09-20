@@ -1,5 +1,9 @@
 2022-09-20  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-build-remote-file-name-spec-regexp):
+	Handle the `simplified' syntax better.
+	(tramp-handle-file-name-case-insensitive-p): Do not unquote candidate.
+
 	* tramp-archive.el (max-specpdl-size):
 	* tramp-gvfs.el (max-specpdl-size): Wrap with `with-no-warnings'.
 
