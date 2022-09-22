@@ -1,3 +1,10 @@
+2022-09-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-autoload-file-name-regexp): Simplify.
+
+	* tramp-crypt.el (tramp-crypt-file-name-p): Add it to
+	`bookmark-inhibit-context-functions'.
+
 2022-09-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-build-remote-file-name-spec-regexp):
