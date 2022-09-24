@@ -1,3 +1,18 @@
+2022-09-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (LISP_FILES): Add tramp-docker.el.
+
+	* tramp-docker.el: Format header lines.
+	(tramp-docker): Remove custom group.
+	(tramp-docker-program, tramp-docker-method): Add
+	;;;###tramp-autoload cookie.
+	(tramp-docker-program): Change group to `tramp'.  Add version.
+	(tramp-docker--add-method, tramp-docker--remove-method)
+	(tramp-docker-unload-function, tramp-docker-setup): Remove functions.
+	(tramp-methods, tramp-set-completion-function): Initialize via
+	`tramp--with-startup'.
+	(tramp-unload-hook):  Unload `tramp-docker'.
+
 2022-09-24  Brian Cully  <bjc@kublai.com>
 
 	* tramp-docker.el: New file.
