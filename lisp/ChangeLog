@@ -1,3 +1,7 @@
+2022-09-24  Author: Brian Cully  <bjc@kublai.com>
+
+	* tramp-docker.el: New file.
+
 2022-09-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive.el (tramp-archive-autoload-file-name-regexp): Simplify.
