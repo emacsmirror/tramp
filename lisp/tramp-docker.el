@@ -56,7 +56,7 @@
 (defun tramp-docker--completion-function (&rest _args)
   "List Docker containers available for connection.
 
-This function is used by ‘tramp-set-completion-function’, please
+This function is used by `tramp-set-completion-function', please
 see its function help for a description of the format."
   (let* ((raw-list (shell-command-to-string
                     (concat tramp-docker-program
