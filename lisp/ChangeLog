@@ -2,6 +2,8 @@
 
 	* Makefile.in (LISP_FILES): Add tramp-docker.el.
 
+	* tramp-compat.el (docker-tramp): Warn, if that package is used.
+
 	* tramp-docker.el: Format header lines.
 	(tramp-docker): Remove custom group.
 	(tramp-docker-program, tramp-docker-method): Add
