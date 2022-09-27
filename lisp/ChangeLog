@@ -1,3 +1,9 @@
+2022-09-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-docker.el (tramp-docker--completion-function):
+	Add ;;;###tramp-autoload cookie.  Make implementation more robust.
+	(tramp-methods) Use `tramp-default-remote-shell'.
+
 2022-09-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (LISP_FILES): Add tramp-docker.el.
