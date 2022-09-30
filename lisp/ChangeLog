@@ -1,4 +1,9 @@
-2022-09-27  Michael Albinus  <michael.albinus@gmx.de>
+2022-09-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-get-remote-tmpdir): Remove obsolete connection
+	property "tmpdir".  (Bug#57800)
+
+2022-09-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-docker.el (tramp-docker--completion-function):
 	Add ;;;###tramp-autoload cookie.  Make implementation more robust.
