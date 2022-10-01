@@ -1,3 +1,16 @@
+2022-10-01  Stefan Kangas  <stefankangas@gmail.com>
+
+	Decrease use of the word "Emacsen" in docs
+
+	"Emacsen" is either a less clear way of saying "old versions of
+	Emacs", or an implicit reference to XEmacs.  We recommend against
+	using it in the FAQ.  So use the more clear wording instead.
+
+	* tramp-archive.el:
+	* tramp-smb.el:
+	* tramp-uu.el:
+	* tramp.el (with-tramp-locked-connection): Don't use the word "Emacsen".
+
 2022-10-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (tramp-cache-version): New defconst.
