@@ -1,3 +1,12 @@
+2022-10-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-methods): Fix docstring.
+	(tramp-get-remote-tmpdir): Revert previous patch, it isn't needed
+	anymore.
+
+	* tramp-docker.el (tramp-default-remote-shell):
+	* tramp-sshfs.el (tramp-default-remote-shell): Declare.
+
 2022-10-01  Stefan Kangas  <stefankangas@gmail.com>
 
 	Decrease use of the word "Emacsen" in docs
