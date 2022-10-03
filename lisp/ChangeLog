@@ -1,3 +1,10 @@
+2022-10-03  Paul Eggert  <eggert@cs.ucla.edu>
+
+	* tramp-sh.el (tramp-sh-handle-set-file-times):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-set-file-times):
+	Use the POSIX standard TZ=UTC0 rather than the GNU extension
+	TZ=UTC to set the time zone to UTC.
+
 2022-10-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Fix docstring.
