@@ -1,3 +1,11 @@
+2022-10-04  Brian Cully  <bjc@kublai.com>
+
+	* tramp-docker.el (tramp-podman-program): New defcustom.
+	(tramp-podman-method): New defconst.
+	(tramp-docker-program): Remove "podman" from option list.
+	(top): Update comments to refer to Docker-alike where necessary.
+	Add description for how to use the podman method.
+
 2022-10-03  Paul Eggert  <eggert@cs.ucla.edu>
 
 	* tramp-sh.el (tramp-sh-handle-set-file-times):
