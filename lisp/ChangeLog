@@ -1,3 +1,13 @@
+2022-10-05  Filipp Gunbin  <fgunbin@fastmail.fm>
+
+	* tramp-compat.el (kubernetes-tramp): Warn if that package is used.
+
+	* tramp-container.el: Rename from tramp-docker.el.
+	(tramp-kubernetes-program): New defcustom.
+	(tramp-kubernetes-method): New defconst.
+	(tramp-kubernetes--completion-function): New function.
+	(tramp-methods) <kubernetes>: Add.
+
 2022-10-04  Brian Cully  <bjc@kublai.com>
 
 	* tramp-docker.el (tramp-podman-program): New defcustom.
