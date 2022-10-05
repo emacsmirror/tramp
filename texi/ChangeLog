@@ -1,3 +1,8 @@
+2022-10-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Inline methods): Method "kubernetes" does not
+	support user names.
+
 2022-10-05  Filipp Gunbin  <fgunbin@fastmail.fm>
 
 	* tramp.texi (Inline methods): Add kubernetes.
