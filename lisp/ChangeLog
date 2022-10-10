@@ -1,3 +1,10 @@
+2022-10-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-build-remote-file-name-spec-regexp):
+	Revert previous change, it's too complicate.
+	(tramp-build-completion-file-name-regexp):
+	Use `tramp-prefix-format' instead of `tramp-prefix-regexp'.  (Bug#558133)
+
 2022-10-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (LISP_FILES): Rename tramp-docker.el to
