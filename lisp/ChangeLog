@@ -1,3 +1,15 @@
+2022-10-18  Jim Porter  <jporterbugs@gmail.com>
+
+	* tramp-integration.el: Only apply Eshell hooks when
+	'eshell-path-env-list' is unbound.
+
+2022-10-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-perl-id): Fix Perl script.
+	(tramp-sh-handle-expand-file-name):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-expand-file-name):
+	Check, that there's really a Tramp file name.
+
 2022-10-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-build-remote-file-name-spec-regexp):
