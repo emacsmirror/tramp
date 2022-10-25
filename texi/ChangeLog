@@ -1,3 +1,7 @@
+2022-10-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (File name completion): Add tramp-completion-use-cache.
+
 2022-10-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods): Method "kubernetes" does not
