@@ -1,3 +1,19 @@
+2022-10-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-methods): Adapt docstring.
+
+	* tramp-cache.el (tramp-completion-use-cache): New defcustom.
+	(tramp-parse-connection-properties): Use it.
+
+	* tramp-container.el (tramp-docker--completion-function)
+	(tramp-kubernetes--completion-function): Ensure the processes run
+	locally.
+	(tramp-kubernetes--current-context-data): New defun.
+	(tramp-methods) <kubernetes>: Add `tramp-config-check'.
+
+	* tramp-sh.el (tramp-open-connection-setup-interactive-shell):
+	Handle `tramp-login-args'.
+
 2022-10-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-equal-p): Fix docstring.
