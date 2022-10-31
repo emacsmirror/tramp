@@ -1,3 +1,8 @@
+2022-10-31  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-file-newer-than-file-p): Don't use
+	fractions of seconds.  (Bug#58842)
+
 2022-10-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Adapt docstring.
