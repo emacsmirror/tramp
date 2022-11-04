@@ -1,3 +1,7 @@
+2022-11-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-load): Adapt MUST-SUFFIX test.
+
 2022-10-31  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-file-newer-than-file-p): Don't use
@@ -445,7 +449,7 @@
 	(tramp-handle-find-backup-file-name, tramp-handle-lock-file)
 	(tramp-local-host-p, tramp-handle-make-auto-save-file-name)
 	* tramp-sh.el (tramp-default-method-alist)
-	(ramp-default-user-alist, tramp-find-shell):
+	(tramp-default-user-alist, tramp-find-shell):
 	* tramp-sudoedit.el (tramp-default-user-alist): Use them.
 
 2022-08-15  Michael Albinus  <michael.albinus@gmx.de>
