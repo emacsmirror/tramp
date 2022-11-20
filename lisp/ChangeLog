@@ -1,3 +1,7 @@
+2022-11-20  Juanma Barranquero  <lekktu@gmail.com>
+
+	* trampver.el.in (tramp-inside-emacs): Fix typo in docstring.
+
 2022-11-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-load): Adapt MUST-SUFFIX test.
@@ -5728,7 +5732,7 @@
 	(tramp-gvfs-handle-file-writable-p)
 	(tramp-gvfs-handle-write-region): Move to tramp.el.
 
-	* tramp-rclone.el: Dont't require `tramp-adb' and `tramp-gvfs' anymore.
+	* tramp-rclone.el: Don't require `tramp-adb' and `tramp-gvfs' anymore.
 	(tramp-rclone-file-name-handler-alist):
 	Use `tramp-handle-expand-file-name', `tramp-handle-file-local-copy',
 	`tramp-handle-file-writable-p' and `tramp-handle-write-region'.
@@ -6404,7 +6408,7 @@
 	(tramp-smb-conf, tramp-smb-winexe-program)
 	(tramp-smb-winexe-shell-command)
 	(tramp-smb-winexe-shell-command-switch):
-	Dont't require 'tramp.  (Bug#31558)
+	Don't require 'tramp.  (Bug#31558)
 
 2018-05-21  Michael Albinus  <michael.albinus@gmx.de>
 
@@ -7454,7 +7458,7 @@
 	(tramp-adb-ls-toolbox-regexp):
 	Ignore addition links column on Android 7.
 	(tramp-adb-get-ls-command):
-	Dont use --color=none when using toybox (Android 7).  It's not
+	Don't use --color=none when using toybox (Android 7).  It's not
 	possible to disable coloring explicitly for toybox ls.
 
 2017-05-26  Michael Albinus  <michael.albinus@gmx.de>
