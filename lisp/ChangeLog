@@ -1,3 +1,12 @@
+2022-11-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-autoload-file-name-regexp):
+	Use `tramp-compat-rx'.  Protect `tramp-archive-suffixes' and
+	`tramp-archive-compression-suffixes'.
+	(tramp-archive-file-name-handler): Don't autoload.
+	(tramp-register-archive-file-name-handler): Rename from
+	`tramp-register-archive-file-name-handler'.  Adapt callees.
+
 2022-11-20  Juanma Barranquero  <lekktu@gmail.com>
 
 	* trampver.el.in (tramp-inside-emacs): Fix typo in docstring.
