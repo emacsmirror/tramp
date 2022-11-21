@@ -133,7 +133,7 @@ see its function help for a description of the format."
             names)))
 
 (defun tramp-kubernetes--current-context-data (vec)
-  "Return Kubernetes current context data as JSONPATH string."
+  "Return Kubernetes current context data as JSON string."
   (with-temp-buffer
     (when (zerop
 	   (tramp-call-process
@@ -163,6 +163,7 @@ see its function help for a description of the format."
                                    ("-u" "%u")
                                    ("%h")
 			           ("%l")))
+		(tramp-direct-async (,tramp-default-remote-shell "-c"))
                 (tramp-remote-shell ,tramp-default-remote-shell)
                 (tramp-remote-shell-login ("-l"))
                 (tramp-remote-shell-args ("-i" "-c"))))
@@ -174,6 +175,7 @@ see its function help for a description of the format."
                                    ("-u" "%u")
                                    ("%h")
 			           ("%l")))
+		(tramp-direct-async (,tramp-default-remote-shell "-c"))
                 (tramp-remote-shell ,tramp-default-remote-shell)
                 (tramp-remote-shell-login ("-l"))
                 (tramp-remote-shell-args ("-i" "-c"))))
@@ -186,6 +188,7 @@ see its function help for a description of the format."
                                    ("--")
 			           ("%l")))
 		(tramp-config-check tramp-kubernetes--current-context-data)
+		(tramp-direct-async (,tramp-default-remote-shell "-c"))
                 (tramp-remote-shell ,tramp-default-remote-shell)
                 (tramp-remote-shell-login ("-l"))
                 (tramp-remote-shell-args ("-i" "-c"))))
