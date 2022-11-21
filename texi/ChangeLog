@@ -1,3 +1,7 @@
+2022-11-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Remote processes): Mention also tramp-container.el.
+
 2022-10-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (File name completion): Add tramp-completion-use-cache.
