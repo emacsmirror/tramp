@@ -1,3 +1,8 @@
+2022-11-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-file-name-handler-alist):
+	Ignore `memory-info'.
+
 2022-11-27  Michael Albinus  <michael.albinus@gmx.de>
 
 
@@ -12,7 +17,7 @@
 	* tramp-smb.el (tramp-smb-file-name-handler-alist):
 	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist)
 	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
-	Add 'memory-info'.
+	Add `memory-info'.
 
 2022-11-23  Michael Albinus  <michael.albinus@gmx.de>
 
