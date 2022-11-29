@@ -1,3 +1,7 @@
+2022-11-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* INSTALL: Regenerate.
+
 2022-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* aclocal.m4: Use AS_MESSAGE_LOG_FD.

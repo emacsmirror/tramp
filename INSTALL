@@ -1,7 +1,7 @@
-Installing TRAMP into Emacs
+Installing Tramp into Emacs
 ***************************
 
-TRAMP is part of Emacs since version 22.  This TRAMP version, 2.6.0-pre,
+Tramp is part of Emacs since version 22.  This Tramp version, 2.6.0-pre,
 has been used successfully on Emacs 26, on Emacs 27, on Emacs 28, and on
 Emacs 29.  If you use the version that comes with your Emacs, or the
 version from GNU ELPA, the following information is not necessary.
@@ -28,7 +28,7 @@ projects:
 Basic Installation
 ==================
 
-Installing TRAMP into your Emacs is a relatively easy process, at least
+Installing Tramp into your Emacs is a relatively easy process, at least
 compared to rebuilding your machine from scratch.  ;)
 
 Seriously, though, the installation should be a fairly simple matter.
@@ -38,16 +38,16 @@ The easiest way to proceed is as follows:
      unpack the tarball.  This will give you a directory
      '~/emacs/tramp-2.6.0-pre/' which contains subdirectories 'lisp' for
      the Lisp code, 'texi' for the documentation, and 'test' for code
-     running TRAMP's test suite.  Make a symbolic link:
+     running Tramp's test suite.  Make a symbolic link:
 
           $ ln -s tramp-2.6.0-pre tramp
 
-   * 'cd' to '~/emacs/tramp/'.  If you've taken TRAMP from the Git
+   * 'cd' to '~/emacs/tramp/'.  If you've taken Tramp from the Git
      sources, type 'autoconf' in order to get an up-to-date 'configure'
-     script.  This is needed only one time after you've cloned TRAMP
+     script.  This is needed only one time after you've cloned Tramp
      from Git.
 
-   * Type './configure' to configure TRAMP for your system.
+   * Type './configure' to configure Tramp for your system.
 
      Running 'configure' takes a while.  While running, it prints some
      messages telling which features it is checking for.
@@ -55,7 +55,7 @@ The easiest way to proceed is as follows:
    * Type 'make' to build the byte-compiled Lisp files as well as the
      Info manual.
 
-   * Type 'make install' to install the TRAMP Lisp files and Info
+   * Type 'make install' to install the Tramp Lisp files and Info
      manual.
 
    * You can remove the byte-compiled Lisp files and the Info manual
@@ -77,7 +77,7 @@ The easiest way to proceed is as follows:
 Parameters in order to control installation
 ===========================================
 
-By default, 'make install' will install TRAMP's files in
+By default, 'make install' will install Tramp's files in
 '/usr/local/share/emacs/site-lisp' and '/usr/local/share/info'.  You can
 specify an installation prefix other than '/usr/local' by giving
 'configure' the option '--prefix=PATH'.  On GNU/Linux systems, it has
@@ -87,7 +87,7 @@ been reported useful to apply
 
 If your installed copy of Emacs is named something other than 'emacs',
 you will need to tell 'make' where to find it so that it can correctly
-byte-compile the TRAMP sources.
+byte-compile the Tramp sources.
 
 For example, to pass the Emacs command to be called:
 
@@ -126,10 +126,10 @@ This can be missing or wrong versions of 'emacs', Emacs packages,
 'make', or 'makeinfo'.
 
 Warnings let 'configure' (and the whole installation process) continue,
-but parts of TRAMP aren't installed.  This can happen with missing or
+but parts of Tramp aren't installed.  This can happen with missing or
 wrong versions of 'texi2dvi' or 'install-info'.  Here you can decide
 yourself whether you want to renounce on the related feature
-('tramp.dvi' file for printed output, TRAMP entry in Info's 'dir' file),
+('tramp.dvi' file for printed output, Tramp entry in Info's 'dir' file),
 or whether you want to adapt your 'PATH' environment variable, and rerun
 'configure'.  An alternative is calling the missed parts manually later
 on.
@@ -137,9 +137,9 @@ on.
 Recompilation when the Emacs version has changed
 ================================================
 
-TRAMP comes with compatibility code for different Emacs versions.  When
+Tramp comes with compatibility code for different Emacs versions.  When
 you upgrade your Emacs major version, it is necessary to recompile at
-least the TRAMP Lisp files.  You must apply the following steps:
+least the Tramp Lisp files.  You must apply the following steps:
 
    * Reconfigure the Emacs version used for compilation, if it has
      changed.
@@ -150,18 +150,18 @@ least the TRAMP Lisp files.  You must apply the following steps:
 
           $ make -C lisp distclean all
 
-   * Install TRAMP.
+   * Install Tramp.
 
           $ make install
 
-If you have installed TRAMP as GNU ELPA package, you can recompile it
+If you have installed Tramp as GNU ELPA package, you can recompile it
 with the Emacs version you are running by the command 'M-x
 tramp-recompile-elpa <RET>'.
 
-A test suite for TRAMP
+A test suite for Tramp
 ======================
 
-TRAMP comes with an own test suite.  In order to run this test suite,
+Tramp comes with an own test suite.  In order to run this test suite,
 you call
 
      $ make check
@@ -179,10 +179,10 @@ must change the default anyway.
 See the file 'test/README' for further details how to run the test
 suite.
 
-How to plug-in TRAMP into your environment
+How to plug-in Tramp into your environment
 ==========================================
 
-If you don't install TRAMP into the intended directories, but prefer to
+If you don't install Tramp into the intended directories, but prefer to
 use from the source directory, you need to add the following lines into
 your '.emacs':
 
@@ -195,7 +195,7 @@ If the environment variable 'INFOPATH' is set, add the directory
 
      (add-to-list 'Info-directory-list "~/emacs/tramp/info/")
 
-Installing TRAMP via GNU ELPA
+Installing Tramp via GNU ELPA
 *****************************
 
 Tramp must be compiled for the Emacs version you are running.  If you
