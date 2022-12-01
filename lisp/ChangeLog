@@ -1,3 +1,7 @@
+2022-12-01  Stefan Kangas  <stefankangas@gmail.com>
+
+	Fix typos (don't abbreviate "with" or "without")
+
 2022-11-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive.el (tramp-archive-file-name-handler-alist):
@@ -1149,7 +1153,7 @@
 
 2022-04-06  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp-integration.el: Apply `connection-local-set-profiles' w/o
+	* tramp-integration.el: Apply `connection-local-set-profiles' without
 	retrieving old values.
 
 2022-04-05  Michael Albinus  <michael.albinus@gmx.de>
@@ -1522,7 +1526,7 @@
 
 2021-12-09  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-test-message): Extend for buffers w/o remote
+	* tramp.el (tramp-test-message): Extend for buffers without remote
 	default-directory.
 	(tramp-lock-pid): New defvar.
 	(tramp-get-lock-pid): Reimplement.
@@ -5501,7 +5505,7 @@
 
 2018-12-28  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp-sh.el (tramp-set-remote-path): Handle platforms w/o getconf.
+	* tramp-sh.el (tramp-set-remote-path): Handle platforms without getconf.
 
 2018-12-27  Michael Albinus  <michael.albinus@gmx.de>
 
@@ -6415,7 +6419,7 @@
 
 	* tramp.el (tramp-ignored-file-name-regexp): Use type regexp.
 	(tramp-handle-file-name-directory): Fix case of localname starts
-	w/o a slash.
+	without a slash.
 
 2018-05-29  Michael Albinus  <michael.albinus@gmx.de>
 
