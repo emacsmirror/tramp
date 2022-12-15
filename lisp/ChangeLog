@@ -1,3 +1,10 @@
+2022-12-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-crypt.el (tramp-crypt-maybe-open-connection): Fix comment.
+
+	* tramp-sh.el (tramp-sh-handle-file-local-copy): Delete `tmpfile'
+	in case of error.  (Bug#60060)
+
 2022-12-01  Stefan Kangas  <stefankangas@gmail.com>
 
 	Fix typos (don't abbreviate "with" or "without")
