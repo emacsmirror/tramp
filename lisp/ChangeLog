@@ -1,5 +1,8 @@
 2022-12-18  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-file-name-for-operation):
+	Rearrange `make-directory-internal'.
+
 	* tramp-smb.el (tramp-smb-file-name-handler-alist):
 	Ignore `make-directory-internal'.
 	(tramp-smb-handle-make-directory): Move implementation from
