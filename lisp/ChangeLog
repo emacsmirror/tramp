@@ -1,3 +1,9 @@
+2022-12-18  Paul Eggert  <eggert@cs.ucla.edu>
+
+	* tramp-smb.el (tramp-smb-handle-make-directory):
+	Use make-directory, not make-directory-internal.
+	(tramp-smb-handle-make-directory-internal): Now obsolete.
+
 2022-12-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-crypt.el (tramp-crypt-maybe-open-connection): Fix comment.
