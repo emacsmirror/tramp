@@ -1,5 +1,10 @@
 2022-12-18  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp-smb.el (tramp-smb-file-name-handler-alist):
+	Ignore `make-directory-internal'.
+	(tramp-smb-handle-make-directory): Move implementation from
+	`tramp-smb-handle-make-directory-internal' here.
+
 	* tramp-archive.el (tramp-archive-file-name-regexp):
 	Use `eval-when-compile'.  Set it explicitly for older Emacs versions.
 
