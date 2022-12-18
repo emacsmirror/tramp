@@ -1,3 +1,8 @@
+2022-12-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-file-name-regexp):
+	Use `eval-when-compile'.  Set it explicitly for older Emacs versions.
+
 2022-12-18  Paul Eggert  <eggert@cs.ucla.edu>
 
 	* tramp-smb.el (tramp-smb-handle-make-directory):
