@@ -1,5 +1,16 @@
 2022-12-22  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-skeleton-make-directory): New defmacro.  Handle
+	also return values.
+	* tramp-adb.el (tramp-adb-handle-make-directory):
+	* tramp-crypt.el (tramp-crypt-handle-make-directory):
+	* tramp-fuse.el (tramp-fuse-handle-make-directory):
+	* tramp-gvfs.el (tramp-gvfs-handle-make-directory):
+	* tramp-sh.el (tramp-sh-handle-make-directory):
+	* tramp-smb.el (tramp-smb-handle-make-directory):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-make-directory):
+	Use it.
+
 	* trampver.el.in (customize-package-emacs-version-alist):
 	Add Tramp version integrated in Emacs 29.1.
 
@@ -39,7 +50,6 @@
 	Ignore `memory-info'.
 
 2022-11-27  Michael Albinus  <michael.albinus@gmx.de>
-
 
 	* tramp.el (tramp-handle-memory-info): New defun.
 	(tramp-file-name-for-operation)
