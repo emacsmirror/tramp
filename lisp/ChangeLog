@@ -13789,7 +13789,6 @@
 	(tramp-set-auto-save-file-modes): Remove superfluous check for
 	`stringp'.  This is done inside `tramp-tramp-file-p'.
 
-
 	* tramp-fish.el (tramp-fish-handle-directory-files-and-attributes):
 	Do not use `tramp-fish-handle-file-attributes.
 
@@ -19653,7 +19652,6 @@
 	`tramp-smb-open-connection' and `tramp-smb-get-file-entries',
 	respectively.
 
-
 2002-11-10  Michael Albinus  <Michael.Albinus@alcatel.de>
 
 	* tramp.el (tramp-handle-file-name-completion): Use Emacs file
@@ -19701,7 +19699,6 @@
 	(tramp-smb-handle-insert-directory): Mode string adapted.
 	(tramp-smb-read-file-entry): Block introduced for better return
 	handling.  Return list values changed.  Callers	adapted.
-
 
 2002-11-04  Michael Albinus  <Michael.Albinus@alcatel.de>
 
@@ -19834,7 +19831,6 @@
 	`apply'.
 
 	* tramp-ftp.el (top-level): Require `tramp'.
-
 
 2002-10-11  Michael Albinus  <Michael.Albinus@alcatel.de>
 
@@ -20817,7 +20813,6 @@
 
 	* tramp.el (tramp-multi-file-name-structure-separate): Typo, it's
 	name was set to 'tramp-file-name-structure-separate'.
-
 
 2002-07-18  Kai Großjohann  <Kai.Grossjohann@CS.Uni-Dortmund.DE>
 
