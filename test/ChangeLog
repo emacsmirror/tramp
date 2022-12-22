@@ -1,3 +1,7 @@
+2022-12-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test13-make-directory): Handle return values.
+
 2022-12-01  Stefan Kangas  <stefankangas@gmail.com>
 
 	Fix typos (don't abbreviate "with" or "without")
