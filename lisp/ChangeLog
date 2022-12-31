@@ -1,3 +1,8 @@
+2022-12-31  Mattias Engdegård  <mattiase@acm.org>
+
+	* tramp.el (tramp-action-show-and-confirm-message):
+	Remove incorrect quoting of condition names.
+
 2022-12-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-make-directory): New defmacro.  Handle
