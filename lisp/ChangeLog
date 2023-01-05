@@ -1,3 +1,15 @@
+2023-01-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-default-user): Fix docstring.
+	(tramp-completion-reread-directory-timeout): Remove.
+
+	* tramp-archive.el (tramp-archive-file-name-handler-alist):
+	Ignore `make-directory-internal'.
+
+	* tramp-sh.el (tramp-get-remote-trash): Remove.
+
+	* tramp-smb.el (tramp-smb-handle-make-directory-internal): Remove.
+
 2023-01-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-compute-multi-hops): Make check for host name
