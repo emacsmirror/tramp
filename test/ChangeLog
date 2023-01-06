@@ -1,3 +1,19 @@
+2023-01-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive--test-emacs27-p): Remove.
+	(all):
+	* tramp-tests.el (all): Don't skip for Emacs 26.  Replace the
+	removed `tramp-compat-*' items by their real definition.  Don't
+	use `tramp-compat-funcall' when not needed.  Remove
+	`with-no-warnings' and `ignore-errors' where appropriate.
+	(with-connection-local-variables)
+	(shell-command-dont-erase-buffer): Don't declare.
+	(tramp-test10-write-region): Don't check for `make-empty-file'.
+	(tramp-test32-shell-command): Simplify.
+	(tramp-test34-explicit-shell-file-name): Don't protect
+	`explicit-shell-file-name' any longer.
+	(tramp--test-emacs27-p): Remove.
+
 2022-12-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test13-make-directory): Handle return values.
