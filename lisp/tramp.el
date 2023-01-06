@@ -2876,7 +2876,8 @@ remote file names."
   (put #'tramp-completion-file-name-handler 'operations
        (mapcar #'car tramp-completion-file-name-handler-alist))
 
-  (when tramp-archive-enabled
+  ;; After unloading, `tramp-archive-enabled' might not be defined.
+  (when (bound-and-true-p tramp-archive-enabled)
     (add-to-list 'file-name-handler-alist
 	         (cons tramp-archive-file-name-regexp
 		       #'tramp-archive-file-name-handler))
