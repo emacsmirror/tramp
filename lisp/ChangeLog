@@ -1,3 +1,59 @@
+2023-01-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-file-name-quoted-p)
+	(tramp-compat-file-name-quote, tramp-compat-file-name-unquote)
+	(tramp-compat-tramp-syntax, tramp-compat-exec-path)
+	(tramp-compat-time-equal-p, tramp-compat-flatten-tree)
+	(tramp-compat-progress-reporter-update)
+	(tramp-compat-ignore-error, tramp-compat-rx--transform-item)
+	(tramp-compat-rx--transform, tramp-compat-rx): Remove.
+
+	* tramp-adb.el:
+	* tramp-archive.el:
+	* tramp-cache.el:
+	* tramp-cmds.el:
+	* tramp-crypt.el:
+	* tramp-fuse.el:
+	* tramp-gvfs.el:
+	* tramp-integration.el:
+	* tramp-rclone.el:
+	* tramp-sh.el:
+	* tramp-smb.el:
+	* tramp-sshfs.el:
+	* tramp-sudoedit.el:
+	* tramp.el:
+	* trampver.el.in: Replace the removed `tramp-compat-*' items by
+	their real definition.  Don't use `tramp-compat-funcall' when not
+	needed.  Remove `with-no-warnings' and `ignore-errors' where
+	appropriate.
+
+	* tramp.el (tramp-file-name-for-operation): Rearrange list.
+	(tramp-handle-file-newer-than-file-p): Simplify.
+	(tramp-get-process-attributes): Don't check for existence of
+	`connection-local-criteria-for-default-directory'.
+	(tramp-handle-shell-command): Don't check for existence of
+	`shell-command-save-pos-or-erase', `async-shell-command-width' and
+	`shell-command-set-point-after-cmd'.
+	(tramp-handle-start-file-process): Call `make-process' directly.
+	(tramp-defined-time): New defsubst.
+	(tramp-get-local-gid): Don't check for existence of `group-name'.
+
+	* tramp-adb.el (tramp-adb-handle-set-file-times):
+	Use `tramp-defined-time'.
+	(tramp-adb-get-signal-strings): Don't bind `shell-file-name' and
+	`shell-command-switch'.
+
+	* tramp-archive.el (top, tramp-archive-file-name-handler):
+	Don't bind `max-specpdl-size' any longer.
+	(tramp-archive-autoload-file-name-regexp): Remove Emacs 26
+	specific code.
+	(top): Don't call `tramp-register-archive-autoload-file-name-handler'.
+
+	* tramp-gvfs.el (top): Don't bind `max-specpdl-size' any longer.
+	(tramp-gvfs-handle-set-file-times): Use `tramp-defined-time'.
+
+	* tramp-sh.el (tramp-sh-handle-set-file-times): Use `tramp-defined-time'.
+
 2023-01-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-default-user): Fix docstring.
