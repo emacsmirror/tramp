@@ -1,3 +1,22 @@
+2023-01-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-delete-directory):
+	Handle `remote-file-name-inhibit-delete-by-moving-to-trash'.
+	(tramp-skeleton-delete-file): New defmacro.
+
+	* tramp-adb.el (tramp-adb-handle-delete-file):
+	* tramp-fuse.el (tramp-fuse-handle-delete-file):
+	* tramp-gvfs.el (tramp-gvfs-handle-delete-file):
+	* tramp-sh.el (tramp-sh-handle-delete-file):
+	* tramp-smb.el (tramp-smb-handle-delete-file):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-delete-file): Use it.
+
+	* tramp-crypt.el (tramp-crypt-handle-delete-directory)
+	(tramp-crypt-handle-delete-file): Rearrange.
+
+	* tramp-fuse.el (tramp-fuse-handle-delete-directory):
+	Use `tramp-skeleton-delete-directory'.
+
 2023-01-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive.el (tramp-archive-file-name-regexp): Use `ignore-errors'.
