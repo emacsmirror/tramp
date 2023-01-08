@@ -7683,6 +7683,8 @@ If INTERACTIVE is non-nil, the tests are run interactively."
 ;; * file-equal-p (partly done in `tramp-test21-file-links')
 ;; * file-in-directory-p
 ;; * file-name-case-insensitive-p
+;; * memory-info
+;; * tramp-get-home-directory
 ;; * tramp-get-remote-gid
 ;; * tramp-get-remote-groups
 ;; * tramp-get-remote-uid
