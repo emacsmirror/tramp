@@ -1,3 +1,8 @@
+2023-01-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-container-p): Rename from
+	`tramp--test-docker-p'.  Handle also "podman" method.  Adapt callees.
+
 2023-01-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (remote-file-name-inhibit-delete-by-moving-to-trash):
