@@ -1,3 +1,10 @@
+2023-01-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test43-file-system-info):
+	* tramp-tests.el (tramp-test26-file-name-completion)
+	(tramp-test31-memory-info, tramp-test35-remote-path)
+	(tramp-test43-file-system-info): Use new compat functions.
+
 2023-01-13  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-container-p): Rename from
