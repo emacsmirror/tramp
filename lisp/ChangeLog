@@ -46,7 +46,7 @@
 
 	* tramp.el (tramp-skeleton-delete-directory):
 	Handle `remote-file-name-inhibit-delete-by-moving-to-trash'.
-	(tramp-skeleton-delete-file): New defmacro.
+	(tramp-skeleton-delete-file): New defmacro.  (Bug#60460)
 
 	* tramp-adb.el (tramp-adb-handle-delete-file):
 	* tramp-fuse.el (tramp-fuse-handle-delete-file):
