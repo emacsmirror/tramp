@@ -1,3 +1,47 @@
+2023-01-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-replace-regexp-in-region):
+	Move up.
+	(tramp-compat-length<, tramp-compat-length>)
+	(tramp-compat-length=): New defaliases.
+	(tramp-compat-file-name-unquote, tramp-compat-take)
+	(tramp-compat-ntake): Use them.
+
+	* tramp.el (tramp-string-empty-or-nil-p): New defsubst.
+	(tramp-find-host, tramp-buffer-name, tramp-make-tramp-file-name)
+	(tramp-completion-make-tramp-file-name, tramp-debug-buffer-name)
+	(tramp-completion-handle-file-name-all-completions)
+	(tramp-handle-directory-file-name)
+	(tramp-handle-expand-file-name)
+	(tramp-handle-file-name-as-directory)
+	(tramp-handle-file-name-completion)
+	(tramp-direct-async-process-p, tramp-call-process)
+	(tramp-read-passwd):
+	* tramp-adb.el (tramp-adb-get-device)
+	(tramp-adb-execute-adb-command, tramp-adb-maybe-open-connection):
+	* tramp-archive.el (tramp-archive-handle-directory-file-name):
+	* tramp-gvfs.el (tramp-gvfs-handle-expand-file-name)
+	(tramp-gvfs-monitor-process-filter)
+	(tramp-gvfs-handle-get-home-directory)
+	(tramp-gvfs-handler-askpassword)
+	(tramp-gvfs-maybe-open-connection, tramp-get-media-devices):
+	* tramp-rclone.el (tramp-rclone-maybe-open-connection):
+	* tramp-sh.el (tramp-sh-handle-file-directory-p)
+	(tramp-sh-handle-insert-directory)
+	(tramp-sh-handle-expand-file-name, tramp-sh-handle-make-process)
+	(tramp-sh-gio-monitor-process-filter, tramp-set-remote-path)
+	(tramp-open-connection-setup-interactive-shell)
+	(tramp-maybe-open-connection, tramp-make-copy-program-file-name):
+	* tramp-smb.el (tramp-smb-handle-copy-directory)
+	(tramp-smb-handle-expand-file-name, tramp-smb-handle-file-acl)
+	(tramp-smb-handle-insert-directory)
+	(tramp-smb-handle-set-file-acl)
+	(tramp-smb-handle-get-home-directory)
+	(tramp-smb-maybe-open-connection):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-expand-file-name)
+	(tramp-sudoedit-handle-file-name-all-completions): Use the new
+	functions.
+
 2023-01-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-delete-directory):
