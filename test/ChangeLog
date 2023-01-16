@@ -1,3 +1,8 @@
+2023-01-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test29-start-file-process)
+	(tramp-test30-make-process): Don't test disabled process filter.
+
 2023-01-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test43-file-system-info):
