@@ -1,7 +1,15 @@
+2023-01-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-handle-file-user-uid): Move up.
+	Protect `file-user-id' call for older Emacs versions.
+
+	* tramp-crypt.el (tramp-crypt-file-name-handler-alist):
+	Remove 'file-user-uid'.
+
 2023-01-17  Jim Porter  <jporterbugs@gmail.com>
 
 	* tramp.el (tramp-file-name-for-operation): Add 'file-user-uid'.
-	(tramp-handle-file-user-uid): New function.
+	(tramp-handle-file-user-uid): New function.  (Bug#60722)
 
 	* tramp-adb.el (tramp-adb-file-name-handler-alist):
 	* tramp-crypt.el (tramp-crypt-file-name-handler-alist):
