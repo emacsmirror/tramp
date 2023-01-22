@@ -1,3 +1,12 @@
+2023-01-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-call-process, tramp-call-process-region):
+	Let-bind `temporary-file-directory'.
+
+	* tramp-smb.el (tramp-smb-handle-make-symbolic-link):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-make-symbolic-link):
+	Flush TARGET file properties.
+
 2023-01-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-file-regular-p): Fix symlink case.  (Bug#60943)

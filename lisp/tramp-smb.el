@@ -1186,7 +1186,10 @@ component is used as the target of the symlink."
     (let ((non-essential t))
       (when (and (tramp-tramp-file-p target)
 		 (tramp-file-name-equal-p v (tramp-dissect-file-name target)))
-	(setq target (tramp-file-local-name (expand-file-name target)))))
+	(setq target (tramp-file-local-name (expand-file-name target))))
+      ;; There could be a cyclic link.
+      (tramp-flush-file-properties
+       v (expand-file-name target (tramp-file-local-name default-directory))))
 
     ;; If TARGET is still remote, quote it.
     (if (tramp-tramp-file-p target)

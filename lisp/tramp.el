@@ -6378,6 +6378,7 @@ It always returns a return code.  The Lisp error raised when
 PROGRAM is nil is trapped also, returning 1.  Furthermore, traces
 are written with verbosity of 6."
   (let ((default-directory tramp-compat-temporary-file-directory)
+	(temporary-file-directory tramp-compat-temporary-file-directory)
 	(process-environment (default-toplevel-value 'process-environment))
 	(destination (if (eq destination t) (current-buffer) destination))
 	(vec (or vec (car tramp-current-connection)))
@@ -6410,6 +6411,7 @@ It always returns a return code.  The Lisp error raised when
 PROGRAM is nil is trapped also, returning 1.  Furthermore, traces
 are written with verbosity of 6."
   (let ((default-directory tramp-compat-temporary-file-directory)
+	(temporary-file-directory tramp-compat-temporary-file-directory)
 	(process-environment (default-toplevel-value 'process-environment))
 	(buffer (if (eq buffer t) (current-buffer) buffer))
 	result)
