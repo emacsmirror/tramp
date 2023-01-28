@@ -1,3 +1,22 @@
+2023-01-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-barf-if-file-missing): Fix docstring.
+	(tramp-handle-file-directory-p): Don't suppress errors.
+	(tramp-handle-shell-command):
+	* tramp-adb.el (tramp-adb-handle-make-process): Make insertion of
+	a stderr file more robust.
+
+	* tramp-archive.el (tramp-archive-handle-directory-files):
+	Use `tramp-barf-if-file-missing'.
+
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-name-all-completions):
+	Protect against errors from `file-directory-p'.
+
+	* tramp.el (tramp-wrong-passwd-regexp):
+	* tramp-adb.el (tramp-adb-prompt):
+	* tramp-sh.el (tramp-sh-inotifywait-process-filter):
+	* tramp-smb.el (tramp-smb-maybe-open-connection): Unify regexps.
+
 2023-01-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-wrong-passwd-regexp): Fix regexp.
