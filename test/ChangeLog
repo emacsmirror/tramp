@@ -1,3 +1,8 @@
+2023-01-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test47-auto-load)
+	(tramp-test47-delay-load): Unify regexps.
+
 2023-01-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-action-yesno): Suppress run in tests.
