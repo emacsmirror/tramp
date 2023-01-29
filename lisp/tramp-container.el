@@ -154,7 +154,7 @@ see its function help for a description of the format."
                                 " get pods --no-headers "
                                 "-o custom-columns=NAME:.metadata.name")))
              (names (split-string raw-list "\n" 'omit)))
-    (mapcar (lambda (name) (list nil name)) names)))
+    (mapcar (lambda (name) (list nil name)) (delq nil names))))
 
 (defun tramp-kubernetes--current-context-data (vec)
   "Return Kubernetes current context data as JSON string."
@@ -193,7 +193,7 @@ see its function help for a description of the format."
 			      line)
 			 (match-string 1 line)))
                      lines)))
-    (mapcar (lambda (m) (list nil m)) (delq nil names))))
+    (mapcar (lambda (name) (list nil name)) (delq nil names))))
 
 ;;;###tramp-autoload
 (defvar tramp-default-remote-shell) ;; Silence byte compiler.
