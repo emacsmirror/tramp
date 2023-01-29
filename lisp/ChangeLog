@@ -1,3 +1,12 @@
+2023-01-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-set-completion-function): Check, that cdr of
+	FUNCTION-LIST entries is a string.
+
+	* tramp-container.el (tramp-container--completion-function):
+	Rename from `tramp-docker--completion-function'.  Add argument
+	PROGRAM.  Use it for "docker" and "podman" host name completion.
+
 2023-01-28  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-barf-if-file-missing): Fix docstring.
