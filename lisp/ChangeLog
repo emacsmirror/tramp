@@ -1,3 +1,8 @@
+2023-01-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-password-prompt-regexp): Allow alternative
+	trailing colons.  (Bug#61168)
+
 2023-01-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-set-completion-function): Check, that cdr of
