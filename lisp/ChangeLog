@@ -1,3 +1,8 @@
+2023-02-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-make-process): Improve handling of
+	connection-type `pipe'.
+
 2023-01-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-password-prompt-regexp): Allow alternative
