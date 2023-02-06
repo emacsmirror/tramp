@@ -1,3 +1,10 @@
+2023-02-06  Paul Eggert  <eggert@cs.ucla.edu>
+
+	* tramp.texi (Obtaining @value{tramp}):
+	Prefer https: to git: URIs on Savannah.
+	The idea is to avoid some adversary-in-the-middle attacks
+	on developers.
+
 2023-02-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (File name completion): Remove completion styles
