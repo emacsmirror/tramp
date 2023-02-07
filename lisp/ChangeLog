@@ -1,3 +1,8 @@
+2023-02-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-completion-file-name-handler): Run only when
+	`minibuffer-completing-file-name' is non-nil.
+
 2023-02-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	This fixes Bug#51386, Bug#52758, Bug#53513, Bug#54042 and
@@ -18,7 +23,7 @@
 2023-02-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-make-process): Improve handling of
-	connection-type `pipe'.
+	connection-type `pipe'.  (Bug#61341)
 
 2023-01-30  Michael Albinus  <michael.albinus@gmx.de>
 
