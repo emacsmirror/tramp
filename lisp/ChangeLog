@@ -1,3 +1,8 @@
+2023-02-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-completion-handle-expand-file-name): Reimplement.
+	It must also work for the non-Tramp case.
+
 2023-02-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-completion-file-name-handler): Run only when
