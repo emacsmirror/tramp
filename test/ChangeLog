@@ -1,3 +1,8 @@
+2023-02-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
+	Fix test.
+
 2023-02-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
