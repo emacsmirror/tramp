@@ -1,3 +1,10 @@
+2023-02-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-build-completion-file-name-regexp)
+	(tramp-completion-handle-expand-file-name)
+	(tramp-completion-handle-file-name-directory): Support user name
+	completion.
+
 2023-02-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-completion-handle-expand-file-name): Reimplement.
