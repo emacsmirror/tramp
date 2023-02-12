@@ -1,3 +1,10 @@
+2023-02-12  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-completion-handle-expand-file-name)
+	(tramp-completion-handle-file-exists-p)
+	(tramp-completion-handle-file-name-directory): Support multi-hop
+	completion.
+
 2023-02-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-build-completion-file-name-regexp)
