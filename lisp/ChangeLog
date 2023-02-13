@@ -24,8 +24,8 @@
 
 2023-02-06  Michael Albinus  <michael.albinus@gmx.de>
 
-	This fixes Bug#51386, Bug#52758, Bug#53513, Bug#54042 and
-	Bug#60505.
+	This fixes Bug#37954, Bug#51386, Bug#52758, Bug#53513, Bug#54042
+	and Bug#60505.
 
 	* tramp.el (tramp-methods) <->: Add.
 	(tramp-completion-file-name-handler-alist):
