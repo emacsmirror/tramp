@@ -1,3 +1,14 @@
+2023-02-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-completion-handle-file-exists-p): Improve user
+	name completion.
+	(tramp-skeleton-file-exists-p): New defmacro, which also handles
+	host name completion.
+	(tramp-handle-file-exists-p):
+	* tramp-adb.el (tramp-adb-handle-file-exists-p):
+	* tramp-sh.el (tramp-sh-handle-file-exists-p):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-exists-p): Use it.
+
 2023-02-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el:
