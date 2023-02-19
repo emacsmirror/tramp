@@ -4764,15 +4764,13 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
                     (if (or (not (get-buffer "*Completions*"))
 			    (string-match-p
 			     (if (string-empty-p tramp-method-regexp)
-				 (tramp-compat-rx
-				  (: (| (regexp tramp-postfix-user-regexp)
+				 (rx (| (regexp tramp-postfix-user-regexp)
 					(regexp tramp-postfix-host-regexp))
-				     eos))
-			       (tramp-compat-rx
-				(: (| (regexp tramp-postfix-method-regexp)
+				     eos)
+			       (rx (| (regexp tramp-postfix-method-regexp)
 				      (regexp tramp-postfix-user-regexp)
 				      (regexp tramp-postfix-host-regexp))
-				   eos)))
+				   eos))
 			     result))
 			(progn
                           ;; (tramp--test-message
