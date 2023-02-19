@@ -1,3 +1,8 @@
+2023-02-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-action-get-acl)
+	(tramp-smb-action-set-acl): Use timeout.
+
 2023-02-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-completion-handle-file-exists-p): Improve user
