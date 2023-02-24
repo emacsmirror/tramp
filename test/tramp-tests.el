@@ -4786,7 +4786,6 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 			     (dolist (elem (cadr test-and-result) res)
 			       (setq
 				res (or res (string-prefix-p elem result))))))))
->>>>>>> 7506dc46 (* tramp-tests.el (tramp-test26-file-name-completion))
 
                     (with-current-buffer "*Completions*"
 		      ;; We must remove leading `default-directory'.
