@@ -1,5 +1,7 @@
 2023-02-24  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp-gvfs.el (tramp-gvfs-parse-device-names): Ignore errors.
+
 	* trampver.el.in (customize-package-emacs-version-alist):
 	Add Tramp version integrated in Emacs 28.3.
 
