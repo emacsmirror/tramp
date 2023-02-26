@@ -2530,7 +2530,7 @@ This checks also `file-name-as-directory', `file-name-directory',
 			(rx bos))
 		      tramp--test-messages))))))
 
-	    ;; We do not test lockname here.  See
+	    ;; We do not test the lock file here.  See
 	    ;; `tramp-test39-make-lock-file-name'.
 
 	    ;; Do not overwrite if excluded.
@@ -6535,11 +6535,33 @@ INPUT, if non-nil, is a string sent to the process."
               (save-buffer)
 	      (should-not (buffer-modified-p)))
             (should-not (with-no-warnings (file-locked-p tmp-name1)))
+
+            ;; `kill-buffer' removes the lock.
 	    (with-no-warnings (lock-file tmp-name1))
 	    (should (eq (with-no-warnings (file-locked-p tmp-name1)) t))
+            (with-temp-buffer
+              (set-visited-file-name tmp-name1)
+              (insert "foo")
+	      (should (buffer-modified-p))
+	      (cl-letf (((symbol-function #'read-from-minibuffer)
+                         (lambda (&rest _args) "yes")))
+                (kill-buffer)))
+	    (should-not (with-no-warnings (file-locked-p tmp-name1)))
 
+            ;; `kill-buffer' should not remove the lock when the
+            ;; connection is broken.  See Bug#61663.
+	    (with-no-warnings (lock-file tmp-name1))
+	    (should (eq (with-no-warnings (file-locked-p tmp-name1)) t))
+            (with-temp-buffer
+              (set-visited-file-name tmp-name1)
+              (insert "foo")
+	      (should (buffer-modified-p))
+	      (tramp-cleanup-connection tramp-test-vec 'keep-debug 'keep-password)
+	      (cl-letf (((symbol-function #'read-from-minibuffer)
+                         (lambda (&rest _args) "yes")))
+                (kill-buffer)))
 	    ;; A new connection changes process id, and also the
-	    ;; lockname contents.
+	    ;; lock file contents.  But it still exists.
 	    (tramp-cleanup-connection tramp-test-vec 'keep-debug 'keep-password)
 	    (should (stringp (with-no-warnings (file-locked-p tmp-name1))))
 
