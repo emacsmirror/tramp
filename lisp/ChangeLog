@@ -1,5 +1,7 @@
 2023-02-28  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-remote-path): Improve docstring.
+
 	* tramp.el (tramp-connectable-p): Simplify.
 	(tramp-handle-unlock-file): Improve warning.
 
