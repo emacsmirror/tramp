@@ -1,3 +1,8 @@
+2023-02-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-connectable-p): Simplify.
+	(tramp-handle-unlock-file): Improve warning.
+
 2023-02-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-unlock-file): Do not unlock when
