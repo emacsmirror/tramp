@@ -1,3 +1,8 @@
+2023-03-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-file-name-completion-with-perl):
+	(tramp-test26-file-name-completion-with-ls): New tests.
+
 2023-02-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test39-make-lock-file-name): Extend test.

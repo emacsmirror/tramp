@@ -4635,6 +4635,10 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 	  ;; Cleanup.
 	  (ignore-errors (delete-directory tmp-name 'recursive)))))))
 
+(tramp--test-deftest-with-perl tramp-test26-file-name-completion)
+
+(tramp--test-deftest-with-ls tramp-test26-file-name-completion)
+
 ;; This test is inspired by Bug#51386, Bug#52758, Bug#53513, Bug#54042
 ;; and Bug#60505.
 (ert-deftest tramp-test26-interactive-file-name-completion ()
