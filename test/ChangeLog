@@ -1,3 +1,7 @@
+2023-03-02  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-file-name-completion): Extend test.
+
 2023-03-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test26-file-name-completion-with-perl):
