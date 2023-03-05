@@ -1,3 +1,8 @@
+2023-03-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Remove also
+	//DIRED-OPTIONS// line when there is no //DIRED// line.
+
 2023-03-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-unlock-file): Raise a warning only when
