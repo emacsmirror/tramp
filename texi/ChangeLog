@@ -1,3 +1,9 @@
+2023-03-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Ssh setup): Explain tramp-use-ssh-controlmaster-options
+	value `suppress'.
+	(Remote processes): Add reference to "Using ssh connection sharing".
+
 2023-02-06  Paul Eggert  <eggert@cs.ucla.edu>
 
 	* tramp.texi (Obtaining @value{tramp}):
