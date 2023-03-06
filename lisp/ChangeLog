@@ -1,3 +1,10 @@
+2023-03-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-use-ssh-controlmaster-options): Allow new
+	value `suppress'.
+	(tramp-ssh-option-exists-p): New defun.
+	(tramp-ssh-controlmaster-options): Implement `suppress' actions.
+
 2023-03-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-insert-directory): Remove also
