@@ -1768,7 +1768,7 @@ ID-FORMAT valid values are `string' and `integer'."
     (when (and (not (tramp-compat-string-search "/" filename))
 	       (tramp-connectable-p v))
     (unless (tramp-compat-string-search "/" filename)
-      (tramp-compat-ignore-error file-missing
+      (ignore-error file-missing
 	(all-completions
 	 filename
 	 (with-tramp-file-property v localname "file-name-all-completions"

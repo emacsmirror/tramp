@@ -432,7 +432,7 @@ Emacs dired can't find files."
 
 (defun tramp-adb-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for Tramp files."
-  (tramp-compat-ignore-error file-missing
+  (ignore-error file-missing
     (all-completions
      filename
      (with-parsed-tramp-file-name (expand-file-name directory) nil

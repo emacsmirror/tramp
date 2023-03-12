@@ -650,7 +650,7 @@ offered."
 
 (defun tramp-archive-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for file archives."
-  (tramp-compat-ignore-error file-missing
+  (ignore-error file-missing
     (file-name-all-completions
      filename (tramp-archive-gvfs-file-name directory))))
 

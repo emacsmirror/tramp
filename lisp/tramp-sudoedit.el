@@ -460,22 +460,22 @@ the result will be a local, non-Tramp, file name."
 
 (defun tramp-sudoedit-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for Tramp files."
-  (tramp-compat-ignore-error file-missing
-  (all-completions
-   filename
-   (with-parsed-tramp-file-name (expand-file-name directory) nil
-     (with-tramp-file-property v localname "file-name-all-completions"
-       (tramp-sudoedit-send-command
-	v "ls" "-a1" "--quoting-style=literal" "--show-control-chars"
-	(if (tramp-string-empty-or-nil-p localname)
-	    "" (file-name-unquote localname)))
-       (mapcar
-	(lambda (f)
-	  (if (ignore-errors (file-directory-p (expand-file-name f directory)))
-	      (file-name-as-directory f)
-	    f))
-	(delq
-	 nil
+  (ignore-error file-missing
+    (all-completions
+     filename
+     (with-parsed-tramp-file-name (expand-file-name directory) nil
+       (with-tramp-file-property v localname "file-name-all-completions"
+	 (tramp-sudoedit-send-command
+	  v "ls" "-a1" "--quoting-style=literal" "--show-control-chars"
+	  (if (tramp-string-empty-or-nil-p localname)
+	      "" (file-name-unquote localname)))
+	 (mapcar
+	  (lambda (f)
+	    (if (ignore-errors (file-directory-p (expand-file-name f directory)))
+		(file-name-as-directory f)
+	      f))
+	  (delq
+	   nil
 	   (mapcar
 	    (lambda (l) (and (not (string-match-p (rx bol (* blank) eol) l)) l))
 	    (split-string

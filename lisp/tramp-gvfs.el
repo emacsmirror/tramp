@@ -1418,7 +1418,7 @@ If FILE-SYSTEM is non-nil, return file system attributes."
 (defun tramp-gvfs-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for Tramp files."
   (unless (tramp-compat-string-search "/" filename)
-    (tramp-compat-ignore-error file-missing
+    (ignore-error file-missing
       (all-completions
        filename
        (with-parsed-tramp-file-name (expand-file-name directory) nil

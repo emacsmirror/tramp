@@ -83,9 +83,7 @@ Add the extension of F, if existing."
     tramp-temp-name-prefix tramp-compat-temporary-file-directory)
    dir-flag (file-name-extension f t)))
 
-;; Threads have entered Emacs 26.1, `main-thread' in Emacs 27.1.  But
-;; then, they might not exist when Emacs is configured
-;; --without-threads.
+;; Threads might not exist when Emacs is configured --without-threads.
 (defconst tramp-compat-main-thread (bound-and-true-p main-thread)
   "The main thread of Emacs, if compiled --with-threads.")
 
@@ -94,11 +92,13 @@ Add the extension of F, if existing."
   (tramp-compat-funcall 'current-thread))
 
 (defsubst tramp-compat-thread-yield ()
-  "Yield the CPU to another thread."
+  "Yield the CPU to another thread.
+Do nothing if compiled --without-threads."
   (tramp-compat-funcall 'thread-yield))
 
 (defsubst tramp-compat-make-mutex (name)
-  "Create a mutex."
+  "Create a mutex.
+Do nothing if compiled --without-threads."
   (tramp-compat-funcall 'make-mutex name))
 
 (defmacro tramp-compat-with-mutex (mutex &rest body)

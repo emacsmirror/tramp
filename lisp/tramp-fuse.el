@@ -98,7 +98,7 @@
 (defun tramp-fuse-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for Tramp files."
   (tramp-fuse-remove-hidden-files
-   (tramp-compat-ignore-error file-missing
+   (ignore-error file-missing
      (all-completions
       filename
       (delete-dups
