@@ -1,3 +1,24 @@
+2023-03-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-accept-process-output): Don't use TIMEOUT
+	anymore, default it to 0.  When the connection uses a shared
+	socket possibly, accept also the output from other processes over
+	the same connection.  (Bug#61350)
+	(tramp-handle-file-notify-rm-watch, tramp-action-process-alive)
+	(tramp-action-out-of-band, tramp-process-one-action)
+	(tramp-interrupt-process):
+	* tramp-adb.el (tramp-adb-handle-make-process):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-notify-add-watch):
+	* tramp-sh.el (tramp-sh-handle-file-notify-add-watch):
+	* tramp-smb.el (tramp-smb-action-get-acl)
+	(tramp-smb-action-set-acl, tramp-smb-wait-for-output):
+	* tramp-sudoedit.el (tramp-sudoedit-action-sudo): Adapt callees.
+
+	* tramp.el (tramp-handle-make-process):
+	* tramp-sh.el (tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-sh-handle-file-notify-add-watch)
+	(tramp-maybe-open-connection): Set `shared-socket' property.
+
 2023-03-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-adb.el (tramp-adb-handle-file-name-all-completions):
