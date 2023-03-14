@@ -4592,9 +4592,11 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 	      (should-not (file-name-completion "a" tmp-name))
 	      ;; `file-name-completion' should not err out if
 	      ;; directory does not exist.  (Bug#61890)
-	      (should-not
-	       (file-name-completion
-		"a" (tramp-compat-file-name-concat tmp-name "fuzz")))
+	      ;; Ange-FTP does not support this.
+	      (unless (tramp--test-ange-ftp-p)
+		(should-not
+		 (file-name-completion
+		  "a" (tramp-compat-file-name-concat tmp-name "fuzz"))))
 	      ;; Ange-FTP does not support predicates.
 	      (unless (tramp--test-ange-ftp-p)
 		(should
