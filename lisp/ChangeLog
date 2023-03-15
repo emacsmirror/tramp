@@ -1,3 +1,11 @@
+2023-03-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-run-test): Add VEC argument.
+	(tramp-sh-handle-file-executable-p)
+	(tramp-sh-handle-file-readable-p)
+	(tramp-sh-handle-file-directory-p)
+	(tramp-sh-handle-file-writable-p): Adapt callees.
+
 2023-03-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-accept-process-output): Don't use TIMEOUT
