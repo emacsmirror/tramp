@@ -1,3 +1,7 @@
+2023-03-17  tefan Kangas  <stefankangas@gmail.com>
+
+	* tramp.texi (GVFS-based methods): Improve indexing.
+
 2023-03-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Ssh setup): Explain tramp-use-ssh-controlmaster-options
