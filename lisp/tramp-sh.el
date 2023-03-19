@@ -113,7 +113,7 @@ are `tramp-ssh-controlmaster-options' for ssh, and \"-share\" for PuTTY.
 Set it to nil, if you use Control* or Proxy* options in your ssh
 configuration.
 Set it to `suppress' if you want to disable settings in your
-\"~/.ssh/config¸\" or in your PuTTY session."
+\"~/.ssh/config\" file or in your PuTTY session."
   :group 'tramp
   :version "30.1"
   :type '(choice (const :tag "Set ControlMaster" t)
