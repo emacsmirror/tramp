@@ -1,3 +1,7 @@
+2023-03-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-yn-prompt-regexp): Fix regexp.
+
 2023-03-18  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-get-process, tramp-message)
