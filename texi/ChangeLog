@@ -1,3 +1,9 @@
+2023-03-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Ssh setup): Use `tramp-use-connection-share'.
+	Describe its settings for PuTTY.
+	(Remote processes): Use `tramp-use-connection-share'.
+
 2023-03-17  tefan Kangas  <stefankangas@gmail.com>
 
 	* tramp.texi (GVFS-based methods): Improve indexing.
