@@ -1,3 +1,8 @@
+2023-03-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-gvfs.el (while-no-input-ignore-events): Add `dbus-event'
+	for older Emacs versions.
+
 2023-03-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-yn-prompt-regexp): Fix regexp.
