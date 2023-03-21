@@ -4,7 +4,7 @@
 	for older Emacs versions.
 
 	* tramp-sh.el (tramp-use-ssh-controlmaster-options):
-	Revert alias declaration.  (Bug#62295, Bug#62329)
+	Invert alias declaration.  (Bug#62295, Bug#62329)
 
 2023-03-19  Michael Albinus  <michael.albinus@gmx.de>
 
