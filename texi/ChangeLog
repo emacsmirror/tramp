@@ -1,3 +1,9 @@
+2023-03-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Auto-save File Lock and Backup):
+	Mention remote-file-name-inhibit-auto-save.
+	(Frequently Asked Questions): Describe, how to suppress auto-save.
+
 2023-03-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Ssh setup): Use `tramp-use-connection-share'.
