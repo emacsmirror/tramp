@@ -1722,11 +1722,11 @@ default values are used."
 	  (unless (or nodefault non-essential
 		      (assoc method tramp-methods))
 	    (tramp-user-error
-	     v "Method `%s' is not known." method))
+	     v "Method `%s' is not known" method))
 	  ;; Only some methods from tramp-sh.el do support multi-hops.
 	  (unless (or (null hop) nodefault non-essential (tramp-multi-hop-p v))
 	    (tramp-user-error
-	     v "Method `%s' is not supported for multi-hops." method)))))))
+	     v "Method `%s' is not supported for multi-hops" method)))))))
 
 (put #'tramp-dissect-file-name 'tramp-suppress-trace t)
 
@@ -1755,7 +1755,7 @@ See `tramp-dissect-file-name' for details."
     ;; Only some methods from tramp-sh.el do support multi-hops.
     (unless (or nodefault non-essential (tramp-multi-hop-p v))
       (tramp-user-error
-       v "Method `%s' is not supported for multi-hops."
+       v "Method `%s' is not supported for multi-hops"
        (tramp-file-name-method v)))
     ;; Return result.
     v))
@@ -4928,7 +4928,7 @@ Do not set it manually, it is used buffer-local in `tramp-get-lock-pid'.")
 	(unless (tramp-multi-hop-p item)
 	  (setq tramp-default-proxies-alist saved-tdpa)
 	  (tramp-user-error
-	   vec "Method `%s' is not supported for multi-hops."
+	   vec "Method `%s' is not supported for multi-hops"
 	   (tramp-file-name-method item)))))
 
     ;; Some methods ("su", "sg", "sudo", "doas", "ksu") do not use the

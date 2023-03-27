@@ -2150,7 +2150,7 @@ the uid and gid from FILENAME."
 		 cmd-result)
 	      (tramp-error-with-buffer
 	       nil v 'file-error
-	       "Copying directly failed, see buffer `%s' for details."
+	       "Copying directly failed, see buffer `%s' for details"
 	       (buffer-name)))))
 
 	 ;; We are on the local host.

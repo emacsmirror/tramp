@@ -1,3 +1,12 @@
+2023-03-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el:
+	* tramp-cmds.el:
+	* tramp-crypt.el:
+	* tramp-gvfs.el:
+	* tramp-sh.el:
+	* tramp-smb.el: Fix error messages.
+
 2023-03-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-gvfs.el (tramp-gvfs-listmountableinfo)
