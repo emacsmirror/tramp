@@ -3968,7 +3968,7 @@ Let-bind it when necessary.")
         ;; Some handlers for `tramp-get-remote-uid' return nil if they
         ;; can't get the UID; always return -1 in this case for
         ;; consistency.
-        -1)))
+        tramp-unknown-id-integer)))
 
 (defun tramp-handle-access-file (filename string)
   "Like `access-file' for Tramp files."

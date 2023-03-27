@@ -1147,8 +1147,8 @@ Operations not mentioned here will be handled by the normal Emacs functions.")
     (unless (tramp-get-remote-ln v)
       (tramp-error
        v 'file-error
-       (concat "Making a symbolic link. "
-	       "ln(1) does not exist on the remote host."))))
+       (concat "Making a symbolic link: "
+	       "ln(1) does not exist on the remote host"))))
 
   (tramp-skeleton-handle-make-symbolic-link target linkname ok-if-already-exists
     (and (tramp-send-command-and-check
