@@ -2205,7 +2205,7 @@ the uid and gid from FILENAME."
 			  "%s %s %s" cmd
 			  (tramp-shell-quote-argument localname1)
 			  (tramp-shell-quote-argument tmpfile))
-		       "Copying directly failed, see buffer `%s' for details."
+		       "Copying directly failed, see buffer `%s' for details"
 		       (tramp-get-buffer v))
 		      ;; We must change the ownership as remote user.
 		      ;; Since this does not work reliable, we also
@@ -2238,7 +2238,7 @@ the uid and gid from FILENAME."
 			  "cp -f -p %s %s"
 			  (tramp-shell-quote-argument tmpfile)
 			  (tramp-shell-quote-argument localname2))
-		       "Copying directly failed, see buffer `%s' for details."
+		       "Copying directly failed, see buffer `%s' for details"
 		       (tramp-get-buffer v)))
 		     (t1
 		      (tramp-run-real-handler
