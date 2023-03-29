@@ -1,3 +1,7 @@
+2023-03-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Remote shell setup): Clarify use of ssh RemoteCommand.
+
 2023-03-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Default Method): OpenSSH for MS Windows can be used.
