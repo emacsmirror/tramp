@@ -1,3 +1,8 @@
+2023-04-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test38-find-backup-file-name):
+	Add dummy cleanup form.
+
 2023-03-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test34-connection-local-variables): Fix test.
