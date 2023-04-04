@@ -4,6 +4,9 @@
 	`create-lockfiles' is non-nil or `remote-file-name-inhibit-locks'
 	is nil.  (Bug#62614)
 
+	* tramp-sh.el (tramp-open-connection-setup-interactive-shell):
+	Check for `tramp-string-empty-or-nil-p'.
+
 2023-04-03  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-handle-file-acl)
