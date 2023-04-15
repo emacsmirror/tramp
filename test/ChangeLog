@@ -1,3 +1,7 @@
+2023-04-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (.PHONY, %.log): Add FORCE.
+
 2023-04-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test09-insert-file-contents): Adapt test.

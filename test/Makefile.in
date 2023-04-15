@@ -34,7 +34,7 @@ SELECTOR	?= t
 
 WRITE_LOG	?=
 
-.PHONY: all check test clean distclean
+.PHONY: all check test clean distclean FORCE
 
 # We want to keep *.elc files.
 .SECONDARY:
@@ -53,7 +53,7 @@ check test: $(TESTS)
 	$(EM) -l bytecomp -f batch-byte-compile $?
 
 %.log: WRITE_LOG = > $@.log 2>&1
-%.log: %
+%.log: % FORCE
 	@echo
 
 clean:
