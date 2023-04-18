@@ -23,9 +23,10 @@ The Makefile in this directory supports the following targets:
   If $REMOTE_TEMPORARY_FILE_DIRECTORY is set, only tramp-tests.el is
   used.
 
-* make <filename>
+* make <filename>  -or-  make <filename>.log
   Run all tests declared in <filename>.el.  <filename> can be either
-  tramp-archive-tests or tramp-tests.
+  tramp-archive-tests or tramp-tests.  If the target is
+  <filename>.log, the output of the test run will be redirected there.
 
 ERT offers selectors, which make it possible to filter out which test
 cases shall run.  The make variable $(SELECTOR) gives you a simple
