@@ -235,7 +235,7 @@ see its function help for a description of the format."
 		     (lambda (line)
                        (when (string-match
 			      (rx bol (* space) (group (+ (not space)))
-				  (? (+ space) (group (* (not space)))) eol)
+				  (? (+ space) (group (+ (not space)))) eol)
 			      line)
 			 (or (match-string 2 line) (match-string 1 line))))
                      lines)))
