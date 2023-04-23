@@ -233,12 +233,10 @@ see its function help for a description of the format."
              (lines (split-string raw-list "\n" 'omit))
              (names (mapcar
 		     (lambda (line)
-                       (when
-			   (string-match
-			    (rx bol (* space)
-				(group (+ (not space)))
-				(? (+ space) (group (* (not space)))) eol)
-			    line)
+                       (when (string-match
+			      (rx bol (* space) (group (+ (not space)))
+				  (? (+ space) (group (* (not space)))) eol)
+			      line)
 			 (or (match-string 2 line) (match-string 1 line))))
                      lines)))
     (mapcar (lambda (name) (list nil name)) (delq nil names))))
