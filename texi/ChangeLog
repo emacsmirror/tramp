@@ -1,3 +1,9 @@
+2023-04-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Cleanup remote connections):
+	Document tramp-cleanup-some-buffers and
+	tramp-cleanup-some-buffers-hook.
+
 2023-04-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods): Add flatpak.
