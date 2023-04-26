@@ -1,3 +1,41 @@
+2023-04-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-post-process-creation): New defun.
+	(tramp-handle-make-process):
+	* tramp-adb.el (tramp-adb-maybe-open-connection):
+	* tramp-crypt.el (tramp-crypt-maybe-open-connection):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-notify-add-watch)
+	(tramp-gvfs-maybe-open-connection):
+	* tramp-rclone.el (tramp-rclone-maybe-open-connection):
+	* tramp-sh.el (tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-sh-handle-file-notify-add-watch)
+	(tramp-maybe-open-connection):
+	* tramp-smb.el (tramp-smb-handle-copy-directory)
+	(tramp-smb-handle-file-acl, tramp-smb-handle-set-file-acl)
+	(tramp-smb-maybe-open-connection):
+	* tramp-sshfs.el (tramp-sshfs-maybe-open-connection):
+	* tramp-sudoedit.el (tramp-sudoedit-maybe-open-connection)
+	(tramp-sudoedit-send-command): Use it.
+
+	* tramp-cmds.el (tramp-tainted-remote-process-buffers): New defvar.
+	(tramp-cleanup-dired-buffer-p)
+	(tramp-delete-tainted-remote-process-buffer-function)
+	(kill-buffer-hook, tramp-cleanup-remote-process-p)
+	(tramp-cleanup-some-buffers): New defuns.
+	(tramp-cleanup-some-buffers-hook): New defcustom.  Add
+	`buffer-file-name', `tramp-cleanup-dired-buffer-p' and
+	`tramp-cleanup-remote-process-p' to the hook.
+	(kill-buffer-hook):
+	Add `tramp-delete-tainted-remote-process-buffer-function'.
+	(tramp-cleanup-all-buffers): Rework.
+
+	* tramp.el (tramp-handle-make-process):
+	* tramp-adb.el (tramp-adb-handle-make-process):
+	* tramp-sh.el (tramp-sh-handle-make-process):
+	Use `tramp-taint-remote-process-buffer'.
+
+	* tramp-compat.el (tramp-compat-always): New defalias.
+
 2023-04-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-container.el (tramp-flatpak-program): New defcustom.
