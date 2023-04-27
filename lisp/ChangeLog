@@ -1,3 +1,10 @@
+2023-04-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-remote-path): Add ;;;###tramp-autoload cookie.
+	(Bug#63102)
+
+	* tramp-gvfs.el (tramp-gvfs-maybe-open-connection): Use `assoc-default'.
+
 2023-04-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-post-process-creation): New defun.
@@ -785,8 +792,8 @@
 
 	* tramp-docker.el: Format header lines.
 	(tramp-docker): Remove custom group.
-	(tramp-docker-program, tramp-docker-method): Add
-	;;;###tramp-autoload cookie.
+	(tramp-docker-program, tramp-docker-method):
+	Add ;;;###tramp-autoload cookie.
 	(tramp-docker-program): Change group to `tramp'.  Add version.
 	(tramp-docker--add-method, tramp-docker--remove-method)
 	(tramp-docker-unload-function, tramp-docker-setup): Remove functions.
