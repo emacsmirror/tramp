@@ -1,3 +1,22 @@
+2023-05-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-file-user-uid)
+	(tramp-handle-file-group-gid, tramp-read-id-output):
+	* tramp-archive.el (tramp-archive-handle-file-group-gid):
+	(tramp-archive-handle-file-user-uid): Fix docstring.
+
+	* tramp.el (tramp-file-name-for-operation):
+	* tramp-adb.el (tramp-adb-file-name-handler-alist):
+	* tramp-archive.el (tramp-archive-file-name-handler-alist):
+	* tramp-crypt.el (tramp-crypt-file-name-handler-alist):
+	* tramp-gvfs.el (tramp-gvfs-file-name-handler-alist):
+	* tramp-rclone.el (tramp-rclone-file-name-handler-alist):
+	* tramp-sh.el (tramp-sh-file-name-handler-alist):
+	* tramp-smb.el (tramp-smb-file-name-handler-alist):
+	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist):
+	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler-alist):
+	Order alphabetically.
+
 2023-05-03  Jim Porter  <jporterbugs@gmail.com>
 
 	* tramp.el (tramp-handle-file-group-gid):
