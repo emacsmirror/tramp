@@ -69,7 +69,8 @@
 (defconst tramp-compat-temporary-file-directory
   (file-name-as-directory
    (if-let ((xdg (xdg-cache-home))
-	    ((file-directory-p xdg)))
+	    ((file-directory-p xdg))
+	    ((file-writable-p xdg)))
        ;; We can use `file-name-concat' starting with Emacs 28.1.
        (prog1 (setq xdg (concat (file-name-as-directory xdg) "emacs"))
 	 (make-directory xdg t))
