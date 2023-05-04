@@ -665,6 +665,7 @@ The `sudo' program appears to insert a `^@' character into the prompt."
 	 "Sorry, try again."
 	 "Name or service not known"
 	 "Host key verification failed."
+	 "Authentication failed"
 	 "No supported authentication methods left to try!"
 	 (: "Login " (| "Incorrect" "incorrect"))
 	 (: "Connection " (| "refused" "closed"))

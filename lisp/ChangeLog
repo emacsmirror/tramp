@@ -1,3 +1,8 @@
+2023-05-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-wrong-passwd-regexp): Add "Authentication
+	failed" string (from doas).
+
 2023-05-03  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-file-user-uid)
