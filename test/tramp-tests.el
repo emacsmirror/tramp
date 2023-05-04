@@ -2440,15 +2440,19 @@ This checks also `file-name-as-directory', `file-name-directory',
 		`(,(expand-file-name tmp-name) 0)))
 	      (should (string-equal (buffer-string) "foo"))
 	      (should (= point (point))))
-	    (let ((point (point)))
-	      (replace-string-in-region "foo" "bar" (point-min) (point-max))
-	      (goto-char point)
-	      (should
-	       (equal
-		(insert-file-contents tmp-name nil nil nil 'replace)
-		`(,(expand-file-name tmp-name) 3)))
-	      (should (string-equal (buffer-string) "foo"))
-	      (should (= point (point))))
+	    ;; Insert another string.
+	    ;; `replace-string-in-region' was introduced in Emacs 28.1.
+	    (when (tramp--test-emacs28-p)
+	      (let ((point (point)))
+		(with-no-warnings
+		  (replace-string-in-region "foo" "bar" (point-min) (point-max)))
+		(goto-char point)
+		(should
+		 (equal
+		  (insert-file-contents tmp-name nil nil nil 'replace)
+		  `(,(expand-file-name tmp-name) 3)))
+		(should (string-equal (buffer-string) "foo"))
+		(should (= point (point)))))
 	    ;; Error case.
 	    (delete-file tmp-name)
 	    (should-error
@@ -7444,10 +7448,7 @@ This is needed in timer functions as well as process filters and sentinels."
   "Check parallel asynchronous requests.
 Such requests could arrive from timers, process filters and
 process sentinels.  They shall not disturb each other."
-  :tags (append '(:expensive-test :tramp-asynchronous-processes)
-		(and (or (getenv "EMACS_HYDRA_CI")
-                         (getenv "EMACS_EMBA_CI"))
-                     '(:unstable)))
+  :tags '(:expensive-test :tramp-asynchronous-processes)
   (skip-unless (tramp--test-enabled))
   (skip-unless (tramp--test-supports-processes-p))
   (skip-unless (not (tramp--test-container-p)))
@@ -7515,14 +7516,12 @@ process sentinels.  They shall not disturb each other."
                   (when buffers
                     (let ((time (float-time))
                           (default-directory tmp-name)
-                          (file (buffer-name (seq-random-elt buffers)))
-			  ;; A remote operation in a timer could
-			  ;; confuse Tramp heavily.  So we ignore this
-			  ;; error here.
-			  (debug-ignored-errors
-			   (cons 'remote-file-error debug-ignored-errors)))
+                          (file (buffer-name (seq-random-elt buffers))))
                       (tramp--test-message
                        "Start timer %s %s" file (current-time-string))
+		      (dired-uncache file)
+		      (tramp--test-message
+		       "Continue timer %s %s" file (file-attributes file))
 		      (vc-registered file)
                       (tramp--test-message
                        "Stop timer %s %s" file (current-time-string))
@@ -7738,114 +7737,8 @@ process sentinels.  They shall not disturb each other."
 	  (let ((auth-sources `(,netrc-file)))
 	    (should (file-exists-p ert-remote-temporary-file-directory)))))))))
 
-(ert-deftest tramp-test48-threads ()
-  "Check that Tramp cooperates with threads."
-  (skip-unless (tramp--test-enabled))
-  (skip-unless (featurep 'threads))
-  (skip-unless (= (length (with-no-warnings (all-threads))) 1))
-  (skip-unless (not (with-no-warnings (thread-last-error))))
-  (skip-unless (boundp main-thread))
-  ;; For the time being it works only in the feature branch.
-  (skip-unless
-   (string-equal (or emacs-repository-branch "") "feature/tramp-thread-safe"))
-
-  (tramp--test-instrument-test-case 0
-  (with-no-warnings
-    (with-timeout (60 (tramp--test-timeout-handler))
-      ;; We cannot bind the variables dynamically; they are used in the threads.
-      (defvar tmp-name1 (tramp--test-make-temp-name))
-      (defvar tmp-name2 (tramp--test-make-temp-name))
-      (defvar tmp-mutex (make-mutex "mutex"))
-      (defvar tmp-condvar1 (make-condition-variable tmp-mutex "condvar1"))
-      (defvar tmp-condvar2 (make-condition-variable tmp-mutex "condvar2"))
-
-      ;; Rename simple file.
-      (unwind-protect
-	  (let (tmp-thread1 tmp-thread2)
-	    (write-region "foo" nil tmp-name1)
-	    (should (file-exists-p tmp-name1))
-	    (should-not (file-exists-p tmp-name2))
-
-	    (should (mutexp tmp-mutex))
-	    (should (condition-variable-p tmp-condvar1))
-	    (should (condition-variable-p tmp-condvar2))
-
-	    ;; This thread renames `tmp-name1' to `tmp-name2' twice.
-	    (setq
-	     tmp-thread1
-	     (make-thread
-	      (lambda ()
-		;; Rename first time.
-		(rename-file tmp-name1 tmp-name2)
-		;; Notify thread2.
-		(with-mutex (condition-mutex tmp-condvar2)
-		  (condition-notify tmp-condvar2 t))
-		;; Rename second time, once we've got notification from thread2.
-		(with-mutex (condition-mutex tmp-condvar1)
-		  (condition-wait tmp-condvar1))
-		(rename-file tmp-name1 tmp-name2))
-	      "thread1"))
-
-	    (should (threadp tmp-thread1))
-	    (should (thread-live-p tmp-thread1))
-
-	    ;; This thread renames `tmp-name2' to `tmp-name1' twice.
-	    (setq
-	     tmp-thread2
-	     (make-thread
-	      (lambda ()
-		;; Rename first time, once we've got notification from thread1.
-		(with-mutex (condition-mutex tmp-condvar2)
-		  (condition-wait tmp-condvar2))
-		(rename-file tmp-name2 tmp-name1)
-		;; Notify thread1.
-		(with-mutex (condition-mutex tmp-condvar1)
-		  (condition-notify tmp-condvar1 t))
-		;; Rename second time, once we've got notification from
-		;; the main thread.
-		(with-mutex (condition-mutex tmp-condvar2)
-		  (condition-wait tmp-condvar2))
-		(rename-file tmp-name2 tmp-name1))
-	      "thread2"))
-
-	    (should (threadp tmp-thread2))
-	    (should (thread-live-p tmp-thread2))
-	    (should (= (length (all-threads)) 3))
-
-	    ;; Wait for thread1.
-	    (thread-join tmp-thread1)
-	    ;; Checks.
-	    (should-not (thread-live-p tmp-thread1))
-	    (should (= (length (all-threads)) 2))
-	    (should-not (thread-last-error))
-	    (should (file-exists-p tmp-name2))
-	    (should-not (file-exists-p tmp-name1))
-
-	    ;; Notify thread2.
-	    (with-mutex (condition-mutex tmp-condvar2)
-	      (condition-notify tmp-condvar2 t))
-
-	    ;; Wait for thread2.
-	    (thread-join tmp-thread2)
-	    ;; Checks.
-	    (should-not (thread-live-p tmp-thread2))
-	    (should (= (length (all-threads)) 1))
-	    (should-not (thread-last-error))
-	    (should (file-exists-p tmp-name1))
-	    (should-not (file-exists-p tmp-name2)))
-
-	;; Cleanup.
-	(ignore-errors (delete-file tmp-name1))
-	(ignore-errors (delete-file tmp-name2))
-	;; We could have spurious threads still running; wait for them to die.
-	(while (cdr (all-threads))
-	  (thread-signal (cadr (all-threads)) 'error nil)
-	  (thread-yield))
-	;; Cleanup errors.
-	(ignore-errors (thread-last-error 'cleanup)))))))
-
 ;; This test is inspired by Bug#29163.
-(ert-deftest tramp-test49-auto-load ()
+(ert-deftest tramp-test48-auto-load ()
   "Check that Tramp autoloads properly."
   ;; If we use another syntax but `default', Tramp is already loaded
   ;; due to the `tramp-change-syntax' call.
@@ -7870,7 +7763,7 @@ process sentinels.  They shall not disturb each other."
 	(mapconcat #'shell-quote-argument load-path " -L ")
 	(shell-quote-argument code)))))))
 
-(ert-deftest tramp-test49-delay-load ()
+(ert-deftest tramp-test48-delay-load ()
   "Check that Tramp is loaded lazily, only when needed."
   ;; Tramp is neither loaded at Emacs startup, nor when completing a
   ;; non-Tramp file name like "/foo".  Completing a Tramp-alike file
@@ -7900,7 +7793,7 @@ process sentinels.  They shall not disturb each other."
 	  (mapconcat #'shell-quote-argument load-path " -L ")
 	  (shell-quote-argument (format code tm)))))))))
 
-(ert-deftest tramp-test49-recursive-load ()
+(ert-deftest tramp-test48-recursive-load ()
   "Check that Tramp does not fail due to recursive load."
   (skip-unless (tramp--test-enabled))
 
@@ -7924,7 +7817,7 @@ process sentinels.  They shall not disturb each other."
 	  (mapconcat #'shell-quote-argument load-path " -L ")
 	  (shell-quote-argument code))))))))
 
-(ert-deftest tramp-test49-remote-load-path ()
+(ert-deftest tramp-test48-remote-load-path ()
   "Check that Tramp autoloads its packages with remote `load-path'."
   ;; `tramp-cleanup-all-connections' is autoloaded from tramp-cmds.el.
   ;; It shall still work, when a remote file name is in the
@@ -7949,7 +7842,7 @@ process sentinels.  They shall not disturb each other."
 	(mapconcat #'shell-quote-argument load-path " -L ")
 	(shell-quote-argument code)))))))
 
-(ert-deftest tramp-test50-unload ()
+(ert-deftest tramp-test49-unload ()
   "Check that Tramp and its subpackages unload completely.
 Since it unloads Tramp, it shall be the last test to run."
   :tags '(:expensive-test)
@@ -8063,7 +7956,6 @@ If INTERACTIVE is non-nil, the tests are run interactively."
 ;;   async processes.  Check, why they don't run stable.
 ;; * Check, why direct async processes do not work for
 ;;   `tramp-test45-asynchronous-requests'.
-;; * Fix `tramp-test48-threads'.
 
 (provide 'tramp-tests)
 

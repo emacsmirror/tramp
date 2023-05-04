@@ -895,7 +895,7 @@ This tests also `file-executable-p', `file-writable-p' and `set-file-modes'."
     (should (integerp (with-no-warnings (file-user-uid))))
     (should (integerp (with-no-warnings (file-group-gid))))))
 
-(ert-deftest tramp-archive-test49-auto-load ()
+(ert-deftest tramp-archive-test48-auto-load ()
   "Check that `tramp-archive' autoloads properly."
   :tags '(:expensive-test)
   (skip-unless tramp-archive-enabled)
@@ -940,7 +940,7 @@ This tests also `file-executable-p', `file-writable-p' and `set-file-modes'."
 	       (format "(setq tramp-archive-enabled %s)" enabled))
 	      (shell-quote-argument (format code file)))))))))))
 
-(ert-deftest tramp-archive-test49-delay-load ()
+(ert-deftest tramp-archive-test48-delay-load ()
   "Check that `tramp-archive' is loaded lazily, only when needed."
   :tags '(:expensive-test)
   (skip-unless tramp-archive-enabled)

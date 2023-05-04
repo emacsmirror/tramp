@@ -1,3 +1,16 @@
+2023-05-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test48-auto-load)
+	(tramp-archive-test48-delay-load): Rename.
+
+	* tramp-tests.el (tramp-test09-insert-file-contents): Adapt test.
+	(tramp-test45-asynchronous-requests): Remove :unstable tag.
+	Adapt test.
+	(tramp-test48-threads): Remove.
+	(tramp-test48-auto-load, tramp-test48-delay-load)
+	(tramp-test48-recursive-load, tramp-test48-remote-load-path)
+	(tramp-test49-unload): Rename.
+
 2023-05-03  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test44-user-group-ids):
