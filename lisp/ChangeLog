@@ -1,7 +1,26 @@
 2023-05-04  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-wrong-passwd-regexp): Add "Authentication
-	failed" string (from doas).
+	* tramp.el (tramp-debug-to-file): Fix docstring.
+	(tramp-wrong-passwd-regexp): Add "Authentication failed" string
+	(from doas).
+	(tramp-debug-message): Comment thread insertion.  Simplify
+	backtrace check.
+	(tramp-mutex, tramp-get-mutex): Remove.
+	(tramp-file-name-handler): Don't handle threads.
+	(with-tramp-locked-connection): Suppress timers.  (Bug#49954, Bug60534)
+
+	* tramp-cache.el (tramp-cache-print): Don't check for `mutexp'.
+
+	* tramp-compat.el (xdg): Require.
+	(tramp-compat-temporary-file-directory): Set it to
+	$XDG_CACHE_HOME/emacs if possible.
+	(tramp-compat-main-thread, tramp-compat-current-thread)
+	(tramp-compat-thread-yield, tramp-compat-make-mutex)
+	(tramp-compat-with-mutex): Remove.
+
+	* tramp-ftp.el (ange-ftp-ftp-process-buffer): Don't declare.
+	(tramp-ftp-file-name-handler): Don't set "process-name" property.
+	Move setting tramp-file-name-method down.
 
 2023-05-03  Michael Albinus  <michael.albinus@gmx.de>
 

@@ -31,7 +31,6 @@
 (require 'tramp)
 
 ;; Pacify byte-compiler.
-(declare-function ange-ftp-ftp-process-buffer "ange-ftp")
 (defvar ange-ftp-ftp-name-arg)
 (defvar ange-ftp-ftp-name-res)
 (defvar ange-ftp-name-format)
@@ -126,16 +125,7 @@ pass to the OPERATION."
 	  ;; "ftp" method is used in the Tramp file name.  So we unset
 	  ;; those values.
 	  (ange-ftp-ftp-name-arg "")
-	  ange-ftp-ftp-name-res
-	  (v (tramp-dissect-file-name
-	      (apply #'tramp-file-name-for-operation operation args) t)))
-      (setf (tramp-file-name-method v) tramp-ftp-method)
-      ;; Set "process-name" for thread support.
-      (tramp-set-connection-property
-       v "process-name"
-       (ange-ftp-ftp-process-buffer
-	(tramp-file-name-host v) (tramp-file-name-user v)))
-
+	  ange-ftp-ftp-name-res)
       (cond
        ;; If argument is a symlink, `file-directory-p' and
        ;; `file-exists-p' call the traversed file recursively.  So we
@@ -157,7 +147,9 @@ pass to the OPERATION."
 		   (lambda (operation &rest args)
 		     (tramp-archive-run-real-handler operation args))))
 	  (prog1 (apply #'ange-ftp-hook-function operation args)
-	    (tramp-set-connection-property v "started" t))))
+	    (let ((v (tramp-dissect-file-name (car args) t)))
+	      (setf (tramp-file-name-method v) tramp-ftp-method)
+	      (tramp-set-connection-property v "started" t)))))
 
        ;; If the second argument of `copy-file' or `rename-file' is a
        ;; remote file name but via FTP, ange-ftp doesn't check this.

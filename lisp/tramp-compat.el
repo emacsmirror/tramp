@@ -35,6 +35,7 @@
 (require 'parse-time)
 (require 'shell)
 (require 'subr-x)
+(require 'xdg)
 
 (declare-function tramp-error "tramp")
 (declare-function tramp-tramp-file-p "tramp")
@@ -64,9 +65,15 @@
      (with-no-warnings (funcall ,function ,@arguments))))
 
 ;; We must use a local directory.  If it is remote, we could run into
-;; an infloop.
+;; an infloop.  We try to follow the XDG specification, for security reasons.
 (defconst tramp-compat-temporary-file-directory
-  (eval (car (get 'temporary-file-directory 'standard-value)) t)
+  (file-name-as-directory
+   (if-let ((xdg (xdg-cache-home))
+	    ((file-directory-p xdg)))
+       ;; We can use `file-name-concat' starting with Emacs 28.1.
+       (prog1 (setq xdg (concat (file-name-as-directory xdg) "emacs"))
+	 (make-directory xdg t))
+     (eval (car (get 'temporary-file-directory 'standard-value)) t)))
   "The default value of `temporary-file-directory'.")
 
 (defsubst tramp-compat-make-temp-name ()
@@ -82,32 +89,6 @@ Add the extension of F, if existing."
    (expand-file-name
     tramp-temp-name-prefix tramp-compat-temporary-file-directory)
    dir-flag (file-name-extension f t)))
-
-;; Threads might not exist when Emacs is configured --without-threads.
-(defconst tramp-compat-main-thread (bound-and-true-p main-thread)
-  "The main thread of Emacs, if compiled --with-threads.")
-
-(defsubst tramp-compat-current-thread ()
-  "The current thread, or nil if compiled --without-threads."
-  (tramp-compat-funcall 'current-thread))
-
-(defsubst tramp-compat-thread-yield ()
-  "Yield the CPU to another thread.
-Do nothing if compiled --without-threads."
-  (tramp-compat-funcall 'thread-yield))
-
-(defsubst tramp-compat-make-mutex (name)
-  "Create a mutex.
-Do nothing if compiled --without-threads."
-  (tramp-compat-funcall 'make-mutex name))
-
-(defmacro tramp-compat-with-mutex (mutex &rest body)
-  "Invoke BODY with MUTEX held, releasing MUTEX when done.
-This is the simplest safe way to acquire and release a mutex."
-  (declare (indent 1) (debug t))
-  `(if (mutexp ,mutex)
-       (with-mutex ,mutex ,@body)
-     ,@body))
 
 ;; `file-modes', `set-file-modes' and `set-file-times' got argument
 ;; FLAG in Emacs 28.1.

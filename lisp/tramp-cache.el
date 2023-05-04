@@ -496,12 +496,12 @@ PROPERTIES is a list of file properties (strings)."
 		(cons property (gethash property hash tramp-cache-undefined)))
 	      ,properties)))
        (unwind-protect (progn ,@body)
-       ;; Reset PROPERTIES.  Recompute hash, it could have been flushed.
-       (setq hash (tramp-get-hash-table ,key))
-       (dolist (value values)
-	 (if (not (eq (cdr value) tramp-cache-undefined))
-	     (puthash (car value) (cdr value) hash)
-	   (remhash (car value) hash)))))))
+	 ;; Reset PROPERTIES.  Recompute hash, it could have been flushed.
+	 (setq hash (tramp-get-hash-table ,key))
+	 (dolist (value values)
+	   (if (not (eq (cdr value) tramp-cache-undefined))
+	       (puthash (car value) (cdr value) hash)
+	     (remhash (car value) hash)))))))
 
 ;;;###tramp-autoload
 (defun tramp-cache-print (table)
@@ -531,8 +531,7 @@ PROPERTIES is a list of file properties (strings)."
 		       (prin1-to-string key))
 		     (if (hash-table-p value)
 			 (tramp-cache-print value)
-		       (if (or (bufferp value)
-			       (mutexp value))
+		       (if (bufferp value)
 			   (prin1-to-string (prin1-to-string value))
 			 (prin1-to-string value))))))
 	   (setq result (if result (concat result " " tmp) tmp))))
