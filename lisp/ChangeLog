@@ -1,3 +1,9 @@
+2023-05-05  Mattias Engdegård  <mattiase@acm.org>
+
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Test whether -N
+	is understood by ls since that option is used along with --dired.
+	Remove -N when we remove --dired.  (Bug#63142)
+
 2023-05-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-debug-to-file): Fix docstring.
