@@ -1,3 +1,8 @@
+2023-05-09  Benson Chu  <bensonchu457@gmail.com>  (tiny change)
+
+	* tramp-sh.el (tramp-ssh-controlmaster-options): Should never
+	return nil, but empty string.
+
 2023-05-05  Mattias Engdegård  <mattiase@acm.org>
 
 	* tramp-sh.el (tramp-sh-handle-insert-directory): Test whether -N
