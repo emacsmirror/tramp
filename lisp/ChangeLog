@@ -1,3 +1,7 @@
+2023-05-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-gvfs.el (initialize): Ignore D-Bus errors.
+
 2023-05-09  Benson Chu  <bensonchu457@gmail.com>  (tiny change)
 
 	* tramp-sh.el (tramp-ssh-controlmaster-options): Should never
