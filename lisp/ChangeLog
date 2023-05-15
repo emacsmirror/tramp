@@ -1,3 +1,11 @@
+2023-05-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-crypt.el (tramp-crypt-handle-file-exists-p): New defun.
+	(tramp-crypt-file-name-handler-alist): Add it.
+
+	* tramp-smb.el (tramp-smb-handle-copy-file): Flush proper file
+	properties.
+
 2023-05-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-gvfs.el (initialize): Ignore D-Bus errors.
