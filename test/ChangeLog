@@ -1,3 +1,8 @@
+2023-05-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive--test-emacs28-p): New defun.
+	(tramp-archive-test47-auto-load): Extend test.
+
 2023-05-13  Mattias Engdegård  <mattiase@acm.org>
 
 	* tramp-archive-tests.el (tramp-archive-test16-directory-files):
