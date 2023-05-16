@@ -73,6 +73,7 @@
 (defvar tramp-persistency-file-name)
 (defvar tramp-remote-path)
 (defvar tramp-remote-process-environment)
+(defvar tramp-use-connection-share)
 
 ;; Needed for Emacs 27.
 (defvar lock-file-name-transforms)
@@ -6933,6 +6934,13 @@ This does not support external Emacs calls."
   "Check, whether an out-of-band method is used."
   (tramp-method-out-of-band-p tramp-test-vec 1))
 
+(defun tramp--test-putty-p ()
+  "Check, whether the method method usaes PuTTY.
+This does not support connection share for more than two connections."
+  (member
+   (file-remote-p ert-remote-temporary-file-directory 'method)
+   '("plink" "plinkx" "pscp" "psftp")))
+
 (defun tramp--test-rclone-p ()
   "Check, whether the remote host is offered by rclone.
 This requires restrictions of file name syntax."
@@ -7491,6 +7499,10 @@ process sentinels.  They shall not disturb each other."
             (cond
              ((getenv "EMACS_HYDRA_CI") 10)
              (t 1)))
+	   ;; PuTTY-based methods can only share up to 10 connections.
+	   (tramp-use-connection-share
+	    (if (and (tramp--test-putty-p) (>= number-proc 10))
+		'suppress (bound-and-true-p tramp-use-connection-share)))
 	   ;; This is when all timers start.  We check inside the
 	   ;; timer function, that we don't exceed timeout.
 	   (timer-start (current-time))

@@ -1,3 +1,9 @@
+2023-05-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-use-connection-share): Declare.
+	(tramp--test-putty-p): New defun.
+	(tramp-test45-asynchronous-requests): Tweak test.
+
 2023-05-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive--test-emacs28-p): New defun.
