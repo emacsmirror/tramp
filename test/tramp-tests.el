@@ -7494,15 +7494,15 @@ process sentinels.  They shall not disturb each other."
                (string-to-number (getenv "REMOTE_PARALLEL_PROCESSES"))))
 	     ((getenv "EMACS_HYDRA_CI") 5)
              (t 10)))
+	   ;; PuTTY-based methods can only share up to 10 connections.
+	   (tramp-use-connection-share
+	    (if (and (tramp--test-putty-p) (>= number-proc 10))
+		'suppress (bound-and-true-p tramp-use-connection-share)))
            ;; On hydra, timings are bad.
            (timer-repeat
             (cond
              ((getenv "EMACS_HYDRA_CI") 10)
              (t 1)))
-	   ;; PuTTY-based methods can only share up to 10 connections.
-	   (tramp-use-connection-share
-	    (if (and (tramp--test-putty-p) (>= number-proc 10))
-		'suppress (bound-and-true-p tramp-use-connection-share)))
 	   ;; This is when all timers start.  We check inside the
 	   ;; timer function, that we don't exceed timeout.
 	   (timer-start (current-time))
