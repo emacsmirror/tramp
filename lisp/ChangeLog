@@ -1,3 +1,10 @@
+2023-05-17  Mattias Engdegård  <mattiase@acm.org>
+
+	Eliminate some mutation of program constants
+
+	* tramp.el (tramp-handle-memory-info): Work on newly created
+	objects, or use non-destructive operations.
+
 2023-05-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-crypt.el (tramp-crypt-handle-file-exists-p): New defun.
