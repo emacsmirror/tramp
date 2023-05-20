@@ -1,3 +1,16 @@
+2023-05-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (ansi-color): Require.
+
+	* tramp.el (tramp-shell-prompt-pattern): Remove escape characters.
+	(tramp-process-one-action, tramp-convert-file-attributes):
+	Use `ansi-color-control-seq-regexp'.
+
+	* tramp-sh.el (tramp-display-escape-sequence-regexp)
+	(tramp-device-escape-sequence-regexp): Delete.
+	(tramp-sh-handle-insert-directory, tramp-barf-if-no-shell-prompt)
+	(tramp-wait-for-output): Use `ansi-color-control-seq-regexp'.
+
 2023-05-17  Mattias Engdegård  <mattiase@acm.org>
 
 	Eliminate some mutation of program constants
