@@ -4,7 +4,7 @@
 
 	* tramp.el (tramp-shell-prompt-pattern): Remove escape characters.
 	(tramp-process-one-action, tramp-convert-file-attributes):
-	Use `ansi-color-control-seq-regexp'.
+	Use `ansi-color-control-seq-regexp'.  (Bug#63539)
 
 	* tramp-sh.el (tramp-display-escape-sequence-regexp)
 	(tramp-device-escape-sequence-regexp): Delete.
