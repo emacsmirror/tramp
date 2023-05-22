@@ -1,3 +1,8 @@
+2023-05-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-dissect-file-name): Set hop to nil if NODEFAULT.
+	(Bug#63578)
+
 2023-05-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (ansi-color): Require.
