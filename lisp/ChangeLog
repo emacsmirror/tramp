@@ -1,3 +1,9 @@
+2023-05-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-fuse.el (tramp-fuse-mount-point):
+	* tramp-sh.el (tramp-ssh-controlmaster-options):
+	Use `small-temporary-file-directory'.
+
 2023-05-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-terminal-type): Fix docstring.
