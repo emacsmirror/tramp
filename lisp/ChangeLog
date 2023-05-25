@@ -1,3 +1,10 @@
+2023-05-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-dissect-file-name): Revert last change.
+	(tramp-handle-file-name-as-directory)
+	(tramp-handle-file-name-directory): Let-bind
+	`tramp-default-proxies-alist'.
+
 2023-05-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-fuse.el (tramp-fuse-mount-point):
