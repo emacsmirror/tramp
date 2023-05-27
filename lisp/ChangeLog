@@ -3,8 +3,9 @@
 	* tramp.el (tramp-make-tramp-file-name): Keep hop while in file
 	name completion.
 
-	* tramp-sh.el (tramp-barf-if-no-shell-prompt): Still add optional
-	trailing `ansi-color-control-seq-regexp'.
+	* tramp-sh.el (tramp-sh-handle-process-file): Set `env' explicitly.
+	(tramp-barf-if-no-shell-prompt): Still add optional trailing
+	`ansi-color-control-seq-regexp'.
 
 2023-05-25  Michael Albinus  <michael.albinus@gmx.de>
 

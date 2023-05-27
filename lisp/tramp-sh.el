@@ -3127,7 +3127,7 @@ implementation will be used."
             (if (tramp-compat-string-search "=" elt)
                 (setq env (append env `(,elt)))
               (setq uenv (cons elt uenv)))))
-      (setenv-internal env "INSIDE_EMACS" (tramp-inside-emacs) 'keep)
+      (setq env (setenv-internal env "INSIDE_EMACS" (tramp-inside-emacs) 'keep))
       (when env
 	(setq command
 	      (format
