@@ -1,3 +1,8 @@
+2023-05-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
+	Adapt test.
+
 2023-05-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-display-escape-sequence-regexp): Dont't declare.
