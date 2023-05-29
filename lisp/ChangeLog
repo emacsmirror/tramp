@@ -1,3 +1,8 @@
+2023-05-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-add-hops): Suppress `signal-hook-function'.
+	Save `tramp-default-proxies-alist' only when changed.
+
 2023-05-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-make-tramp-file-name): Keep hop while in file
