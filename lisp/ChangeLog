@@ -1,3 +1,13 @@
+2023-06-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-fuse.el (tramp-fuse-handle-file-exists-p): New defun.
+	(tramp-fuse-mount-timeout): Move up.
+	(tramp-fuse-mount-point): Use `tramp-fuse-mount-timeout'.
+	(tramp-fuse-unmount): Flush "mount-point" file property.
+
+	* tramp-sshfs.el (tramp-sshfs-file-name-handler-alist):
+	Use `tramp-fuse-handle-file-exists-p'.
+
 2023-05-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-add-hops): Suppress `signal-hook-function'.
