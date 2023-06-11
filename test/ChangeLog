@@ -1,3 +1,9 @@
+2023-06-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (all): Use function read syntax where appropriate.
+	(tramp-test39-detect-external-change): Let-bind
+	`read-from-minibuffer' instead of `yes-or-no-p'.
+
 2023-05-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
