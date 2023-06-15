@@ -1,4 +1,8 @@
-2023-04-26  Michael Albinus  <michael.albinus@gmx.de>
+2023-06-15  Basil L. Contovounesios  <contovob@tcd.ie>
+
+	* tramp.texi (File name completion): Consistently mark up nil as @code.
+
+2023-05-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Cleanup remote connections):
 	Document tramp-cleanup-some-buffers and
