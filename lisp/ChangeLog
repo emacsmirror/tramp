@@ -1,3 +1,13 @@
+2023-06-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (ls-lisp-use-insert-directory-program): Declare.
+	(tramp-handle-insert-directory): Require ls-lisp.  Simplify.
+
+	* tramp-compat.el (ls-lisp): Don't require.  (Bug#64124)
+
+	* tramp-sh.el (ls-lisp-use-insert-directory-program): Declare.
+	(tramp-sh-handle-insert-directory): Simplify.
+
 2023-06-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-fuse.el (tramp-fuse-handle-file-exists-p): New defun.
