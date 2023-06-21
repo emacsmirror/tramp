@@ -1,3 +1,9 @@
+2023-06-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-show-ad-hoc-proxies): New defcustom.
+	(tramp-make-tramp-file-name): Use it.
+	(tramp-make-tramp-hop-name): Don't add hop twice.
+
 2023-06-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (ls-lisp-use-insert-directory-program): Declare.
