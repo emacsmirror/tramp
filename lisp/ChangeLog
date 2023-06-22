@@ -1,3 +1,18 @@
+2023-06-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-prefix-format, tramp-prefix-regexp)
+	(tramp-method-regexp, tramp-postfix-method-format)
+	(tramp-postfix-method-regexp, tramp-prefix-ipv6-format)
+	(tramp-prefix-ipv6-regexp, tramp-postfix-ipv6-format)
+	(tramp-postfix-ipv6-regexp, tramp-postfix-host-format)
+	(tramp-postfix-host-regexp, tramp-remote-file-name-spec-regexp)
+	(tramp-file-name-structure, tramp-file-name-regexp)
+	(tramp-completion-method-regexp)
+	(tramp-completion-file-name-regexp):
+	* tramp-compat.el (tramp-syntax):
+	* tramp-gvfs.el (tramp-gvfs-dbus-event-vector):
+	Rearrange declarations.
+
 2023-06-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-show-ad-hoc-proxies): New defcustom.

@@ -39,6 +39,7 @@
 
 (declare-function tramp-error "tramp")
 (declare-function tramp-tramp-file-p "tramp")
+(defvar tramp-syntax)
 (defvar tramp-temp-name-prefix)
 
 (defconst tramp-compat-emacs-compiled-version (eval-when-compile emacs-version)
