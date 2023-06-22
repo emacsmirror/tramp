@@ -9,7 +9,6 @@
 	(tramp-file-name-structure, tramp-file-name-regexp)
 	(tramp-completion-method-regexp)
 	(tramp-completion-file-name-regexp):
-	* tramp-compat.el (tramp-syntax):
 	* tramp-gvfs.el (tramp-gvfs-dbus-event-vector):
 	Rearrange declarations.
 
