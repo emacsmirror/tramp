@@ -1,3 +1,8 @@
+2023-06-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-get-buffer-string): Check, that BUFFER is really
+	a bufferp.
+
 2023-06-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Adapt docstring.
