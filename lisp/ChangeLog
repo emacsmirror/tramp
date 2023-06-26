@@ -1,3 +1,11 @@
+2023-06-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-fuse.el (tramp-fuse-mounted-p): The mount-spec could
+	contain an optional trailing slash.  (Bug#64278)
+
+	* tramp-rclone.el (tramp-rclone-handle-file-system-info):
+	Check return code of command.
+
 2023-06-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-get-buffer-string): Check, that BUFFER is really
