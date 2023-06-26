@@ -182,9 +182,8 @@ It has the same meaning as `remote-file-name-inhibit-cache'.")
 	  ;; mounts of type "memory" or "gdrive".  Make it optional.
 	  (setq mount-spec
 		(if (cdr mount-spec)
-		    (tramp-compat-rx
-		     (literal (car mount-spec))
-		     ":" (? (literal (cadr mount-spec))))
+		    (rx (literal (car mount-spec))
+			":" (? (literal (cadr mount-spec))))
 		  (car mount-spec)))
           (tramp-set-file-property
 	   vec "/" "mounted"
