@@ -1,3 +1,14 @@
+2023-06-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-expand-args): Use `tramp-compat-take'.
+
+	* tramp-container.el (tramp-kubernetes--context-namespace):
+	Adapt dpcstring.
+	(tramp-kubernetes-connection-local-default-profile)
+	(tramp-kubernetes-connection-local-default-variables)
+	(tramp-flatpak-connection-local-default-profile)
+	(tramp-flatpak-connection-local-default-variables): Rename.
+
 2023-06-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-fuse.el (tramp-fuse-mounted-p): The mount-spec could
