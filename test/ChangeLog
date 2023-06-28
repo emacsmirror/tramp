@@ -1,3 +1,9 @@
+2023-06-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test34-connection-local-variables)
+	(tramp-test34-explicit-shell-file-name): Don't let-bind
+	`connection-local-profile-alist' and `connection-local-criteria-alist'.
+
 2023-06-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test02-file-name-dissect)
