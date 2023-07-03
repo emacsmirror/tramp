@@ -1,3 +1,14 @@
+2023-07-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-timeout, with-tramp-suspended-timers):
+	New defmacros.
+	(tramp-dont-suspend-timers): New defvar.
+	(tramp-handle-access-file): Implement handling of
+	`remote-file-name-access-timeout'.  (Bug#64401)
+	(tramp-action-show-and-confirm-message, tramp-process-actions)
+	(with-tramp-locked-connection, tramp-wait-for-regexp)
+	(tramp-read-passwd, tramp-read-passwd-without-cache): Use the macros.
+
 2023-07-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-gvfs.el (tramp-gvfs-do-copy-or-rename-file):
