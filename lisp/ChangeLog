@@ -1,3 +1,7 @@
+2023-07-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-access-file): Improve error handling.
+
 2023-07-03  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (with-tramp-timeout, with-tramp-suspended-timers):
