@@ -163,7 +163,7 @@ Using @value{tramp}
 
 How file names, directories and localnames are mangled and managed
 
-* Temporary directory::         Where temporary files are kept
+* Temporary directory::         Where temporary files are kept.
 * Localname deconstruction::    Breaking a localname into its components.
 * External packages::           Integration with external Lisp packages.
 
@@ -5897,7 +5897,7 @@ programs.
 @chapter How file names, directories and localnames are mangled and managed
 
 @menu
-* Temporary directory::         Where temporary files are kept
+* Temporary directory::         Where temporary files are kept.
 * Localname deconstruction::    Splitting a localname into its component parts.
 * External packages::           Integrating with external Lisp packages.
 @end menu
