@@ -1,3 +1,7 @@
+2023-07-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test49-unload): Extend test.
+
 2023-07-03  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (remote-file-name-access-timeout): Declare.
