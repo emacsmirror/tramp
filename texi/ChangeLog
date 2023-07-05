@@ -1,3 +1,15 @@
+2023-07-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Overview): Use scp in the example.
+	(FUSE-based methods): Move information about mount point to node
+	"FUSE setup".
+	(Overview, Predefined connection information, FUSE setup)
+	(Traces and Profiles): Refer to node "Temporary directory".
+	(Frequently Asked Questions): Move information about temporary
+	directory to node "Temporary directory".
+	(Temporary directory): New node.
+	(Top, Files directories and localnames): Add it to @menu.
+
 2023-07-05  Robert Pluim  <rpluim@gmail.com>
 
 	* tramp.texi (Frequently Asked Questions): Grammar fixes.
