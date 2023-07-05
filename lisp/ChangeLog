@@ -1,3 +1,9 @@
+2023-07-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-timeout): Ensure, that the timeout is a
+	positive number, or nil.
+	(tramp-handle-access-file): Simplify code.
+
 2023-07-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-access-file): Improve error handling.
