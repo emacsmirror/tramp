@@ -2,6 +2,12 @@
 
 	* tramp.el (tramp-get-buffer-string): Stabilize.
 
+	* tramp-sh.el (tramp-do-copy-or-rename-file): Set date and modes
+	if appropriate.
+	(tramp-do-copy-or-rename-file-via-buffer)
+	(tramp-do-copy-or-rename-file-directly)
+	(tramp-do-copy-or-rename-file-out-of-band): Do not set date and modes.
+
 2023-07-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (with-tramp-timeout): Ensure, that the timeout is a
