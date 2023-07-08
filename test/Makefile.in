@@ -46,13 +46,16 @@ all: check
 check test: $(TESTS)
 
 %-tests: %-tests.elc
-	-$(EM) -L $(builddir) -l tramp $(TRAMP_TEST_ARGS) -l $@	\
+	-$(EM) -L $(builddir) -l tramp $(TRAMP_TEST_ARGS) -l $@	${EXTR_ARGS} \
 	--eval '(ert-run-tests-batch-and-exit (quote ${SELECTOR}))' ${WRITE_LOG}
 
 %.elc: %.el
 	$(EM) -l bytecomp -f batch-byte-compile $?
 
 %.log: WRITE_LOG = > $@.log 2>&1
+%.log: EXTR_ARGS = \
+  --eval '(setq ert-batch-backtrace-line-length nil)' \
+  --eval '(setq ert-batch-backtrace-right-margin nil)'
 %.log: % FORCE
 	@echo
 
