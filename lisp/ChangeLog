@@ -1,3 +1,8 @@
+2023-07-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-ssh-controlmaster-options): Don't use an
+	absolute ControlPath on macOS.  (Bug#64880)
+
 2023-07-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (inhibit-remote-files): New defun.
