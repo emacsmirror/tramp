@@ -1,3 +1,50 @@
+2023-07-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (LISP_FILES): Add tramp-message.el.
+
+	* tramp.el (tramp-message): Require.
+	(tramp-verbose, tramp-debug-to-file, tramp-debug-buffer-name)
+	(tramp-debug-outline-regexp, tramp-debug-font-lock-keywords)
+	(tramp-debug-outline-level)
+	(tramp-debug-buffer-command-completion-p)
+	(tramp-setup-debug-buffer, tramp-get-debug-buffer)
+	(tramp-get-debug-file-name, tramp-trace-buffer-name)
+	(tramp-trace-functions, tramp-debug-message, tramp-message)
+	(tramp-backtrace, tramp-error, tramp-error-show-message-timeout)
+	(tramp-error-with-buffer, tramp-user-error)
+	(tramp-with-demoted-errors): Move to tramp-message.el.
+	(tramp-current-connection, tramp-file-name-user-domain)
+	(tramp-file-name-host-port): Add ;;;###tramp-autoload cookie.
+	(tramp-inhibit-progress-reporter): Move down.
+	(tramp-post-process-creation): Write debug message only when there
+	is a command.
+
+	* tramp-message.el: New file.
+
+	* tramp.el (tramp-file-name-handler):
+	* tramp-adb.el (tramp-adb-maybe-open-connection):
+	* tramp-crypt.el (tramp-crypt-maybe-open-connection):
+	* tramp-gvfs.el (tramp-gvfs-maybe-open-connection):
+	* tramp-rclone.el (tramp-rclone-maybe-open-connection):
+	* tramp-sh.el (tramp-maybe-open-connection):
+	* tramp-smb.el (tramp-smb-maybe-open-connection):
+	* tramp-sshfs.el (tramp-sshfs-maybe-open-connection):
+	* tramp-sudoedit.el (tramp-sudoedit-maybe-open-connection):
+	Wrap code `with-tramp-debug-message'.
+
+	* tramp-adb.el (tramp-adb-file-name-handler):
+	* tramp-crypt.el (tramp-crypt-file-name-handler):
+	* tramp-gvfs.el (tramp-gvfs-file-name-handler):
+	* tramp-rclone.el (tramp-rclone-file-name-handler):
+	* tramp-sh.el (tramp-sh-file-name-handler):
+	* tramp-smb.el (tramp-smb-file-name-handler):
+	* tramp-sshfs.el (tramp-sshfs-file-name-handler):
+	* tramp-sudoedit.el (tramp-sudoedit-file-name-handler):
+	Set `tramp-debug-message-fnh-function'.
+
+	* trampver.el.in (tramp-repository-branch)
+	(tramp-repository-version): Add ;;;###tramp-autoload cookie.
+
 2023-07-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-ssh-controlmaster-options): Don't use an
