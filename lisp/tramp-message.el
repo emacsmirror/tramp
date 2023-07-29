@@ -290,7 +290,7 @@ ARGUMENTS to actually emit the message (if applicable)."
 (put #'tramp-debug-message 'tramp-suppress-trace t)
 
 ;;;###tramp-autoload
-(defsubst tramp-message (vec-or-proc level fmt-string &rest arguments)
+(defun tramp-message (vec-or-proc level fmt-string &rest arguments)
   "Emit a message depending on verbosity level.
 VEC-OR-PROC identifies the Tramp buffer to use.  It can be either a
 vector or a process.  LEVEL says to be quiet if `tramp-verbose' is
