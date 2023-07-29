@@ -1,3 +1,8 @@
+2023-07-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-instrument-test-case): Don't bind
+	`trace-buffer'.
+
 2023-07-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test49-without-remote-files):

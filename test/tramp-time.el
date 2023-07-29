@@ -72,7 +72,7 @@
 ;(find-file "~/src/tramp/lisp/tramp.el")
 ;(let ((edebug-all-defs t)) (eval-current-buffer))
 ;(goto-char (point-min))
-;(re-search-forward "defun tramp-send-command-and-check")
+;(search-forward-regexp "defun tramp-send-command-and-check")
 ;(edebug-defun)
 ;(edebug-set-global-break-condition
 ; (and (bufferp (get-buffer "*result*"))
