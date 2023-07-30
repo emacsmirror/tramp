@@ -1,3 +1,30 @@
+2023-07-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (top): Use `function-put' but `put'.
+	(tramp-file-name-user-domain, tramp-file-name-host-port)
+	(tramp-file-name-port-or-default, tramp-file-name-unify)
+	(tramp-dissect-file-name, tramp-ensure-dissected-file-name)
+	(tramp-dissect-hop-name, tramp-make-tramp-file-name)
+	(tramp-signal-hook-function, tramp-post-process-creation)
+	(tramp-read-passwd, tramp-read-passwd-without-cache)
+	(tramp-clear-passwd): Add declare form.
+	(tramp-string-empty-or-nil-p): Add ;;;###tramp-autoload cookie.
+	(tramp-test-message): Move to tramp-message.el.
+
+	* tramp-compat.el (subr-x): Don't require.
+	(top): Use `function-put' but `put'.
+
+	* tramp-gvfs.el (tramp-dbus-function): Add declare form.
+
+	* tramp-message.el (tramp-byte-run--set-suppress-trace):
+	New function.  Add it to `defun-declarations-alist'.
+	(tramp-setup-debug-buffer, tramp-debug-buffer-name)
+	(tramp-get-debug-buffer, tramp-get-debug-file-name)
+	(tramp-trace-buffer-name, tramp-debug-message, tramp-message):
+	Add declare form.
+	(tramp-debug-buffer-name): Use `tramp-string-empty-or-nil-p'.
+	(tramp-test-message): New defun.
+
 2023-07-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (LISP_FILES): Add tramp-message.el.
