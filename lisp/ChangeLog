@@ -1,5 +1,18 @@
 2023-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-file-name-user-domain)
+	(tramp-file-name-host-port): Remove ;;;###tramp-autoload cookie.
+	(tramp-file-name-unify, tramp-dissect-file-name)
+	(tramp-ensure-dissected-file-name): Remove declare form.  Add
+	`tramp-suppress-trace' function property.
+
+	* tramp-message.el (tramp-file-name-host-port)
+	(tramp-file-name-user-domain): Declare.
+	(tramp-message): Remove declare form.  Add `tramp-suppress-trace'
+	function property.
+
+2023-07-30  Michael Albinus  <michael.albinus@gmx.de>
+
 	* tramp.el (top): Use `function-put' but `put'.
 	(tramp-file-name-user-domain, tramp-file-name-host-port)
 	(tramp-file-name-port-or-default, tramp-file-name-unify)
