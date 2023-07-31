@@ -1,3 +1,29 @@
+2023-07-31  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-make-symbolic-link): Rename from
+	`tramp-skeleton-handle-make-symbolic-link'.
+	(tramp-handle-file-symlink-p): Check file property
+	"file-symlink-marker".
+
+	* tramp-sh.el (cl-seq): Require.
+	(tramp-perl-file-truename): Print also whether the file is a symlink.
+	(tramp-bundle-read-file-names): Rename from
+	`tramp-vc-registered-read-file-names'.  Print also the
+	`file-directory-p: value.
+	(tramp-sh-handle-make-symbolic-link): Combine two commands.  Use
+	`tramp-skeleton-make-symbolic-link'.
+	(tramp-sh-handle-file-truename): Read also "file-symlink-marker" property.
+	(tramp-sh-handle-file-directory-p): Simplify if-let clause.
+	(tramp-sh-handle-file-name-all-completions): Simplify command.
+	(tramp-bundle-read-file-names): New defun.
+	(tramp-sh-handle-vc-registered, tramp-get-remote-path): Use it.
+	(tramp-open-shell): Flush "scripts" connection property.
+	(tramp-open-connection-setup-interactive-shell): Combine two commands.
+
+	* tramp-smb.el (tramp-smb-handle-make-symbolic-link):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-make-symbolic-link):
+	Use `tramp-skeleton-make-symbolic-link'.
+
 2023-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-user-domain)
