@@ -1202,7 +1202,7 @@ Operations not mentioned here will be handled by the normal Emacs functions.")
        v (format "tramp_perl_file_truename %s"
 		 (tramp-shell-quote-argument localname)))
       (with-current-buffer (tramp-get-connection-buffer v)
-      	(goto-char (point-min))
+        (goto-char (point-min))
 	(tramp-set-file-property v localname "file-symlink-marker" (read (current-buffer)))
 	(read (current-buffer))))
 

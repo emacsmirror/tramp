@@ -1,3 +1,47 @@
+2023-08-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-byte-run--set-suppress-trace): New defun, moved
+	from tramp-message.el.
+	(tramp-file-name-unify, tramp-file-name-equal-p)
+	(tramp-tramp-file-p, tramp-find-method, tramp-find-user)
+	(tramp-find-host, tramp-dissect-file-name)
+	(tramp-ensure-dissected-file-name, tramp-buffer-name)
+	(tramp-delete-temp-file-function, tramp-time-diff):
+	Declare `tramp-suppress-trace' property.
+
+	* tramp-archive.el (tramp-archive-file-name-handler-alist):
+	Use `tramp-archive-handle-file-symlink-p'.
+	(tramp-archive-handle-file-symlink-p): New defun.
+
+	* tramp-cache.el (tramp-loaddefs): Don't require.
+	(tramp-get-hash-table, tramp-cache-print)
+	(tramp-dump-connection-properties): Declare `tramp-suppress-trace'
+	property.
+
+	* tramp-cmds.el (tramp-cleanup-dired-buffer-p)
+	(tramp-delete-tainted-remote-process-buffer-function):
+	Declare `tramp-suppress-trace' property.
+
+	* tramp-compat.el (tramp-loaddefs): Require.
+	(tramp-error): Declare.
+
+	* tramp-crypt.el (tramp-crypt-file-name-handler): Fix typo.
+
+	* tramp-integration.el (tramp-rfn-eshadow-setup-minibuffer)
+	(tramp-rfn-eshadow-update-overlay-regexp)
+	(tramp-rfn-eshadow-update-overlay): Declare `tramp-suppress-trace'
+	property.
+
+	* tramp-message.el (tramp-compat): Require (instead of
+	tramp-loaddefs.el).
+	(tramp-compat-string-replace, tramp-compat-temporary-file-directory):
+	Don't declare.
+	(tramp-byte-run--set-suppress-trace): Move to tramp.el.
+	(tramp-debug-outline-level)
+	(tramp-debug-buffer-command-completion-p, tramp-message)
+	(tramp-debug-button-action, tramp-debug-link-messages)
+	(tramp-debug-message-buttonize): Declare `tramp-suppress-trace' property.
+
 2023-07-31  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-make-symbolic-link): Rename from
@@ -12,7 +56,8 @@
 	`file-directory-p: value.
 	(tramp-sh-handle-make-symbolic-link): Combine two commands.  Use
 	`tramp-skeleton-make-symbolic-link'.
-	(tramp-sh-handle-file-truename): Read also "file-symlink-marker" property.
+	(tramp-sh-handle-file-truename): Read also "file-symlink-marker"
+	property.
 	(tramp-sh-handle-file-directory-p): Simplify if-let clause.
 	(tramp-sh-handle-file-name-all-completions): Simplify command.
 	(tramp-bundle-read-file-names): New defun.
