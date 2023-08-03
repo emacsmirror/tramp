@@ -1,3 +1,20 @@
+2023-08-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-convert-file-attributes): Extract SELinux context.
+
+	* tramp-sh.el (tramp-stat-file-attributes-with-selinux)
+	(tramp-stat-directory-files-and-attributes-with-selinux): New defconst.
+	(tramp-do-file-attributes-with-ls)
+	(tramp-do-file-attributes-with-stat)
+	(tramp-do-directory-files-and-attributes-with-stat): Return also
+	SELinux context.
+	(tramp-remote-selinux-p, tramp-do-copy-or-rename-file): Adapt docstring.
+
+	* tramp-sudoedit.el (tramp-sudoedit-do-copy-or-rename-file)
+	(tramp-sudoedit-remote-selinux-p): Adapt docstring.
+	(tramp-sudoedit-file-attributes-with-selinux): New defconst.
+	(tramp-sudoedit-handle-file-attributes): Use it.
+
 2023-08-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-byte-run--set-suppress-trace): New defun, moved

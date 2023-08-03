@@ -101,7 +101,7 @@
   (eval-and-compile
     (defalias 'tramp-byte-run--set-suppress-trace
       #'(lambda (f _args val)
- 	  (list 'function-put (list 'quote f)
+	  (list 'function-put (list 'quote f)
 		''tramp-suppress-trace val)))
 
     (add-to-list
@@ -6055,6 +6055,13 @@ to cache the result.  Return the modified ATTR."
 		 ;; Set virtual device number.
 		 (setcar (nthcdr 11 attr)
 			 (tramp-get-device ,vec))
+		 ;; Set SELinux context.
+		 (when (stringp (nth 12 attr))
+		   (tramp-set-file-property
+		    ,vec ,localname  "file-selinux-context"
+		    (split-string (nth 12 attr) ":" 'omit)))
+		 ;; Remove optional entries.
+		 (setcdr (nthcdr 11 attr) nil)
 		 attr)))))
 
        ;; Return normalized result.
