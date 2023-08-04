@@ -1,3 +1,7 @@
+2023-08-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-write-region): Fix scoping.  (Bug#65022)
+
 2023-08-03  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-convert-file-attributes): Extract SELinux context.
