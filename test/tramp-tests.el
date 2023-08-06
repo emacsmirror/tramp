@@ -7486,7 +7486,7 @@ This requires restrictions of file name syntax."
      (append
       (list
        (unless (tramp--test-hpux-p) "Γυρίστε το Γαλαξία με Ώτο Στοπ")
-       (unless (tramp--test-hpux-p)
+       (unless (or (tramp--test-hpux-p) (tramp--test-macos-p))
 	 "أصبح بوسعك الآن تنزيل نسخة كاملة من موسوعة ويكيبيديا العربية لتصفحها بلا اتصال بالإنترنت")
        "银河系漫游指南系列"
        "Автостопом по гала́ктике"
