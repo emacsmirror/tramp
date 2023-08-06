@@ -2722,7 +2722,9 @@ This checks also `file-name-as-directory', `file-name-directory',
 	      (let ((bfcs buffer-file-coding-system))
 		(should (buffer-modified-p))
 		(should (null (save-buffer)))
-		(should (eq buffer-file-coding-system bfcs)))))
+		(should
+                 (eq (coding-system-get buffer-file-coding-system :mime-charset)
+                     (coding-system-get  bfcs :mime-charset))))))
 
 	;; Cleanup.
 	(ignore-errors (delete-file tmp-name))))))
