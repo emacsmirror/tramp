@@ -4,6 +4,7 @@
 	(tramp--test-openbsd-p): New defun.
 	(tramp-test41-special-characters, tramp-test42-utf8): Use it.
 	(Bug#64935)
+	(tramp-test42-utf8): Skip for macOS.
 
 2023-07-29  Michael Albinus  <michael.albinus@gmx.de>
 
