@@ -1,6 +1,7 @@
 2023-08-06  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp-tests.el (tramp--test-openbsd-p): New defun.
+	* tramp-tests.el (tramp-test10-write-region): Extend test.
+	(tramp--test-openbsd-p): New defun.
 	(tramp-test41-special-characters, tramp-test42-utf8): Use it.
 	(Bug#64935)
 
