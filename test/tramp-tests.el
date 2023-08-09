@@ -5383,7 +5383,7 @@ If UNSTABLE is non-nil, the test is tagged as `:unstable'."
     (let ((default-directory ert-remote-temporary-file-directory)
 	  (tmp-name (tramp--test-make-temp-name nil quoted))
 	  kill-buffer-query-functions command proc)
-      (should-not (make-process))
+      (should-not (apply #'make-process nil)) ; Use `apply' to avoid warnings.
 
       ;; Simple process.
       (unwind-protect
@@ -7497,7 +7497,7 @@ This requires restrictions of file name syntax."
      (append
       (list
        (unless (tramp--test-hpux-p) "Γυρίστε το Γαλαξία με Ώτο Στοπ")
-       (unless (or (tramp--test-hpux-p) (tramp--test-macos-p))
+       (unless (tramp--test-hpux-p)
 	 "أصبح بوسعك الآن تنزيل نسخة كاملة من موسوعة ويكيبيديا العربية لتصفحها بلا اتصال بالإنترنت")
        "银河系漫游指南系列"
        "Автостопом по гала́ктике"
