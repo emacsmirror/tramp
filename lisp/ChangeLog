@@ -1,9 +1,14 @@
+2023-08-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-debug-command-messages): Adapt docstring.
+	(tramp-message, with-tramp-debug-message): Don't require a minimum
+	`tramp-verbose' level when `tramp-debug-command-messages' is non-nil.
+
 2023-08-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-bundle-read-file-names): Replace "echo -n" by
 	"printf", it isn't portable.  (Bug#65321)
-	(tramp-find-file-exists-command): Do not call
-	`tramp-get-ls-command'.
+	(tramp-find-file-exists-command): Do not call `tramp-get-ls-command'.
 
 2023-08-15  Michael Albinus  <michael.albinus@gmx.de>
 
