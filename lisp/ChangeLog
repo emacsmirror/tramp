@@ -1,3 +1,18 @@
+2023-08-29  Gene Goykhman  <gene@indigo1.com>
+
+	* tramp.el (tramp--last-hop-directory): Add new variable.
+	(tramp-completion-handle-file-name-all-completions): Use container
+	host directory to execute container program on remote host.
+	(tramp-set-completion-function): FIXME: for now, don't constrain
+	allowable completion methods to only those present on the local system.
+	(tramp-completion-remote-containers): Add customize option to
+	provide completion candidates for containers running on remote hosts.
+
+	* tramp-container.el (tramp-container--completion-function):
+	Set default directory to last hop.
+	(tramp-set-completion-function): Don't use executable-find for
+	container program since it might not be running locally.
+
 2023-08-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-null-hop): Add ;;;###tramp-autoload cookie.
