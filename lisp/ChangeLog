@@ -6,6 +6,8 @@
 	(tramp-get-completion-methods): Rename argument to MULTI-HOP.
 	(tramp-completion-remote-containers): Add :version.
 	(tramp-multi-hop-p): Bind `tramp-verbose' to nil.
+	(tramp-accept-process-output): Use `with-tramp-suspended-timers'
+	also for the other processes.
 
 	* tramp-container.el (tramp-container--completion-function):
 	Use METHOD as argument, instead of PROGRAM.  Determine program
