@@ -1,3 +1,19 @@
+2023-08-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp--last-hop-directory): Adapt docstring.  Move down.
+	(tramp-set-completion-function): Revert default case to
+	`file-exists-p', the workaround isn't needed anymore.
+	(tramp-get-completion-methods): Rename argument to MULTI-HOP.
+	(tramp-completion-remote-containers): Add :version.
+	(tramp-multi-hop-p): Bind `tramp-verbose' to nil.
+
+	* tramp-container.el (tramp-container--completion-function):
+	Use METHOD as argument, instead of PROGRAM.  Determine program
+	from METHOD entry in `tramp-methods'.  Bind `non-essential' to
+	nil.  Use a file property as cache.
+	(tramp-container--completion-function): Use adapted arguments when
+	setting for "docker" and "podman".
+
 2023-08-29  Gene Goykhman  <gene@indigo1.com>
 
 	* tramp.el (tramp--last-hop-directory): Add new variable.
