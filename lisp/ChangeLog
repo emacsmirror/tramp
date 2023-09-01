@@ -1,6 +1,7 @@
 2023-09-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-completion-multi-hop-methods): Fix :type.
+	Add ;;;###tramp-autoload cookie.
 
 	* tramp-container.el (tramp-completion-multi-hop-methods):
 	Add methods properly.
