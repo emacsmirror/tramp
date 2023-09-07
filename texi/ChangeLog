@@ -1,3 +1,8 @@
+2023-09-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions): Do not use `defadvice'.
+	Add indices.  (Bug#65481)
+
 2023-09-04  Gene Goykhman  <gene@indigo1.com>
 
 	* tramp.texi (Ad-hoc multi-hops): Add tramp-completion-multi-hop-methods.
