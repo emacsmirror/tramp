@@ -1,3 +1,8 @@
+2023-09-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-perl-file-name-all-completions): Fix Perl
+	script.  (Bug#65744)
+
 2023-09-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-get-completion-methods): Make MULTI-HOP optional.
