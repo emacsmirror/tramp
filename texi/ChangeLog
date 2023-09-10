@@ -1,3 +1,11 @@
+2023-09-10  Po Lu  <luangruo@yahoo.com>
+
+	* tramp.texi (External methods, FUSE-based methods): The construct
+	``allows to <infinitive>'' is not English inasmuch as no direct
+	object to ``allows'' is provided.  Correct and rephrase each
+	instance of such a construct within our documentation and
+	commentary.
+
 2023-09-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions): Do not use `defadvice'.
