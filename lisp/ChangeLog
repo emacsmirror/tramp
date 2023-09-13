@@ -1,3 +1,8 @@
+2023-09-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-ls-file-attributes): New defconst.
+	(tramp-do-file-attributes-with-ls): Use it.  (Bug#65324)
+
 2023-09-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cmds.el (dired-advertise, dired-unadvertise): Declare.
