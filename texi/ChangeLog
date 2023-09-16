@@ -1,3 +1,8 @@
+2023-09-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Remote shell setup):
+	Describe tramp-otp-password-prompt-regexp.
+
 2023-09-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Ad-hoc multi-hops): Document tramp-file-name-with-method
