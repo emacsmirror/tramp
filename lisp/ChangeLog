@@ -3,6 +3,18 @@
 	* tramp.el (tramp-otp-password-prompt-regexp): New defcustom.
 	(tramp-action-otp-password): New defun.
 
+	* tramp-container.el (tramp-skeleton-completion-function): New defmacro.
+	(tramp-container--completion-function): Use it.
+	(tramp-kubernetes--completion-function): Use METHOD as argument.
+	Use `tramp-skeleton-completion-function'.
+	(tramp-skeleton-kubernetes-vector): New defmacro.
+	(tramp-kubernetes--current-context)
+	(tramp-kubernetes--current-context-data): Use it.
+	(tramp-completion-multi-hop-methods): Add "kubernetes".
+
+	* tramp-message.el (tramp-debug-message): Publish the name of the
+	debug file name.
+
 	* tramp-sh.el (tramp-actions-before-shell)
 	(tramp-actions-copy-out-of-band):
 	Use `tramp-otp-password-prompt-regexp'.
