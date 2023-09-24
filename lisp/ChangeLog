@@ -1,6 +1,6 @@
 2023-09-24  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-methods): Adapt docstring.
+	* tramp.el (tramp-methods): Adapt docstring.  (Bug#66093)
 	(tramp-handle-make-process): Replace ?a by "-t" if indicated.
 
 	* tramp-sshfs.el (tramp-methods): Use "%a".
