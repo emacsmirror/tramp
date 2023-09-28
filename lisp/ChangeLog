@@ -1,3 +1,11 @@
+2023-09-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-bsd-unames): New defconst.
+	(tramp-sh-handle-file-ownership-preserved-p)
+	(tramp-open-connection-setup-interactive-shell)
+	(tramp-get-ls-command): Use it.
+	(tramp-sh-handle-insert-directory): Improve handling of "--dired".
+
 2023-09-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Adapt docstring.  (Bug#66093)
