@@ -1,7 +1,10 @@
 2023-09-28  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp-tests.el (tramp--test-check-files): Don't err out when
-	"printenv" doesn't exist on remote side.
+	* tramp-tests.el (tramp-test17-insert-directory): Improve check.
+	(tramp--test-check-files): Don't err out when "printenv" doesn't
+	exist on remote side.
+	(tramp-test47-read-password): Remove :unstable tag.
+	(tramp-test47-read-otp-password): Rename.
 
 2023-09-25  Michael Albinus  <michael.albinus@gmx.de>
 
