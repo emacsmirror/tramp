@@ -7405,7 +7405,7 @@ This requires restrictions of file name syntax."
 		       (search-forward-regexp
 			(rx
 			 bol (literal envvar)
-			 "=" (literal (getenv envvar)) eol)))))))
+			 "=" (literal (getenv envvar)) eol)))))))))
 
 	;; Cleanup.
 	(ignore-errors (kill-buffer buffer))
