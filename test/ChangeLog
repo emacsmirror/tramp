@@ -1,3 +1,8 @@
+2023-09-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-check-files): Don't err out when
+	"printenv" doesn't exist on remote side.
+
 2023-09-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test46-read-password): Use `copy-tree' but
