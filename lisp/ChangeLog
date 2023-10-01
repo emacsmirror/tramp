@@ -1,3 +1,8 @@
+2023-10-01  Stefan Kangas  <stefankangas@gmail.com>
+
+	* tramp.el (tramp-default-method): Capitalize 'Windows' where it
+	clearly refers to the non-free operating system with that name.
+
 2023-09-28  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-bsd-unames): New defconst.
