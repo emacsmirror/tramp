@@ -1,3 +1,12 @@
+2023-10-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (ls-lisp-dirs-first, ls-lisp-emulation)
+	(ls-lisp-ignore-case, ls-lisp-verbosity): Declare.
+	(tramp-handle-insert-directory): Bind `ls-lisp-*' options.  Call
+	`ls-lisp-set-options'.
+
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Reorganize.
+
 2023-10-01  Stefan Kangas  <stefankangas@gmail.com>
 
 	* tramp.el (tramp-default-method): Capitalize 'Windows' where it
