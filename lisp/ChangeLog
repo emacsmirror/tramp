@@ -1,3 +1,7 @@
+2023-10-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-read-id-output): Identifiers can contain "-".
+
 2023-10-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):
