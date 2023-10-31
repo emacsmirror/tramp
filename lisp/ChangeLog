@@ -1,3 +1,7 @@
+2023-10-31  Stefan Monnier  <monnier@iro.umontreal.ca>
+
+	* tramp-sh.el: Require `cl-lib` rather than `cl-seq`.
+
 2023-10-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-read-id-output): Identifiers can contain "-".
