@@ -42,6 +42,19 @@ If you experience compatibility error messages for the @value{tramp}
 package, or if you use another major Emacs version than the version
 @value{tramp} has been installed with, you must recompile the package:
 
+@subheading Emacs 29 or newer
+
+@itemize @bullet
+@item
+Recompile the @value{tramp} package
+
+@example
+M-x package-recompile RET tramp
+@end example
+@end itemize
+
+@subheading Emacs 28 or older
+
 @itemize @bullet
 @item
 Remove all byte-compiled @value{tramp} files
@@ -70,12 +83,7 @@ M-x tramp-recompile-elpa
 Afterwards, you must restart Emacs.
 @end itemize
 
-@ifplaintext
-@unnumbered Mitigation of a bug in Emacs 29.1
-@end ifplaintext
-@ifnotplaintext
-@section Mitigation of a bug in Emacs 29.1
-@end ifnotplaintext
+@subheading Mitigation of a bug in Emacs 29.1
 
 Due to a bug in Emacs 29.1, you must apply the following change prior
 installation or upgrading @value{tramp} @value{trampver} from GNU ELPA:
