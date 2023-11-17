@@ -2746,7 +2746,7 @@ not in completion mode."
   "Skeleton for `tramp-*-handle-filename-all-completions'.
 BODY is the backend specific code."
   (declare (indent 2) (debug t))
-  `(tramp-compat-ignore-error file-missing
+  `(ignore-error file-missing
      (delete-dups (delq nil
        (let* ((case-fold-search read-file-name-completion-ignore-case)
 	      (regexp (mapconcat #'identity completion-regexp-list "\\|"))
@@ -2770,74 +2770,76 @@ BODY is the backend specific code."
   (tramp-skeleton-file-name-all-completions filename directory
     (let ((fullname
 	   (tramp-drop-volume-letter (expand-file-name filename directory)))
-	  ;; When `tramp-syntax' is `simplified', we need a default method.
-	  (tramp-default-method
-	   (and (string-empty-p tramp-postfix-method-format)
-		tramp-default-method))
-	  (tramp-default-method-alist
-	   (and (string-empty-p tramp-postfix-method-format)
-		tramp-default-method-alist))
-	  tramp-default-user tramp-default-user-alist
-	  tramp-default-host tramp-default-host-alist
-	  hop result result1)
+	  (directory (tramp-drop-volume-letter directory))
+	  tramp--last-hop-directory hop result result1)
 
       ;; Suppress hop from completion.
       (when (string-match
-	     (tramp-compat-rx
+	     (rx
 	      (regexp tramp-prefix-regexp)
 	      (group (+ (regexp tramp-remote-file-name-spec-regexp)
 			(regexp tramp-postfix-hop-regexp))))
 	     fullname)
 	(setq hop (match-string 1 fullname)
-	      fullname (replace-match "" nil nil fullname 1)))
+	      fullname (replace-match "" nil nil fullname 1)
+	      tramp--last-hop-directory
+	      (tramp-make-tramp-file-name (tramp-dissect-hop-name hop))))
 
-      ;; Possible completion structures.
-      (dolist (elt (tramp-completion-dissect-file-name fullname))
-	(let* ((method (tramp-file-name-method elt))
-	       (user (tramp-file-name-user elt))
-	       (host (tramp-file-name-host elt))
-	       (localname (tramp-file-name-localname elt))
-	       (m (tramp-find-method method user host))
-	       all-user-hosts)
+      (let (;; When `tramp-syntax' is `simplified', we need a default method.
+	    (tramp-default-method
+	     (and (string-empty-p tramp-postfix-method-format)
+		  tramp-default-method))
+	    (tramp-default-method-alist
+	     (and (string-empty-p tramp-postfix-method-format)
+		  tramp-default-method-alist))
+	    tramp-default-user tramp-default-user-alist
+	    tramp-default-host tramp-default-host-alist)
 
-	  (unless localname ;; Nothing to complete.
-	    (if (or user host)
-		;; Method dependent user / host combinations.
-		(progn
-		  (mapc
-		   (lambda (x)
-		     (setq all-user-hosts
-			   (append all-user-hosts
-				   (funcall (nth 0 x) (nth 1 x)))))
-		   (tramp-get-completion-function m))
+	;; Possible completion structures.
+	(dolist (elt (tramp-completion-dissect-file-name fullname))
+	  (let* ((method (tramp-file-name-method elt))
+		 (user (tramp-file-name-user elt))
+		 (host (tramp-file-name-host elt))
+		 (localname (tramp-file-name-localname elt))
+		 (m (tramp-find-method method user host))
+		 all-user-hosts)
 
-		  (setq result
-			(append result
-				(mapcar
-				 (lambda (x)
-				   (tramp-get-completion-user-host
-				    method user host (nth 0 x) (nth 1 x)))
-				 (delq nil all-user-hosts)))))
+	    (unless localname ;; Nothing to complete.
+	      (if (or user host)
+		  ;; Method dependent user / host combinations.
+		  (progn
+		    (mapc
+		     (lambda (x)
+		       (setq all-user-hosts
+			     (append all-user-hosts
+				     (funcall (nth 0 x) (nth 1 x)))))
+		     (tramp-get-completion-function m))
 
-	      ;; Possible methods.
-	      (setq result
-		    (append result (tramp-get-completion-methods m)))))))
+		    (setq result
+			  (append result
+				  (mapcar
+				   (lambda (x)
+				     (tramp-get-completion-user-host
+				      method user host (nth 0 x) (nth 1 x)))
+				   all-user-hosts))))
 
-      ;; Add hop.
-      (dolist (elt result)
-	(when elt
-	  (string-match tramp-prefix-regexp elt)
-	  (setq elt (replace-match (concat tramp-prefix-format hop) nil nil elt))
-	  (push
-	   (substring elt (length (tramp-drop-volume-letter directory)))
-	   result1)))
+		;; Possible methods.
+		(setq result
+		      (append result (tramp-get-completion-methods m hop)))))))
 
-      ;; Complete local parts.
-      (append
-       result1
-       (ignore-errors
-	 (tramp-run-real-handler
-	  #'file-name-all-completions (list filename directory)))))))
+	;; Add hop.
+	(dolist (elt result)
+          (when elt
+	    (setq elt (replace-regexp-in-string
+		       tramp-prefix-regexp (concat tramp-prefix-format hop) elt))
+	    (push (substring elt (length directory)) result1)))
+
+	;; Complete local parts.
+	(append
+         result1
+         (ignore-errors
+           (tramp-run-real-handler
+	    #'file-name-all-completions (list filename directory))))))))
 
 ;; Method, host name and user name completion for a file.
 (defun tramp-completion-handle-file-name-completion
