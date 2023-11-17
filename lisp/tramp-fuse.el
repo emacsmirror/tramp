@@ -102,11 +102,10 @@
 
 (defun tramp-fuse-handle-file-name-all-completions (filename directory)
   "Like `file-name-all-completions' for Tramp files."
-  (tramp-fuse-remove-hidden-files
-   (ignore-error file-missing
-     (all-completions
-      filename
-      (delete-dups
+  (tramp-skeleton-file-name-all-completions filename directory
+     (tramp-fuse-remove-hidden-files
+      (all-completions
+       filename
        (append
 	(file-name-all-completions
 	 filename (tramp-fuse-local-file-name directory))
@@ -117,7 +116,7 @@
 	      (catch 'match
 		(dolist (elt completion-regexp-list)
 		  (unless (string-match-p elt item) (throw 'match nil)))
-		(setq result (cons (concat item "/") result))))))))))))
+		(setq result (cons (concat item "/") result)))))))))))
 
 ;; This function isn't used.
 (defun tramp-fuse-handle-insert-directory

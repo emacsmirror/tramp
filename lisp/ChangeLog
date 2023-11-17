@@ -1,3 +1,16 @@
+2023-11-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-file-name-all-completions): New defmacro.
+	(tramp-completion-handle-file-name-all-completions):
+	* tramp-adb.el (tramp-adb-handle-file-name-all-completions):
+	* tramp-crypt.el (tramp-crypt-handle-file-name-all-completions):
+	* tramp-fuse.el (tramp-fuse-handle-file-name-all-completions):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-name-all-completions):
+	* tramp-sh.el (tramp-sh-handle-file-name-all-completions):
+	* tramp-smb.el (tramp-smb-handle-file-name-all-completions):
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-name-all-completions):
+	Use it.
+
 2023-10-31  Stefan Monnier  <monnier@iro.umontreal.ca>
 
 	* tramp-sh.el: Require `cl-lib` rather than `cl-seq`.
