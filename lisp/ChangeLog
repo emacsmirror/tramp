@@ -1,3 +1,14 @@
+2023-11-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-file-truename)
+	(tramp-skeleton-write-region, tramp-handle-file-truename):
+
+	* tramp-integration.el (tramp-eshell-directory-change)
+	(tramp-recentf-exclude-predicate):
+	* tramp-smb.el (tramp-smb-handle-copy-file):
+	* tramp-sudoedit.el (tramp-sudoedit-do-copy-or-rename-file):
+	Use `tramp-tramp-file-p' instead of `file-remote-p'.
+
 2023-11-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-file-name-all-completions): New defmacro.
