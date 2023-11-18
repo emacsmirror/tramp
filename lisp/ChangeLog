@@ -2,7 +2,6 @@
 
 	* tramp.el (tramp-skeleton-file-truename)
 	(tramp-skeleton-write-region, tramp-handle-file-truename):
-
 	* tramp-integration.el (tramp-eshell-directory-change)
 	(tramp-recentf-exclude-predicate):
 	* tramp-smb.el (tramp-smb-handle-copy-file):
