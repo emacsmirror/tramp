@@ -1,5 +1,13 @@
 2023-11-22  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-skeleton-file-name-all-completions): Handle ".""
+	and "..".
+
+	* tramp-adb.el (tramp-adb-handle-file-name-all-completions):
+	* tramp-fuse.el (tramp-fuse-handle-file-name-all-completions):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-name-all-completions):
+	Remove special handling of "." an "..".
+
 	* tramp-sh.el (tramp-send-command-and-read): Use 'space' instead
 	of 'blank' in rx expression, in order to handle also CR and alike.
 	Reported by Dominique Quatravaux <dominique@quatravaux.org>.
