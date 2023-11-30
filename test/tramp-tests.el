@@ -5684,7 +5684,7 @@ If UNSTABLE is non-nil, the test is tagged as `:unstable'."
 	(delete-exited-processes t)
 	kill-buffer-query-functions command proc)
 
-    ;; The PROCESS argument of `sig-process can be a string.  Test
+    ;; The PROCESS argument of `signal-process' can be a string.  Test
     ;; this as well.
     (dolist
 	(func '(identity
