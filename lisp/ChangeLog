@@ -1,3 +1,8 @@
+2023-11-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-local-host-regexp): Extend.
+	(tramp-signal-process): PROCESS can also be a string.
+
 2023-11-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-file-name-all-completions): Handle ".""
