@@ -1,3 +1,7 @@
+2023-11-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test31-signal-process): Extend.
+
 2023-11-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-timeout-handler): Be more verbose.
