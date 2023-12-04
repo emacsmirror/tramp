@@ -4946,7 +4946,7 @@ a connection-local variable."
 	    ;; Query flag is overwritten in `tramp-post-process-creation',
 	    ;; so we reset it.
 	    (set-process-query-on-exit-flag p (null noquery))
-	    ;; This is neded for ssh or PuTTY based processes, and
+	    ;; This is needed for ssh or PuTTY based processes, and
 	    ;; only if the respective options are set.  Perhaps, the
 	    ;; setting could be more fine-grained.
 	    ;; (process-put p 'tramp-shared-socket t)

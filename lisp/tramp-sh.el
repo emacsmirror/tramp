@@ -2523,7 +2523,7 @@ The method used must be an out-of-band method."
 		      (tramp-get-connection-name v)
 		      (tramp-get-connection-buffer v)
 		      copy-program copy-args)))
-		;; This is neded for ssh or PuTTY based processes, and
+		;; This is needed for ssh or PuTTY based processes, and
 		;; only if the respective options are set.  Perhaps,
 		;; the setting could be more fine-grained.
 		;; (process-put p 'tramp-shared-socket t)
@@ -3847,7 +3847,7 @@ Fall back to normal file name handler if no Tramp handler exists."
 	   v 'file-notify-error
 	   "`%s' failed to start on remote host"
 	   (string-join sequence " "))
-	;; This is neded for ssh or PuTTY based processes, and only if
+	;; This is needed for ssh or PuTTY based processes, and only if
 	;; the respective options are set.  Perhaps, the setting could
 	;; be more fine-grained.
 	;; (process-put p 'tramp-shared-socket t)
@@ -5255,7 +5255,7 @@ connection if a previous connection has died for some reason."
 			      (and tramp-encoding-command-interactive
 				   `(,tramp-encoding-command-interactive)))))))
 
-		  ;; This is neded for ssh or PuTTY based processes,
+		  ;; This is needed for ssh or PuTTY based processes,
 		  ;; and only if the respective options are set.
 		  ;; Perhaps, the setting could be more fine-grained.
 		  ;; (process-put p 'tramp-shared-socket t)
