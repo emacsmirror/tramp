@@ -521,8 +521,8 @@ The string is used in `tramp-methods'.")
  (tramp-set-completion-function "fcp" tramp-completion-function-alist-ssh))
 
 (defcustom tramp-sh-extra-args
-  `((,(rx "/bash" eos) . "-noediting -norc -noprofile")
-    (,(rx "/zsh" eos) . "-f +Z -V"))
+  `((,(rx (| bos "/") "bash" eos) . "-noediting -norc -noprofile")
+    (,(rx (| bos "/") "zsh" eos) . "-f +Z -V"))
   "Alist specifying extra arguments to pass to the remote shell.
 Entries are (REGEXP . ARGS) where REGEXP is a regular expression
 matching the shell file name and ARGS is a string specifying the
@@ -533,7 +533,7 @@ This variable is only used when Tramp needs to start up another shell
 for tilde expansion.  The extra arguments should typically prevent the
 shell from reading its init file."
   :group 'tramp
-  :version "27.1"
+  :version "30.1"
   :type '(alist :key-type regexp :value-type string))
 
 (defconst tramp-actions-before-shell

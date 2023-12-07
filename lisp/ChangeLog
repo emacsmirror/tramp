@@ -17,6 +17,8 @@
 	(tramp-crypt-cleanup-connection): New defun.  Add it to
 	`tramp-cleanup-connection-hook'
 
+	* tramp-sh.el (tramp-sh-extra-args): Extend regexp.
+
 2023-11-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-local-host-regexp): Extend.
