@@ -3328,7 +3328,7 @@ BODY is the backend specific code."
     (with-parsed-tramp-file-name (expand-file-name ,directory) nil
       (tramp-barf-if-file-missing v ,directory
 	(when (file-directory-p ,directory)
-	  (setq ,directory
+	  (setf ,directory
 		(file-name-as-directory (expand-file-name ,directory)))
 	  (let ((temp
 		 (with-tramp-file-property v localname "directory-files" ,@body))
@@ -3499,7 +3499,7 @@ on the same host.  Otherwise, TARGET is quoted."
      (let ((non-essential t))
        (when (and (tramp-tramp-file-p ,target)
 		  (tramp-file-name-equal-p v (tramp-dissect-file-name ,target)))
-	 (setq ,target (tramp-file-local-name (expand-file-name ,target))))
+	 (setf ,target (tramp-file-local-name (expand-file-name ,target))))
        ;; There could be a cyclic link.
        (tramp-flush-file-properties
 	v (expand-file-name ,target (tramp-file-local-name default-directory))))

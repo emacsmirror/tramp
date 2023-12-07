@@ -1,3 +1,22 @@
+2023-12-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-directory-files)
+	(tramp-skeleton-make-symbolic-link):
+	* tramp-cache.el (with-tramp-saved-file-property)
+	(with-tramp-saved-file-properties)
+	(with-tramp-saved-connection-property)
+	(with-tramp-saved-connection-properties): Use `setf' but `setq' in macro.
+
+	* tramp-compat.el (tramp-compat-funcall): Declare debug.
+
+	* tramp-crypt.el (tramp-crypt-file-name-p): Exclude lock files.
+	(tramp-crypt-file-name-handler-alist): Use `identity' for
+	`abbreviate-file-name'.
+	(tramp-crypt-add-directory, tramp-crypt-remove-directory):
+	Adapt docstrings.
+	(tramp-crypt-cleanup-connection): New defun.  Add it to
+	`tramp-cleanup-connection-hook'
+
 2023-11-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-local-host-regexp): Extend.
