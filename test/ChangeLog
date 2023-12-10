@@ -111,7 +111,7 @@
 
 2023-05-20  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp-tests.el (tramp-display-escape-sequence-regexp): Dont't declare.
+	* tramp-tests.el (tramp-display-escape-sequence-regexp): Don't declare.
 	(tramp-test28-process-file, tramp-test32-shell-command):
 	Use `ansi-color-control-seq-regexp'.
 	(tramp-test45-asynchronous-requests): Adapt test.
