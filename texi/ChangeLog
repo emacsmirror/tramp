@@ -1,3 +1,8 @@
+2023-12-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions):
+	'dired-listing-switches' handles connection-local values if exist.
+
 2023-12-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Remote processes): Adapt index.
