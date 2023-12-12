@@ -1,3 +1,10 @@
+2023-12-12  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-connection-local-p): New macro.
+
+	* tramp-crypt.el (tramp-crypt-cleanup-connection):
+	Bind `tramp-crypt-enabled'.
+
 2023-12-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-directory-files)
