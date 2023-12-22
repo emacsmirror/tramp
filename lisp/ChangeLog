@@ -1,7 +1,7 @@
 2023-12-22  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-handle-make-process): Use
-	`tramp-remote-path' for setting PATH environment.
+	* tramp.el (tramp-handle-make-process):
+	Use `tramp-remote-path' for setting PATH environment.
 
 	* tramp-sh.el (tramp-get-remote-pipe-buf): New defun.
 	(tramp-set-remote-path): Use it.
