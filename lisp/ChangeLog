@@ -1,3 +1,12 @@
+2023-12-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-make-process): Use
+	`tramp-remote-path' for setting PATH environment.
+
+	* tramp-sh.el (tramp-get-remote-pipe-buf): New defun.
+	(tramp-set-remote-path): Use it.
+	(tramp-get-remote-path): Add ;;;###tramp-autoload cookie.
+
 2023-12-13  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (tramp-compat-connection-local-p): Make it
