@@ -4874,7 +4874,7 @@ a connection-local variable."
 			    (member
 			     elt (default-toplevel-value 'process-environment))))
 			(setq env (cons elt env)))))
-		 ;; Add remote path if exists.
+	       ;; Add remote path if exists.
 	       (env (if-let ((sh-file-name-handler-p)
 			     (remote-path
 			      (string-join (tramp-get-remote-path v) ":")))
@@ -4890,7 +4890,7 @@ a connection-local variable."
 	        (append
 		 `("cd" ,(tramp-shell-quote-argument localname) "&&" "(" "env")
 		 env `(,command ")")))
-		;; Add remote shell if needed.
+	       ;; Add remote shell if needed.
 	       (command
 		(if (consp (tramp-get-method-parameter v 'tramp-direct-async))
 		    (append
