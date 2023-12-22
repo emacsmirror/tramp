@@ -1,3 +1,8 @@
+2023-12-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test35-exec-path-direct-async)
+	(tramp-test35-remote-path-direct-async): New tests.
+
 2023-12-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test18-file-attributes)
