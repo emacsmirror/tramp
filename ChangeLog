@@ -1,3 +1,11 @@
+2023-12-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.0 released.
+
+	* configure.ac: Bump version.
+
+	* INSTALL: Regenerate.
+
 2023-11-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* INSTALL: Regenerate.
