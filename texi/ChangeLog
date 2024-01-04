@@ -1,3 +1,7 @@
+2023-12-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.0 released.
+
 2023-12-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Remote processes): Remove item about tramp-remote-path.
