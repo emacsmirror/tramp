@@ -331,5 +331,10 @@ Also see `ignore'."
 ;;
 ;; * Starting with Emacs 27.1, there's no need to escape open
 ;;   parentheses with a backslash in docstrings anymore.
+;;
+;; * Starting with Emacs 30.1, there is `handler-bind'.  Use it
+;;   instead of `condition-case' when the origin of an error shall be
+;;   kept, for example when the HANDLER propagates the error with
+;;   `(signal (car err) (cdr err)'.
 
 ;;; tramp-compat.el ends here
