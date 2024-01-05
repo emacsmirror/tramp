@@ -1,3 +1,8 @@
+2024-01-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (ert-remote-temporary-file-directory):
+	Make it a defvar.
+
 2023-12-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.7.0 released.
