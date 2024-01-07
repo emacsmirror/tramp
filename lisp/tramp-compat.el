@@ -330,7 +330,10 @@ Also see `ignore'."
 ;;; TODO:
 ;;
 ;; * Starting with Emacs 27.1, there's no need to escape open
-;;   parentheses with a backslash in docstrings anymore.
+;;   parentheses with a backslash in docstrings anymore.  However,
+;;   `outline-minor-mode' has still problems with this.  Since there
+;;   are developers using `outline-minor-mode' in Lisp files, we still
+;;   keep this quoting.
 ;;
 ;; * Starting with Emacs 29.1, use `buffer-match-p'.
 ;;
