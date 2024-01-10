@@ -1,3 +1,8 @@
+2024-01-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-file-name-completion)
+	(tramp-test26-interactive-file-name-completion): Run also on MS Windows.
+
 2024-01-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (ert-remote-temporary-file-directory):
