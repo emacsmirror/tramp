@@ -1,3 +1,9 @@
+2024-01-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-build-completion-file-name-regexp): Do not use
+	`tramp-volume-letter-regexp'.  (Bug#68320)
+	(tramp-completion-handle-expand-file-name): Simplify regexp.
+
 2024-01-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-bundle-read-file-names): Check, that the
