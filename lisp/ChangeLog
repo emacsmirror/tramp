@@ -1,3 +1,7 @@
+2024-01-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-local-host-regexp): Adapt :version.
+
 2024-01-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-build-completion-file-name-regexp): Do not use
