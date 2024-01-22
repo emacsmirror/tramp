@@ -1,3 +1,8 @@
+2024-01-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-parse-passwd): Use `tramp-parse-passwd-group'.
+	Reported by Tim Landscheidt <tim@tim-landscheidt.de>.
+
 2024-01-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-local-host-regexp): Adapt :version.
