@@ -1,3 +1,9 @@
+2024-02-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-backtrace, tramp-error)
+	(tramp-error-with-buffer, tramp-user-error):
+	Declare `tramp-suppress-trace' property.
+
 2024-02-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (with-tramp-saved-file-property)
