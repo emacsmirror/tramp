@@ -1,3 +1,8 @@
+2024-02-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-gvfs.el (tramp-gvfs-file-name-handler):
+	`file-remote-p' must not return an error.  (Bug#68976)
+
 2024-02-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-message.el (tramp-backtrace, tramp-error)
