@@ -1,3 +1,9 @@
+2024-02-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-set-ert-test-documentation): New defun.
+	(tramp--test-deftest-with-stat, tramp--test-deftest-with-perl)
+	(tramp--test-deftest-with-ls): Use it to define docstring.
+
 2024-02-08  Stefan Monnier  <monnier@iro.umontreal.ca>
 
 	* tramp-archive-tests.el (tramp-archive-test-file-archive)
