@@ -1,3 +1,7 @@
+2024-02-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el: Adapt comments.
+
 2024-02-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive.el (tramp-register-archive-autoload-file-name-handler):
