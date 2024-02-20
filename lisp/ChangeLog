@@ -1,3 +1,36 @@
+2024-02-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-methods): Adapt docstring.
+	(tramp-get-method-parameter, tramp-expand-args): New optional
+	argument DEFAULT.
+
+	* tramp-container.el (tramp-dockercp-method)
+	(tramp-podmancp-method): New defconst.
+	(tramp-methods) <dockercp, podmancp>: Add new methods.
+	(tramp-container--completion-function): Adapt docstring.  Use it
+	for "dockercp" and "podmancp" completion.
+
+	* tramp-sh.el (tramp-methods) <nc>: Add `tramp-copy-file-name'.
+	(tramp-default-copy-file-name): New defconst.
+	(tramp-make-copy-file-name): Rename from
+	`tramp-make-copy-program-file-name'.  Use method parameter
+	`tramp-copy-file-name'.  (Bug#69085)
+	(tramp-do-copy-or-rename-file-out-of-band): Adapt callees.
+
+	* tramp.el (tramp-get-remote-tmpdir):
+	* tramp-gvfs.el (tramp-gvfs-maybe-open-connection):
+	* tramp-sh.el (tramp-maybe-open-connection): Use a default
+	value with `tramp-get-method-parameter'.
+
+	* tramp.el (tramp-handle-make-process):
+	* tramp-adb.el (tramp-adb-maybe-open-connection):
+	* tramp-sh.el (tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-maybe-open-connection):
+	* tramp-sshfs.el (tramp-sshfs-handle-process-file)
+	(tramp-sshfs-maybe-open-connection):
+	* tramp-sudoedit.el (tramp-sudoedit-send-command): Adapt
+	`tramp-expand-args' calls.
+
 2024-02-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el: Adapt comments.
@@ -350,7 +383,7 @@
 
 	* tramp-container.el (tramp-container--completion-function):
 	Set default directory to last hop.
-	(tramp-set-completion-function): Don't use executable-find for
+	(tramp-set-completion-function): Don't use `executable-find' for
 	container program since it might not be running locally.
 
 2023-08-27  Michael Albinus  <michael.albinus@gmx.de>
