@@ -1,3 +1,7 @@
+2024-02-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-methods): Fix typo in docstring.  (Bug#69294)
+
 2024-02-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Adapt docstring.
