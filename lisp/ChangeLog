@@ -1,3 +1,12 @@
+2024-02-28  Po Lu  <luangruo@yahoo.com>
+
+	* tramp-adb.el (tramp-adb-handle-file-attributes)
+	(tramp-adb-handle-directory-files-and-attributes)
+	(tramp-adb-handle-file-name-all-completions): Properly print
+	ls's exit status in the presence of a pipe.
+	(tramp-adb-send-command-and-check): New argument
+	COMMAND-AUGMENTED-P.
+
 2024-02-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Fix typo in docstring.  (Bug#69294)
