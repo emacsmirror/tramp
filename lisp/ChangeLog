@@ -1,3 +1,7 @@
+2024-03-04  Po Lu  <luangruo@yahoo.com>
+
+	* tramp-androidsu.el: New file.
+
 2024-02-28  Po Lu  <luangruo@yahoo.com>
 
 	* tramp-adb.el (tramp-adb-handle-file-attributes)
