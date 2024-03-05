@@ -1,3 +1,8 @@
+2024-03-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Quick Start Guide): Add androidsu.
+	(Inline methods): Make androidsu an own item.
+
 2024-03-05  Po Lu  <luangruo@yahoo.com>
 
 	* tramp.texi (Inline methods): Document androidsu.
