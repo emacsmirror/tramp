@@ -1,3 +1,7 @@
+2024-03-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (LISP_FILES): Add tramp-androidsu.el.
+
 2024-03-04  Po Lu  <luangruo@yahoo.com>
 
 	* tramp-androidsu.el: New file.

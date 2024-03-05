@@ -41,11 +41,11 @@ CLEAN_FILES	= @TRAMP_CLEAN_FILES@
 # trampver.el, tramp-compat.el and tramp.el must be handled first due
 # to dependencies.
 LISP_FILES	= trampver.el tramp-compat.el tramp.el tramp-adb.el	\
-		  tramp-cache.el tramp-cmds.el tramp-container.el	\
-		  tramp-crypt.el tramp-ftp.el tramp-fuse.el		\
-		  tramp-integration.el tramp-message.el tramp-rclone.el	\
-		  tramp-sh.el tramp-smb.el tramp-sshfs.el		\
-		  tramp-sudoedit.el tramp-uu.el
+		  tramp-androidsu.el tramp-cache.el tramp-cmds.el	\
+		  tramp-container.el tramp-crypt.el tramp-ftp.el	\
+		  tramp-fuse.el tramp-integration.el tramp-message.el	\
+		  tramp-rclone.el tramp-sh.el tramp-smb.el		\
+		  tramp-sshfs.el tramp-sudoedit.el tramp-uu.el
 
 # tramp-archive.el, tramp-gvfs.el need dbus.
 ifeq ($(EMACS_GVFS), yes)
