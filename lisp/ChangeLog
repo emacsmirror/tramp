@@ -1,3 +1,12 @@
+2024-03-06  Po Lu  <luangruo@yahoo.com>
+
+	* tramp-adb.el (tramp-adb-handle-file-writable-p): Ignore the
+	file-attributes cache, since file mode is not a reliable indicator
+	of writability.
+
+	* tramp-androidsu.el (tramp-androidsu-generate-wrapper):
+	Arguments to fset must be symbols rather than functions.
+
 2024-03-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (LISP_FILES): Add tramp-androidsu.el.
