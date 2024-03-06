@@ -1,3 +1,19 @@
+2024-03-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-adb.el (tramp-adb-maybe-open-connection):
+	Unset environment variable PS2.
+
+	* tramp-androidsu.el (tramp-default-host-alist): Don't add an
+	entry; `tramp-default-host' is set properly.
+	(tramp-androidsu-maybe-open-connection): Don't set connection
+	property "remote-namespace" to nil, this is the default anyway.
+	Don't set connection property "remote-path", we use
+	connection-local values instead.  Unset environment variable PS2.
+	Dump shell options after setting all of them.
+	(tramp-androidsu-handle-make-process): Don't use hard-coded user "root".
+	(tramp-androidsu-connection-local-default-variables): New defvar.
+	Add it to connection-local profiles.
+
 2024-03-06  Po Lu  <luangruo@yahoo.com>
 
 	* tramp-adb.el (tramp-adb-handle-file-writable-p): Ignore the
