@@ -1,3 +1,9 @@
+2024-03-14  Tim Landscheidt  <tim@tim-landscheidt.de>
+
+	* tramp-cmds.el (tramp-cleanup-some-buffers):
+	Replace (with-current-buffer (get-buffer ...) ...) with
+	(with-current-buffer ...).
+
 2024-03-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-adb.el (tramp-adb-maybe-open-connection):
