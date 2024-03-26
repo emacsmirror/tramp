@@ -1,7 +1,7 @@
 2024-03-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):
-	Add Tramp version integrated in Emacs 29.2.
+	Add Tramp version integrated in Emacs 29.3.
 
 2024-03-14  Tim Landscheidt  <tim@tim-landscheidt.de>
 
