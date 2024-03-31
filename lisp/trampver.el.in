@@ -38,9 +38,6 @@
 ;; address and the required Emacs version are auto-frobbed from
 ;; configure.ac, so you should edit that file and run "autoconf &&
 ;; ./configure" to change them.
-;; In Emacs release branch, this is already the anticipated Tramp
-;; version of the next Tramp release integrated in Emacs.  This is to
-;; allow Emacs emergency releases w/o additional Tramp bureaucracy.
 
 ;;;###tramp-autoload
 (defconst tramp-version "@PACKAGE_VERSION@"
@@ -92,9 +89,6 @@
 ;; version, it must be added here as well (see `tramp-syntax', for
 ;; example).  This can be checked by something like
 ;; (customize-changed "26.1")
-;; In Emacs release branch, there is already the anticipated Tramp
-;; version of the next Tramp release integrated in Emacs.  This is to
-;; allow Emacs emergency releases w/o additional Tramp bureaucracy.
 (add-to-list
  'customize-package-emacs-version-alist
  '(Tramp ("2.0.55" . "22.1") ("2.0.57" . "22.2") ("2.0.58-pre" . "22.3")
