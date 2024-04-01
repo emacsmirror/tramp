@@ -1,3 +1,8 @@
+2024-04-01  Po Lu  <luangruo@yahoo.com>
+
+	* tramp-androidsu.el (tramp-androidsu-handle-make-process):
+	Disable exec loader around call to setuid su binary.
+
 2024-03-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):
