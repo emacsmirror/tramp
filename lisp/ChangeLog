@@ -1,3 +1,9 @@
+2024-04-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-inhibit-errors-if-setting-file-attributes-fail):
+	New defcustom.
+	(tramp-skeleton-set-file-modes-times-uid-gid): Use it.
+
 2024-04-02  Po Lu  <luangruo@yahoo.com>
 
 	* tramp-androidsu.el (tramp-androidsu-remote-path): Set type to
