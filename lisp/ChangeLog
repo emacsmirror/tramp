@@ -1,3 +1,8 @@
+2024-05-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-lock-file-info-regexp): BOOT_TIME can be
+	negative.  (Bug#70415)
+
 2024-04-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-insert-directory): Do not use
