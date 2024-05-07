@@ -1,3 +1,8 @@
+2024-05-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-container-p): Add "apptainer".
+	(tramp--test-supports-processes-p): Extend function.
+
 2024-02-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-container-p): Adapt.
