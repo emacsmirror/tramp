@@ -1,3 +1,11 @@
+2024-05-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Top, Configuration): Add "Optional methods".
+	(Optional methods): New section.
+	(Inline methods) <androidsu, toolbox, flatpak>: These are optional
+	methods.
+	(Inline methods) <apptainer>: Add.
+
 2024-04-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions): Describe how to
