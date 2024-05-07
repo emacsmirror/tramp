@@ -1,3 +1,16 @@
+2024-05-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-enable-method): New defun.
+
+	* tramp-androidsu.el (tramp-enable-androidsu-method): New defun.
+	Call it when `system-type' is `android'.
+
+	* tramp-container.el (tramp-apptainer-program): New defcustom.
+	(tramp-apptainer-method): New defconst.
+	(tramp-apptainer--completion-function)
+	(tramp-enable-toolbox-method, tramp-enable-flatpak-method)
+	(tramp-enable-apptainer-method): New defuns.
+
 2024-05-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-lock-file-info-regexp): BOOT_TIME can be
