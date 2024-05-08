@@ -1,3 +1,8 @@
+2024-05-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test03-file-name-defaults)
+	(tramp-test03-file-name-host-rules): Extend tests.
+
 2024-05-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-container-p): Add "apptainer".
