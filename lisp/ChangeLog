@@ -1,3 +1,17 @@
+2024-05-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-enable-method): Implement completion for
+	interactive use.
+
+	* tramp-androidsu.el (tramp-enable-androidsu-method): Use proper
+	regexp for `tramp-default-user-alist'.
+	(Top): Wrap call of `tramp-enable-androidsu-method' with
+	`tramp--with-startup'.
+
+	* tramp-sh.el (tramp-enable-nc-method, tramp-enable-ksu-method)
+	(tramp-enable-krlogin-method, tramp-enable-fcp-method):
+	New defuns.  Move respective configurations there.
+
 2024-05-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-enable-method): New defun.
