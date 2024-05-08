@@ -1,3 +1,8 @@
+2024-05-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Inline methods) <krlogin, ksu>:
+	(External methods) <fcp, nc>: These are optional methods.
+
 2024-05-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Top, Configuration): Add "Optional methods".
