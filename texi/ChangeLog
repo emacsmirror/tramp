@@ -1,3 +1,10 @@
+2024-05-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Quick Start Guide, Inline methods)
+	(Password handling, Predefined connection information)
+	(Ad-hoc multi-hops): Add "run0".
+	(Remote processes): Mention tramp-use-connection-share.
+
 2024-05-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods) <krlogin, ksu>:
