@@ -440,7 +440,7 @@ see its function help for a description of the format."
 (defun tramp-nspawn--completion-function (method)
   "List systemd-nspawn containers available for connection.
 
-This function is used by ‘tramp-set-completion-function’, please
+This function is used by `tramp-set-completion-function', please
 see its function help for a description of the format."
   (tramp-skeleton-completion-function method
     (when-let ((raw-list
