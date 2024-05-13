@@ -775,8 +775,8 @@ require a password (with @command{ssh-agent}, or similar).  Modern
 @command{scp} implementations offer options to reuse existing
 @command{ssh} connections, which @value{tramp} enables by default if
 available.  If that is not possible, you should consider @ref{Password
-handling}, otherwise you will be prompted for a
-password for every copy action.
+handling}, otherwise you will be prompted for a password for every
+copy action.
 
 
 @node Inline methods
