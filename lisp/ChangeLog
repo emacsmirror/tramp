@@ -1,3 +1,8 @@
+2024-05-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-unlock-file): Be quiet if user isn't
+	interested in lock files.  Bug#70900
+
 2024-05-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-local-host-regexp): Add OpenSUSE host names.
