@@ -1,3 +1,8 @@
+2024-05-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
+	Use `tramp-user-error' for the traces.
+
 2024-05-14  Po Lu  <luangruo@yahoo.com>
 
 	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
