@@ -1,3 +1,11 @@
+2024-05-14  Po Lu  <luangruo@yahoo.com>
+
+	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
+	Search for `su' when the connection is initiated; replace PATH of
+	inferior shell with trap-androidsu-remote-path.
+	(tramp-androidsu-handle-make-process): Do not provide username if
+	root.
+
 2024-05-13  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-unlock-file): Be quiet if user isn't
