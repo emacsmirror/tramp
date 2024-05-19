@@ -1,3 +1,10 @@
+2024-05-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Predefined connection information):
+	Remove "direct-async-process".
+	(Remote processes): Explain connection-local variable
+	tramp-direct-async-process.
+
 2024-05-13  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi: Adapt some markups.
