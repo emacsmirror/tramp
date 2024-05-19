@@ -1,3 +1,8 @@
+2024-05-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-deftest-direct-async-process):
+	Use connection-local-variable `tramp-direct-async-process'.
+
 2024-05-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test03-file-name-defaults)
