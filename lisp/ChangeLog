@@ -1,3 +1,15 @@
+2024-05-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-connection-local-p): Sync with
+	Emacs source.
+	(tramp-compat-connection-local-value): New defalias.
+
+	* tramp-message.el (tramp-warning): New defsubst.
+
+	* tramp.el (tramp-direct-async-process): New defvar.
+	(tramp-direct-async-process-p): Use connection-local variable for
+	check.  (Bug#70959)
+
 2024-05-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
