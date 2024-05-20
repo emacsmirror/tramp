@@ -1,3 +1,11 @@
+2024-05-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-container-p): Add "kubernetes",
+	"run0" and "nspawn".
+	(tramp--test-toolbox-p): New defun.
+	(tramp-test45-asynchronous-requests): Use it.
+	(tramp--test-check-files): Adapt regexp.
+
 2024-05-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-deftest-direct-async-process):
