@@ -1,3 +1,8 @@
+2024-05-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (comp-warn-primitives): Declare.
+	(tramp-test18-file-attributes): Use it.
+
 2024-05-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-container-p): Add "kubernetes",
