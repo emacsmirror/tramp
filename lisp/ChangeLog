@@ -1,3 +1,12 @@
+2024-05-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
+	* tramp-gvfs.el (tramp-gvfs-maybe-open-connection):
+	Adapt progress-reporter message.
+
+	* tramp-sh.el (tramp-maybe-open-connection):
+	Divide progress-reporter into two parts.  (Bug#70901)
+
 2024-05-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-container.el: Move connection-local settings where they
