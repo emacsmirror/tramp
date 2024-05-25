@@ -1,3 +1,9 @@
+2024-05-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-deftest-direct-async-process):
+	Don't suppress internal sentinel.
+	(tramp-test32-shell-commanddirect-async): Don't tag it :unstable.
+
 2024-05-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (comp-warn-primitives): Declare.
