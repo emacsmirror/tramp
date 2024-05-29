@@ -3,6 +3,15 @@
 	* tramp.el (tramp-handle-make-process):
 	Obey `tramp-histfile-override'.  (Bug#71049)
 
+	* tramp-container.el (tramp-distrobox-program): New defcustom.
+	(tramp-distrobox-method): New defconst.
+	(tramp-distrobox--completion-function)
+	(tramp-enable-distrobox-method): New defuns.  (Bug#71200)
+	(tramp-docker-method, tramp-dockercp-method)
+	(tramp-podman-method, tramp-podmancp-method)
+	(tramp-kubernetes-method, tramp-flatpak-method)
+	(tramp-apptainer-method, tramp-nspawn-method): Adapt docstring.
+
 	* tramp-sh.el (tramp-histfile-override): Add ;;;###tramp-autoload
 	cookie and `permanent-local' symbol property.
 
