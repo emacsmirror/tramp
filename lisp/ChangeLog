@@ -1,3 +1,11 @@
+2024-05-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-make-process):
+	Obey `tramp-histfile-override'.  (Bug#71049)
+
+	* tramp-sh.el (tramp-histfile-override): Add ;;;###tramp-autoload
+	cookie and `permanent-local' symbol property.
+
 2024-05-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-make-process):
