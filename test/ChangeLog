@@ -1,3 +1,8 @@
+2024-05-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-box-p): Rename from
+	`tramp--test-toolbox-p'.  Add distrobox.  Adapt callees.
+
 2024-05-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-deftest-direct-async-process):
