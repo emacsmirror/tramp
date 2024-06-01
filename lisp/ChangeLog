@@ -1,3 +1,13 @@
+2024-06-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-adb.el:
+	* tramp-container.el: Add myself as maintainer.
+
+	* tramp-compat.el (connection-local-default-application):
+	Define if not bound.
+	(tramp-compat-connection-local-p, tramp-compat-connection-local-value):
+	Use it.
+
 2024-06-01  Dmitry Gutov  <dmitry@gutov.dev>
 
 	* tramp.el (tramp-handle-shell-command):
