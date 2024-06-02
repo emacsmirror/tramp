@@ -1,6 +1,7 @@
 2024-06-02  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-remote-path): Add "/opt/homebrew/bin".  (Bug#71235)
+	* tramp.el (tramp-remote-path): Add "/opt/homebrew/bin" and
+	"/opt/homebrew/sbin".  (Bug#71235)
 
 2024-06-01  Michael Albinus  <michael.albinus@gmx.de>
 
