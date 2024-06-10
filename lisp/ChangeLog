@@ -1,3 +1,19 @@
+2024-06-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-file-local-name): Adapt docstring.
+	(tramp-skeleton-make-process): New defmacro.
+
+	* tramp.el (tramp-handle-make-process):
+	* tramp-adb.el (tramp-adb-handle-make-process):
+	* tramp-androidsu.el (tramp-androidsu-handle-make-process):
+	* tramp-sh.el (tramp-sh-handle-make-process):
+	Use `tramp-skeleton-make-process'.
+
+	* tramp-container.el (tramp-actions-before-shell): Don't declare.
+
+	* tramp-sh.el (tramp-actions-before-shell):
+	Add ;;;###tramp-autoload cookie.
+
 2024-06-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-remote-path): Add "/opt/homebrew/bin" and
@@ -33,8 +49,8 @@
 	(tramp-actions-before-shell, tramp-actions-copy-out-of-band): Declare.
 	Add `tramp-container-no-container-regexp'.  (Bug#71200)
 
-	* tramp-sh.el (tramp-methos) <scp, ssh>:
-	Adapt `tramp-direct-async' argument.  (Bug#71259)
+	* tramp-sh.el (tramp-methods) <scp, ssh>:
+	Adapt `tramp-direct-async' argument.  (Bug#71050, Bug#71259)
 
 2024-05-29  Michael Albinus  <michael.albinus@gmx.de>
 
