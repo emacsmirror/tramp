@@ -1,3 +1,11 @@
+2024-06-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-use-file-attributes): Adapt docstring.
+	Use connection-local value.
+
+	* tramp-sh.el (tramp-open-connection-setup-interactive-shell):
+	Dump os-release when `tramp-verbose' is at least 9.
+
 2024-06-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-use-file-attributes): New defcustom and defsubst.
