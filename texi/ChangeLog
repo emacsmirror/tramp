@@ -1,3 +1,9 @@
+2024-06-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi: Fix indentation.
+	(Bug Reports): Mention Gmane group gmane.emacs.tramp.
+	(Frequently Asked Questions): Precise tramp-use-file-attributes entry.
+
 2024-06-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions):
