@@ -38,13 +38,13 @@ The easiest way to proceed is as follows:
      unpack the tarball.  This will give you a directory
      ‘~/emacs/tramp-2.7.1-pre/’ which contains subdirectories ‘lisp’ for
      the Lisp code, ‘texi’ for the documentation, and ‘test’ for code
-     running Tramp’s test suite.  Make a symbolic link:
+     running Tramp's test suite.  Make a symbolic link:
 
           $ ln -s tramp-2.7.1-pre tramp
 
-   • ‘cd’ to ‘~/emacs/tramp/’.  If you’ve taken Tramp from the Git
+   • ‘cd’ to ‘~/emacs/tramp/’.  If you've taken Tramp from the Git
      sources, type ‘autoconf’ in order to get an up-to-date ‘configure’
-     script.  This is needed only one time after you’ve cloned Tramp
+     script.  This is needed only one time after you've cloned Tramp
      from Git.
 
    • Type ‘./configure’ to configure Tramp for your system.
@@ -63,7 +63,7 @@ The easiest way to proceed is as follows:
      the files that ‘configure’ created, type ‘make distclean’ instead.
 
    • NOTE: If you run into problems running the example ‘make’ command,
-     don’t despair.  You can still byte compile the ‘*.el’ files by
+     don't despair.  You can still byte compile the ‘*.el’ files by
      opening Emacs in ‘dired’ (‘C-x d’) mode, at ‘~/emacs/tramp/lisp’.
      Mark the lisp files with ‘m’, then press ‘B’ to byte compile your
      selections.
@@ -77,7 +77,7 @@ The easiest way to proceed is as follows:
 Parameters in order to control installation
 ===========================================
 
-By default, ‘make install’ will install Tramp’s files in
+By default, ‘make install’ will install Tramp's files in
 ‘/usr/local/share/emacs/site-lisp’ and ‘/usr/local/share/info’.  You can
 specify an installation prefix other than ‘/usr/local’ by giving
 ‘configure’ the option ‘--prefix=PATH’.  On GNU/Linux systems, it has
@@ -86,7 +86,7 @@ been reported useful to apply
      $ ./configure --prefix=/usr
 
 If your installed copy of Emacs is named something other than ‘emacs’,
-you will need to tell ‘make’ where to find it so that it can correctly
+you will need to tell 'make' where to find it so that it can correctly
 byte-compile the Tramp sources.
 
 For example, to pass the Emacs command to be called:
@@ -119,17 +119,17 @@ installation:
      $ make DESTDIR=/tmp install
 
 Running ‘configure’ might result in errors or warnings.  The output
-explains in detail what’s going wrong.
+explains in detail what's going wrong.
 
 In case of errors, it is mandatory to fix them before continuation.
 This can be missing or wrong versions of ‘emacs’, Emacs packages,
 ‘make’, or ‘makeinfo’.
 
 Warnings let ‘configure’ (and the whole installation process) continue,
-but parts of Tramp aren’t installed.  This can happen with missing or
+but parts of Tramp aren't installed.  This can happen with missing or
 wrong versions of ‘texi2dvi’ or ‘install-info’.  Here you can decide
 yourself whether you want to renounce on the related feature
-(‘tramp.dvi’ file for printed output, Tramp entry in Info’s ‘dir’ file),
+(‘tramp.dvi’ file for printed output, Tramp entry in Info's ‘dir’ file),
 or whether you want to adapt your ‘PATH’ environment variable, and rerun
 ‘configure’.  An alternative is calling the missed parts manually later
 on.
@@ -182,7 +182,7 @@ suite.
 How to plug-in Tramp into your environment
 ==========================================
 
-If you don’t install Tramp into the intended directories, but prefer to
+If you don't install Tramp into the intended directories, but prefer to
 use from the source directory, you need to add the following lines into
 your ‘.emacs’:
 
@@ -217,7 +217,7 @@ Emacs 28 or older
 
           $ rm -f ~/.emacs.d/elpa/tramp-2.7.1-pre/tramp*.elc
 
-   • Start Emacs with Tramp’s source files
+   • Start Emacs with Tramp's source files
 
           $ emacs -L ~/.emacs.d/elpa/tramp-2.7.1-pre -l tramp
 
