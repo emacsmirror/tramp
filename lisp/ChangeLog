@@ -1,3 +1,11 @@
+2024-06-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-file-exists-p): Check for property only.
+	(tramp-skeleton-make-process): Don't set `default-directory'.
+	(tramp-handle-make-process): Set it.  (Bug#71709)
+
+	* tramp-message.el (tramp-backtrace): Print also in batch mode.
+
 2024-06-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* trampver.el.in (customize-package-emacs-version-alist):
