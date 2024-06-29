@@ -7295,7 +7295,7 @@ This requires restrictions of file name syntax."
     ;; We use it to enable/disable tests in a given test run, for
     ;; example for remote processes on MS Windows.
     (if (tramp-connection-property-p
-     	 tramp-test-vec "tramp--test-supports-processes-p")
+         tramp-test-vec "tramp--test-supports-processes-p")
 	(tramp-get-connection-property
 	 tramp-test-vec "tramp--test-supports-processes-p")
       (or (tramp--test-adb-p) (tramp--test-sh-p) (tramp--test-sshfs-p)))))
