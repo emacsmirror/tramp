@@ -1,3 +1,14 @@
+2024-06-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.1 released
+
+	* tramp-tests.el (tramp--test-deftest-without-file-attributes):
+	New defmacro.
+	(tramp-test18-file-attributes-without-file-attributes)
+	(tramp-test19-directory-files-and-attributes-without-file-attributes)
+	(tramp-test18-file-attributes-without-file-attributes)
+	(tramp-test42-utf8-without-file-attributes): New tests.
+
 2024-06-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-shell-file-name):
