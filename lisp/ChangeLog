@@ -1,3 +1,13 @@
+2024-06-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.7.1 released
+
+	* tramp-compat.el:
+	* tramp-message.el (tramp-warning): Use `lwarn'.
+
+	* trampver.el.in (customize-package-emacs-version-alist):
+	Add Tramp version integrated in Emacs 30.1.
+
 2024-06-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-file-exists-p): Check for property only.
