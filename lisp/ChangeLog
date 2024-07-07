@@ -1,3 +1,13 @@
+2024-07-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-host-with-port-regexp): Declare.
+	(tramp-set-syntax): Set also `tramp-host-with-port-regexp'.
+	(tramp-build-host-with-port-regexp): New defun.
+	(tramp-host-with-port-regexp): Make it a defvar.  (Bug#71972)
+
+	* trampver.el.in (customize-package-emacs-version-alist):
+	Change Tramp version integrated in Emacs 30.1.
+
 2024-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.7.1 released
