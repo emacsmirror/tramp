@@ -1,3 +1,12 @@
+2024-07-09  Stefan Kangas  <stefankangas@gmail.com>
+
+	* tramp-adb.el (tramp-adb-handle-get-remote-uid):
+	* tramp-cmds.el (tramp-recompile-elpa-command-completion-p):
+	* tramp-crypt.el (tramp-crypt-command-completion-p):
+	* tramp-message.el (tramp-debug-buffer-command-completion-p):
+	* tramp-sh.el (tramp-use-connection-share):
+	* tramp.el (tramp-command-completion-p): Checkdoc fixes.
+
 2024-07-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-host-with-port-regexp): Declare.
