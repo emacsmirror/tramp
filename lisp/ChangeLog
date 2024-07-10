@@ -1,3 +1,7 @@
+2024-07-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-enable-run0-method): Adapt "run0" arguments.
+
 2024-07-09  Stefan Kangas  <stefankangas@gmail.com>
 
 	* tramp-adb.el (tramp-adb-handle-get-remote-uid):
