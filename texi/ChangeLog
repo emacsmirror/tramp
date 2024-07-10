@@ -1,3 +1,7 @@
+2024-07-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Inline methods): Adapt "run0" entry.
+
 2024-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.7.1 released
