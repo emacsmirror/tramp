@@ -1,7 +1,17 @@
+2024-07-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test02-file-name-dissect)
+	(tramp-test02-file-name-dissect-simplified)
+	(tramp-test02-file-name-dissect-separate): Extend tests.
+	(tramp-test06-directory-file-name)
+	(tramp-test26-file-name-completion)
+	(tramp-test26-interactive-file-name-completion): Better handling
+	of IPv6 hosts.
+
 2024-07-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test41-special-characters-direct-async)
-	(tramp-test42-utf8-direct-async): New tests
+	(tramp-test42-utf8-direct-async): New tests.
 
 2024-07-07  Michael Albinus  <michael.albinus@gmx.de>
 
