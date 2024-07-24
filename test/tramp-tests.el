@@ -5146,7 +5146,7 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 		  (goto-char (point-min))
 		  (while (search-forward-regexp
 			  ansi-color-control-seq-regexp nil t)
-		    (replace-match "" nil nil))
+		    (replace-match ""))
 		  (should
 		   (string-equal (if destination (format "%s\n" fnnd) "")
 				 (buffer-string)))
@@ -5161,7 +5161,7 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 		  (goto-char (point-min))
 		  (while (search-forward-regexp
 			  ansi-color-control-seq-regexp nil t)
-		    (replace-match "" nil nil))
+		    (replace-match ""))
 		  (should
 		   (string-equal
 		    (if destination (format "%s\n%s\n" fnnd fnnd) "")
@@ -5894,7 +5894,7 @@ INPUT, if non-nil, is a string sent to the process."
 	      ;; "ls" could produce colorized output.
 	      (goto-char (point-min))
 	      (while (search-forward-regexp ansi-color-control-seq-regexp nil t)
-		(replace-match "" nil nil))
+		(replace-match ""))
 	      (should
 	       (string-equal
 		(format "%s\n" (file-name-nondirectory tmp-name))
