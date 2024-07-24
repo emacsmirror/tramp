@@ -875,8 +875,7 @@ This tests also `file-executable-p', `file-writable-p' and `set-file-modes'."
       (dolist (default-directory
 		(append
 		 `(,temporary-file-directory)
-		 `(,(file-name-as-directory
-		     tramp-archive-test-directory))))
+		 `(,(file-name-as-directory tramp-archive-test-directory))))
 	(dolist (file `("/mock::foo" ,(concat tramp-archive-test-archive "foo")))
           (should
            (string-match
