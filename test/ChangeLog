@@ -1,3 +1,24 @@
+2024-07-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (ert-resource-directory-format)
+	(ert-resource-directory-trim-left-regexp)
+	(ert-resource-directory-trim-right-regexp, ert-resource-directory)
+	(ert-resource-file): Don't define.
+	(tramp-archive--test-emacs28-p): Remove.
+	(top): Remove unneeded skips.  Use original objects instead of
+	their `tramp-compat-' counterparts when possible.
+
+	* tramp-tests.el (seq): Don't require.
+	(lock-file-name-transforms, process-file-return-signal-string)
+	(remote-file-name-inhibit-locks, dired-copy-dereference): Don't declare.
+	(ert-resource-directory-format)
+	(ert-resource-directory-trim-left-regexp)
+	(ert-resource-directory-trim-right-regexp, ert-resource-directory)
+	(ert-resource-file): Don't define.
+	(tramp--test-emacs28-p): Remove.
+	(top): Remove unneeded skips.  Use original objects instead of
+	their `tramp-compat-' counterparts when possible.
+
 2024-07-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test02-file-name-dissect)
