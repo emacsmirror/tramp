@@ -26,13 +26,13 @@ AC_PREREQ([2.50])
 
 # Initialize configure script.  This is the only place Tramp revision
 # needs to be set.
-AC_INIT([Tramp], [2.7.2-pre], [tramp-devel@gnu.org], ,
+AC_INIT([Tramp], [2.8.0-pre], [tramp-devel@gnu.org], ,
 	[https://www.gnu.org/software/tramp/])
 AC_MSG_NOTICE([$PACKAGE_STRING])
 
 # Declare required Emacs version.  This is the only place Emacs
 # revision needs to be set.
-EMACS_REQUIRED_VERSION="27.1"
+EMACS_REQUIRED_VERSION="28.1"
 AC_SUBST(EMACS_REQUIRED_VERSION)
 
 # Check suitable make version.
