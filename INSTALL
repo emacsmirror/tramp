@@ -11,7 +11,7 @@ System Requirements
 
 For installation, it requires at least the following program versions:
 
-   • GNU Emacs 27.1
+   • GNU Emacs 28.1
    • GNU Autoconf 2.50 if sources are taken from Git
    • GNU make 3.76
    • GNU texinfo 4.6
