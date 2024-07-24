@@ -18,8 +18,8 @@
 @value{tramp} is part of Emacs since version 22.
 @ifplaintext
 This @value{tramp} version, @value{trampver}, has been used
-successfully on @w{Emacs 27}, on @w{Emacs 28}, on @w{Emacs 29}, and on
-@w{Emacs 30}.
+successfully on @w{Emacs 28}, on @w{Emacs 29}, on @w{Emacs 30}, and on
+@w{Emacs 31}.
 @end ifplaintext
 If you use the version that comes with your Emacs, or the version from
 GNU ELPA, the following information is not necessary.
@@ -132,7 +132,7 @@ it can correctly byte-compile the @value{tramp} sources.
 For example, to pass the Emacs command to be called:
 
 @example
-$ ./configure --with-emacs=emacs27
+$ ./configure --with-emacs=emacs28
 @end example
 
 If you specify the absolute path of the command, it must not contain
@@ -204,7 +204,7 @@ the following steps:
 Reconfigure the Emacs version used for compilation, if it has changed.
 
 @example
-$ ./configure --with-emacs=emacs27
+$ ./configure --with-emacs=emacs28
 @end example
 
 @item

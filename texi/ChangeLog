@@ -1,3 +1,8 @@
+2024-07-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions):
+	* trampinst.texi (Installation): Adapt supported Emacs versions.
+
 2024-07-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Remote processes): Add another reason why a direct
