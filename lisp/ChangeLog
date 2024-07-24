@@ -1,3 +1,34 @@
+2024-07-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (tramp-compat-file-modes)
+	(tramp-compat-set-file-modes, tramp-compat-set-file-times)
+	(tramp-compat-directory-files)
+	(tramp-compat-directory-files-and-attributes)
+	(tramp-compat-directory-empty-p, tramp-compat-null-device)
+	(tramp-compat-string-replace, tramp-compat-string-search)
+	(tramp-compat-make-lock-file-name)
+	(tramp-compat-file-name-concat)
+	(tramp-compat-replace-regexp-in-region, tramp-compat-length<)
+	(tramp-compat-length>, tramp-compat-length=)
+	(tramp-compat-always): Remove.
+
+	* tramp-adb.el:
+	* tramp-androidsu.el:
+	* tramp-archive.el:
+	* tramp-cache.el:
+	* tramp-cmds.el:
+	* tramp-compat.el:
+	* tramp-crypt.el:
+	* tramp-fuse.el:
+	* tramp-gvfs.el:
+	* tramp-message.el:
+	* tramp-sh.el:
+	* tramp-smb.el:
+	* tramp-sshfs.el:
+	* tramp-sudoedit.el:
+	* tramp.el: Use original objects instead of their `tramp-compat-'
+	counterparts when possible.
+
 2024-07-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-file-remote-p): Extend docstring.
