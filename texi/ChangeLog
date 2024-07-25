@@ -1,3 +1,9 @@
+2024-07-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Inline methods): Extend Kubernetes host name syntax
+	by an optional namespace.
+	(Kubernetes setup): Mention optional namespace part of the host name.
+
 2024-07-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions):
