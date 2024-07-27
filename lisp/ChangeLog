@@ -1,3 +1,12 @@
+2024-07-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-repository-branch, tramp-repository-version):
+	* tramp-message.el (tramp-repository-branch, tramp-repository-version):
+	Declare.
+
+	* trampver.el.in (tramp-repository-branch, tramp-repository-version):
+	Remove ;;;###tramp-autoload cookie.
+
 2024-07-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-dissect-file-name, tramp-compute-multi-hops):
