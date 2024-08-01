@@ -1,3 +1,11 @@
+2024-08-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-crypt.el (tramp-crypt-handle-set-visited-file-modtime)
+	(tramp-crypt-handle-verify-visited-file-modtime): New defuns.
+	(tramp-crypt-file-name-handler-alist): Use them.
+	(tramp-crypt-handle-lock-file): Care about `buffer-file-name'.
+	(tramp-crypt-handle-unlock-file): Remove compat code.
+
 2024-07-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cmds.el (tramp-repository-branch, tramp-repository-version):
