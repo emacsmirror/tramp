@@ -1,3 +1,39 @@
+2024-08-04  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-write-region): Use `lock-file' and
+	`unlock-file'..
+	(tramp-handle-make-lock-file-name): Use `remote-file-name-inhibit-locks'.
+	(tramp-handle-unlock-file): Use `remote-file-name-inhibit-locks'
+	and `userlock--handle-unlock-error'.
+	(tramp-handle-shell-command): Use `shell-command-buffer-name-async'
+	and `shell-command-buffer-name'.
+	(tramp-read-passwd): Remove workaround.
+
+	* tramp-adb.el (tramp-adb-handle-process-file):
+	Use `process-file-return-signal-string'.
+
+	* tramp-cache.el (tramp-dump-connection-properties):
+	Use "lisp-data" for persistency file.
+
+	* tramp-cmds.el (tramp-cleanup-this-connection)
+	(tramp-rename-these-files, tramp-recompile-elpa):
+	Declare `completion'
+
+	* tramp-container.el (tramp-kubernetes--container)
+	(tramp-kubernetes--pod, tramp-kubernetes--namespace): Make more
+	robust.
+
+	* tramp-crypt.el (tramp-crypt-remove-directory):
+	Declare `completion'
+
+	* tramp-gvfs.el (file-notyify-callback): Don't declare.
+
+	* tramp-sh.el (process-file-return-signal-string)
+	(vc-handled-backends): Don't declare.
+
+	* tramp-smb.el (tramp-smb-handle-copy-directory):
+	Use `copy-directory-create-symlink'.
+
 2024-08-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-crypt.el (tramp-crypt-handle-set-visited-file-modtime)
