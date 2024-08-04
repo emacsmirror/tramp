@@ -17,14 +17,14 @@
 
 	* tramp-cmds.el (tramp-cleanup-this-connection)
 	(tramp-rename-these-files, tramp-recompile-elpa):
-	Declare `completion'
+	Declare `completion'.
 
 	* tramp-container.el (tramp-kubernetes--container)
 	(tramp-kubernetes--pod, tramp-kubernetes--namespace): Make more
 	robust.
 
 	* tramp-crypt.el (tramp-crypt-remove-directory):
-	Declare `completion'
+	Declare `completion'.
 
 	* tramp-gvfs.el (file-notyify-callback): Declare.
 
