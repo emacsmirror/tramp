@@ -1,3 +1,7 @@
+2024-08-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-integration.el (shortdoc): Check, that Tramp isn't disabled.
+
 2024-08-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-write-region): Use `lock-file' and
