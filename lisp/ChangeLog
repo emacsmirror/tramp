@@ -1,3 +1,7 @@
+2024-08-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-integration.el (shortdoc): Use `tramp--with-startup'.
+
 2024-08-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-integration.el (shortdoc): Check, that Tramp isn't disabled.
