@@ -1,3 +1,11 @@
+2024-08-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-file-name-handler): Flush connection properties
+	"process-name" and "process-buffer".
+
+	* tramp-cache.el (tramp-get-hash-table):
+	Add ;;;###tramp-autoload cookie.
+
 2024-08-08  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-container.el (tramp-kubernetes--context-namespace):
