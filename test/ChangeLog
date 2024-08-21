@@ -1,3 +1,10 @@
+2024-08-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-deftest-direct-async-process):
+	Skip when underlying TEST has taken too much time.
+	(tramp--test-with-proper-process-name-and-buffer): Remove.
+	(tramp-test45-asynchronous-requests): Remove callees.
+
 2024-07-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (ert-resource-directory-format)
