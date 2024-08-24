@@ -1,3 +1,13 @@
+2024-08-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-copy-directory):
+	Apply `tramp-do-copy-or-rename-file-directly' if possible.
+
+	* tramp-sh.el (tramp-sh-handle-copy-directory):
+	* tramp-smb.el (tramp-smb-handle-copy-directory): Don't check
+	existence of DIRNAME, this is done in
+	`tramp-skeleton-copy-directory' already.
+
 2024-08-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-handler): Flush connection properties
