@@ -1,3 +1,65 @@
+2024-08-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-active-command-completion-p): New defun.
+
+	* tramp-cmds.el (tramp-cleanup-connection)
+	(tramp-cleanup-all-connections, tramp-cleanup-some-buffers)
+	(tramp-cleanup-all-buffers, tramp-rename-files):
+	* tramp-message.el (tramp-setup-debug-buffer):
+	Declare `completion'.
+
+	* tramp-integration.el (tramp-info-link): New widget.
+	(tramp-widget-info-link-action): New defun.
+
+	* tramp.el (tramp, tramp-mode, tramp-backup-directory-alist)
+	(tramp-auto-save-directory, tramp-encoding-shell)
+	(tramp-encoding-command-switch)
+	(tramp-encoding-command-interactive, tramp-default-method)
+	(tramp-default-method-alist, tramp-default-user)
+	(tramp-default-user-alist, tramp-default-host)
+	(tramp-default-host-alist, tramp-default-proxies-alist)
+	(tramp-save-ad-hoc-proxies, tramp-show-ad-hoc-proxies)
+	(tramp-restricted-shell-hosts-alist, tramp-local-host-regexp)
+	(tramp-shell-prompt-pattern, tramp-password-prompt-regexp)
+	(tramp-otp-password-prompt-regexp, tramp-wrong-passwd-regexp)
+	(tramp-terminal-type, tramp-syntax)
+	(tramp-ignored-file-name-regexp, tramp-chunksize)
+	(tramp-process-connection-type, tramp-remote-path)
+	(tramp-remote-process-environment)
+	(tramp-completion-multi-hop-methods)
+	(tramp-completion-use-auth-sources, tramp-use-file-attributes)
+	(tramp-inhibit-errors-if-setting-file-attributes-fail)
+	(tramp-allow-unsafe-temporary-files):
+	* tramp-adb.el (tramp-adb-program)
+	(tramp-adb-connect-if-not-connected):
+	* tramp-cache.el (tramp-connection-properties)
+	(tramp-persistency-file-name, tramp-completion-use-cache):
+	* tramp-cmds.el (tramp-cleanup-some-buffers-hook)
+	(tramp-default-rename-alist, tramp-confirm-rename-file-names)
+	(tramp-file-name-with-method):
+	* tramp-container.el (tramp-docker-program)
+	(tramp-podman-program, tramp-kubernetes-program)
+	(tramp-kubernetes-context, tramp-kubernetes-namespace)
+	(tramp-toolbox-program, tramp-distrobox-program)
+	(tramp-flatpak-program, tramp-apptainer-program)
+	(tramp-nspawn-program):
+	* tramp-crypt.el (tramp-crypt-encfs-program)
+	(tramp-crypt-encfsctl-program, tramp-crypt-encfs-option)
+	(tramp-crypt-save-encfs-config-remote):
+	* tramp-fuse.el (tramp-fuse-unmount-on-cleanup):
+	* tramp-gvfs.el (tramp-gvfs-methods):
+	* tramp-message.el (tramp-verbose, tramp-debug-to-file)
+	(tramp-debug-command-messages):
+	* tramp-rclone.el (tramp-rclone-program):
+	* tramp-sh.el (tramp-inline-compress-start-size)
+	(tramp-copy-size-limit, tramp-histfile-override)
+	(tramp-use-connection-share)
+	(tramp-use-scp-direct-remote-copying, tramp-sh-extra-args):
+	* tramp-sshfs.el (tramp-sshfs-program): Add `:link' key.
+
+	* tramp.el (tramp-enable-method): Move function ...
+	* tramp-cmds.el (tramp-enable-method): ... here.
+
 2024-08-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-copy-directory):
