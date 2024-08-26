@@ -1,3 +1,16 @@
+2024-08-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Inline methods): Add tramp-docker-program,
+	tramp-podman-program, tramp-kubernetes-program,
+	tramp-toolbox-program, tramp-distrobox-program,
+	tramp-flatpak-program, tramp-apptainer-program, and
+	tramp-nspawn-program.
+	(Remote shell setup): Rearrange indices.
+	(Ssh setup): Say "user option" when needed.
+	(Keeping files encrypted): Add tramp-crypt-encfs-program.
+	(Frequently Asked Questions): Rearrange indices.  Remove duplicate
+	text.  Add tramp-mode.
+
 2024-07-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods): Extend Kubernetes host name syntax
