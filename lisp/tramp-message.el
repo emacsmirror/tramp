@@ -141,7 +141,7 @@ They are completed by `M-x TAB' only in Tramp debug buffers."
 (defun tramp-setup-debug-buffer ()
   "Function to setup debug buffers."
   (declare (completion tramp-debug-buffer-command-completion-p)
-   	   (tramp-suppress-trace t))
+           (tramp-suppress-trace t))
   (interactive)
   (set-buffer-file-coding-system 'utf-8)
   (setq buffer-undo-list t)
