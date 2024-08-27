@@ -1,3 +1,8 @@
+2024-08-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-mode): Make it a defvar.  People shouldn't
+	customize it manually.
+
 2024-08-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-active-command-completion-p): New defun.
