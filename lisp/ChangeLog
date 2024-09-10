@@ -1,3 +1,8 @@
+2024-09-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-wait-for-regexp): Add (sit-for 0.005) prior
+	calling `tramp-accept-process-output'.  This avoids 100% CPU load.
+
 2024-09-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name*): Embed `function-put' calls with
