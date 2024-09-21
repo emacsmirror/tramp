@@ -1,3 +1,8 @@
+2024-09-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-wait-for-regexp): Use (sit-for 0) in order to
+	avoid performace regression.
+
 2024-09-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-wait-for-regexp): Add (sit-for 0.005) prior
