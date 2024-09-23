@@ -700,7 +700,6 @@ The `sudo' program appears to insert a `^@' character into the prompt."
 (defcustom tramp-otp-password-prompt-regexp
   (rx-to-string
    `(: bol (* nonl)
-       ;; JumpCloud.
        (group (|
 	 ;; JumpCloud.
 	 "Verification code"
