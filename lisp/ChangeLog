@@ -3,6 +3,9 @@
 	* tramp.el (tramp-file-name-handler): Adapt `tramp-verbose' when
 	completing host names.
 
+	* tramp-integration.el (tramp-syntax): Declare.
+	(shortdoc): Check, that Tramp has `default' syntax.
+
 2024-09-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-otp-password-prompt-regexp): Add TACC HPC prompt.
