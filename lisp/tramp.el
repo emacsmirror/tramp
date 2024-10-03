@@ -2481,7 +2481,7 @@ Fall back to normal file name handler if no Tramp file name handler exists."
 			  ;; "process-name" and "process-buffer",
 			  ;; because the operations shall be applied
 			  ;; in the main connection process.  In order
-			  ;; to avoid suspicious debug buffers during
+			  ;; to avoid superfluous debug buffers during
 			  ;; host name completion, we adapt
 			  ;; `tramp-verbose'.
 			  ;; If `non-essential' is non-nil, Tramp shall
