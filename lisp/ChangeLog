@@ -1,3 +1,9 @@
+2024-10-03  Stefan Kangas  <stefankangas@gmail.com>
+
+	* tramp.el (tramp-temp-buffer-file-name): Prefer defvar-local
+	where possible, and the package does not support Emacs 24.3 or
+	earlier.
+
 2024-09-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-handler): Adapt `tramp-verbose' when
