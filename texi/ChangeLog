@@ -1,3 +1,7 @@
+2024-10-08  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Customizing Methods): Add incus-tramp.
+
 2024-09-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions): Improve indices.
