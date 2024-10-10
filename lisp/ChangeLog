@@ -4,6 +4,7 @@
 	* tramp-message.el (tramp-error-with-buffer, tramp-user-error):
 	Don't redisplay in `sit-for'.  (Bug#73718)
 
+2024-10-03  Stefan Kangas  <stefankangas@gmail.com>
 
 	* tramp.el (tramp-temp-buffer-file-name): Prefer defvar-local
 	where possible, and the package does not support Emacs 24.3 or
