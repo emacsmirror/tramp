@@ -1,3 +1,9 @@
+2024-10-26  Eyal Soha  <eyalsoha@gmail.com>  (tiny change)
+
+	* tramp-sh.el (tramp-vc-file-name-handler):
+	Add `file-directory-p', which is used in
+	`vc-find-root'.  (Bug#74026)
+
 2024-10-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-wait-for-regexp):
