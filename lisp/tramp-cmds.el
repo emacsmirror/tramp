@@ -65,24 +65,24 @@ SYNTAX can be one of the symbols `default' (default),
      "method: "
      (tramp-compat-seq-keep
       (lambda (x)
-	(when-let ((name (symbol-name x))
-		   ;; It must match `tramp-enable-METHOD-method'.
-		   ((string-match
-		     (rx "tramp-enable-"
-			 (group (regexp tramp-method-regexp))
-			 "-method")
-		     name))
-		   (method (match-string 1 name))
-		   ;; It must not be enabled yet.
-		   ((not (assoc method tramp-methods))))
+	(when-let* ((name (symbol-name x))
+		    ;; It must match `tramp-enable-METHOD-method'.
+		    ((string-match
+		      (rx "tramp-enable-"
+			  (group (regexp tramp-method-regexp))
+			  "-method")
+		      name))
+		    (method (match-string 1 name))
+		    ;; It must not be enabled yet.
+		    ((not (assoc method tramp-methods))))
 	  method))
       ;; All method enabling functions.
       (mapcar
        #'intern (all-completions "tramp-enable-" obarray #'functionp))))))
 
-  (when-let (((not (assoc method tramp-methods)))
-	     (fn (intern (format "tramp-enable-%s-method" method)))
-	     ((functionp fn)))
+  (when-let* (((not (assoc method tramp-methods)))
+	      (fn (intern (format "tramp-enable-%s-method" method)))
+	      ((functionp fn)))
     (funcall fn)
     (message "Tramp method \"%s\" enabled" method)))
 
