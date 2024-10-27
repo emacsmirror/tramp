@@ -1,3 +1,25 @@
+2024-10-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-adb.el:
+	* tramp-androidsu.el:
+	* tramp-cache.el:
+	* tramp-cmds.el:
+	* tramp-compat.el:
+	* tramp-container.el:
+	* tramp-crypt.el:
+	* tramp-ftp.el:
+	* tramp-fuse.el:
+	* tramp-gvfs.el:
+	* tramp-integration.el:
+	* tramp-message.el:
+	* tramp-rclone.el:
+	* tramp-sh.el:
+	* tramp-smb.el:
+	* tramp-sshfs.el:
+	* tramp-sudoedit.el:
+	* tramp.el: Use `when-let*', `if-let*' and `and-let*'
+	consequently.  (Bug#73441)
+
 2024-10-26  Eyal Soha  <eyalsoha@gmail.com>  (tiny change)
 
 	* tramp-sh.el (tramp-vc-file-name-handler):

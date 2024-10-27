@@ -672,7 +672,7 @@ This is needed if there are compatibility problems."
   (declare (completion tramp-recompile-elpa-command-completion-p))
   (interactive)
   ;; We expect just one Tramp package is installed.
-  (when-let
+  (when-let*
       ((dir (tramp-compat-funcall
 	     'package-desc-dir
 	     (car (alist-get 'tramp (bound-and-true-p package-alist))))))
@@ -763,8 +763,8 @@ buffer in your bug report.
 
 (defun tramp-reporter-dump-variable (varsym mailbuf)
   "Pretty-print the value of the variable in symbol VARSYM."
-  (when-let ((reporter-eval-buffer reporter-eval-buffer)
-	     (val (buffer-local-value varsym reporter-eval-buffer)))
+  (when-let* ((reporter-eval-buffer reporter-eval-buffer)
+	      (val (buffer-local-value varsym reporter-eval-buffer)))
 
     (if (hash-table-p val)
 	;; Pretty print the cache.
