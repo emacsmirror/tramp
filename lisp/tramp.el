@@ -6385,102 +6385,102 @@ to cache the result.  Return the modified ATTR."
   `(with-tramp-file-property
        ,vec ,localname (format "file-attributes-%s" (or ,id-format 'integer))
      (when-let*
-	 ((result
+	 ((attr ,attr)
+	  (result
 	   (with-tramp-file-property ,vec ,localname "file-attributes"
-	     (when-let* ((attr ,attr))
-	       (save-match-data
-		 ;; Remove ANSI control escape sequences from symlink.
+	     (save-match-data
+	       ;; Remove ANSI control escape sequences from symlink.
+	       (when (stringp (car attr))
+		 (while (string-match ansi-color-control-seq-regexp (car attr))
+		   (setcar attr (replace-match "" nil nil (car attr)))))
+	       ;; Convert uid and gid.  Use `tramp-unknown-id-integer'
+	       ;; as indication of unusable value.
+	       (when (consp (nth 2 attr))
+		 (when (and (numberp (cdr (nth 2 attr)))
+			    (< (cdr (nth 2 attr)) 0))
+		   (setcdr (car (nthcdr 2 attr)) tramp-unknown-id-integer))
+		 (when (and (floatp (cdr (nth 2 attr)))
+			    (<= (cdr (nth 2 attr)) most-positive-fixnum))
+		   (setcdr (car (nthcdr 2 attr)) (round (cdr (nth 2 attr))))))
+	       (when (consp (nth 3 attr))
+		 (when (and (numberp (cdr (nth 3 attr)))
+			    (< (cdr (nth 3 attr)) 0))
+		   (setcdr (car (nthcdr 3 attr)) tramp-unknown-id-integer))
+		 (when (and (floatp (cdr (nth 3 attr)))
+			    (<= (cdr (nth 3 attr)) most-positive-fixnum))
+		   (setcdr (car (nthcdr 3 attr)) (round (cdr (nth 3 attr))))))
+	       ;; Convert last access time.
+	       (unless (listp (nth 4 attr))
+		 (setcar (nthcdr 4 attr) (seconds-to-time (nth 4 attr))))
+	       ;; Convert last modification time.
+	       (unless (listp (nth 5 attr))
+		 (setcar (nthcdr 5 attr) (seconds-to-time (nth 5 attr))))
+	       ;; Convert last status change time.
+	       (unless (listp (nth 6 attr))
+		 (setcar (nthcdr 6 attr) (seconds-to-time (nth 6 attr))))
+	       ;; Convert file size.
+	       (when (< (nth 7 attr) 0)
+		 (setcar (nthcdr 7 attr) -1))
+	       (when (and (floatp (nth 7 attr))
+			  (<= (nth 7 attr) most-positive-fixnum))
+		 (setcar (nthcdr 7 attr) (round (nth 7 attr))))
+	       ;; Convert file mode bits to string.
+	       (unless (stringp (nth 8 attr))
+		 (setcar (nthcdr 8 attr)
+			 (tramp-file-mode-from-int (nth 8 attr)))
 		 (when (stringp (car attr))
-		   (while (string-match ansi-color-control-seq-regexp (car attr))
-		     (setcar attr (replace-match "" nil nil (car attr)))))
-		 ;; Convert uid and gid.  Use `tramp-unknown-id-integer'
-		 ;; as indication of unusable value.
-		 (when (consp (nth 2 attr))
-		   (when (and (numberp (cdr (nth 2 attr)))
-			      (< (cdr (nth 2 attr)) 0))
-		     (setcdr (car (nthcdr 2 attr)) tramp-unknown-id-integer))
-		   (when (and (floatp (cdr (nth 2 attr)))
-			      (<= (cdr (nth 2 attr)) most-positive-fixnum))
-		     (setcdr (car (nthcdr 2 attr)) (round (cdr (nth 2 attr))))))
-		 (when (consp (nth 3 attr))
-		   (when (and (numberp (cdr (nth 3 attr)))
-			      (< (cdr (nth 3 attr)) 0))
-		     (setcdr (car (nthcdr 3 attr)) tramp-unknown-id-integer))
-		   (when (and (floatp (cdr (nth 3 attr)))
-			      (<= (cdr (nth 3 attr)) most-positive-fixnum))
-		     (setcdr (car (nthcdr 3 attr)) (round (cdr (nth 3 attr))))))
-		 ;; Convert last access time.
-		 (unless (listp (nth 4 attr))
-		   (setcar (nthcdr 4 attr) (seconds-to-time (nth 4 attr))))
-		 ;; Convert last modification time.
-		 (unless (listp (nth 5 attr))
-		   (setcar (nthcdr 5 attr) (seconds-to-time (nth 5 attr))))
-		 ;; Convert last status change time.
-		 (unless (listp (nth 6 attr))
-		   (setcar (nthcdr 6 attr) (seconds-to-time (nth 6 attr))))
-		 ;; Convert file size.
-		 (when (< (nth 7 attr) 0)
-		   (setcar (nthcdr 7 attr) -1))
-		 (when (and (floatp (nth 7 attr))
-			    (<= (nth 7 attr) most-positive-fixnum))
-		   (setcar (nthcdr 7 attr) (round (nth 7 attr))))
-		 ;; Convert file mode bits to string.
-		 (unless (stringp (nth 8 attr))
-		   (setcar (nthcdr 8 attr)
-			   (tramp-file-mode-from-int (nth 8 attr)))
-		   (when (stringp (car attr))
-		     (aset (nth 8 attr) 0 ?l)))
-		 ;; Convert directory indication bit.
-		 (when (string-prefix-p "d" (nth 8 attr))
-		   (setcar attr t))
-		 ;; Convert symlink from `tramp-do-file-attributes-with-stat'.
-		 ;; Decode also multibyte string.
-		 (when (consp (car attr))
-		   (setcar attr
-			   (and (stringp (caar attr))
-				(string-match
-				 (rx (+ nonl) " -> " nonl (group (+ nonl)) nonl)
-				 (caar attr))
-				(decode-coding-string
-				 (match-string 1 (caar attr)) 'utf-8))))
-		 ;; Set file's gid change bit.
-		 (setcar
-		  (nthcdr 9 attr)
-		  (not (= (cdr (nth 3 attr))
-			  (or (tramp-get-remote-gid ,vec 'integer)
-			      tramp-unknown-id-integer))))
-		 ;; Convert inode.
-		 (when (floatp (nth 10 attr))
-		   (setcar (nthcdr 10 attr)
-			   (condition-case nil
-			       (let ((high (nth 10 attr))
-				     middle low)
+		   (aset (nth 8 attr) 0 ?l)))
+	       ;; Convert directory indication bit.
+	       (when (string-prefix-p "d" (nth 8 attr))
+		 (setcar attr t))
+	       ;; Convert symlink from `tramp-do-file-attributes-with-stat'.
+	       ;; Decode also multibyte string.
+	       (when (consp (car attr))
+		 (setcar attr
+			 (and (stringp (caar attr))
+			      (string-match
+			       (rx (+ nonl) " -> " nonl (group (+ nonl)) nonl)
+			       (caar attr))
+			      (decode-coding-string
+			       (match-string 1 (caar attr)) 'utf-8))))
+	       ;; Set file's gid change bit.
+	       (setcar
+		(nthcdr 9 attr)
+		(not (= (cdr (nth 3 attr))
+			(or (tramp-get-remote-gid ,vec 'integer)
+			    tramp-unknown-id-integer))))
+	       ;; Convert inode.
+	       (when (floatp (nth 10 attr))
+		 (setcar (nthcdr 10 attr)
+			 (condition-case nil
+			     (let ((high (nth 10 attr))
+				   middle low)
+			       (if (<= high most-positive-fixnum)
+				   (floor high)
+				 ;; The low 16 bits.
+				 (setq low (mod high #x10000)
+				       high (/ high #x10000))
 				 (if (<= high most-positive-fixnum)
-				     (floor high)
-				   ;; The low 16 bits.
-				   (setq low (mod high #x10000)
-					 high (/ high #x10000))
-				   (if (<= high most-positive-fixnum)
-				       (cons (floor high) (floor low))
-				     ;; The middle 24 bits.
-				     (setq middle (mod high #x1000000)
-					   high (/ high #x1000000))
-				     (cons (floor high)
-					   (cons (floor middle) (floor low))))))
-			     ;; Inodes can be incredible huge.  We
-			     ;; must hide this.
-			     (error (tramp-get-inode ,vec)))))
-		 ;; Set virtual device number.
-		 (setcar (nthcdr 11 attr)
-			 (tramp-get-device ,vec))
-		 ;; Set SELinux context.
-		 (when (stringp (nth 12 attr))
-		   (tramp-set-file-property
-		    ,vec ,localname  "file-selinux-context"
-		    (split-string (nth 12 attr) ":" 'omit)))
-		 ;; Remove optional entries.
-		 (setcdr (nthcdr 11 attr) nil)
-		 attr)))))
+				     (cons (floor high) (floor low))
+				   ;; The middle 24 bits.
+				   (setq middle (mod high #x1000000)
+					 high (/ high #x1000000))
+				   (cons (floor high)
+					 (cons (floor middle) (floor low))))))
+			   ;; Inodes can be incredible huge.  We must
+			   ;; hide this.
+			   (error (tramp-get-inode ,vec)))))
+	       ;; Set virtual device number.
+	       (setcar (nthcdr 11 attr)
+		       (tramp-get-device ,vec))
+	       ;; Set SELinux context.
+	       (when (stringp (nth 12 attr))
+		 (tramp-set-file-property
+		  ,vec ,localname  "file-selinux-context"
+		  (split-string (nth 12 attr) ":" 'omit)))
+	       ;; Remove optional entries.
+	       (setcdr (nthcdr 11 attr) nil)
+	       attr))))
 
        ;; Return normalized result.
        (append (tramp-compat-take 2 result)
