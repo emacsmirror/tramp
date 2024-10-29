@@ -1925,9 +1925,9 @@ Their full names are \"org.gtk.vfs.MountTracker.mounted\" and
 	  ;; Ensure that media devices are cached.
 	  (tramp-get-media-devices nil)
 	  (when-let* ((v (tramp-get-connection-property
-			 (make-tramp-media-device
-			  :method method :host host :port port)
-			 "vector" nil)))
+			  (make-tramp-media-device
+			   :method method :host host :port port)
+			  "vector" nil)))
 	    (setq method (tramp-file-name-method v)
 		  host (tramp-file-name-host v)
 		  port (tramp-file-name-port v))))
