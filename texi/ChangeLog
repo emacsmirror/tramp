@@ -1,3 +1,8 @@
+2024-11-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Remote processes): Add another example enabling
+	direct async processes based on method name.  (Bug#74105)
+
 2024-10-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Bug Reports): Explain bisecting.
