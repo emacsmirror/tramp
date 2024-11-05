@@ -158,6 +158,7 @@ being the result.")
   (when (cdr tramp--test-enabled-checked)
     ;; Remove old test files.
     (dolist (dir `(,temporary-file-directory
+		   ,tramp-compat-temporary-file-directory
 		   ,ert-remote-temporary-file-directory))
       (dolist (file (directory-files dir 'full (rx bos (? ".#") "tramp-test")))
 	(ignore-errors
@@ -5393,6 +5394,7 @@ If UNSTABLE is non-nil, the test is tagged as `:unstable'."
      (skip-unless (tramp--test-enabled))
      (let* ((default-directory ert-remote-temporary-file-directory)
 	    (ert-test (ert-get-test ',test))
+	    (result (ert-test-most-recent-result ert-test))
 	    (connection-local-profile-alist
 	     (cons
 	      '(direct-async-process-profile (tramp-direct-async-process . t))
@@ -5944,7 +5946,9 @@ INPUT, if non-nil, is a string sent to the process."
 
   ;; Test `async-shell-command-width'.
   (when (and (tramp--test-asynchronous-processes-p) (tramp--test-sh-p))
-    (let* ((async-shell-command-width 1024)
+    (let* (;; Since Fedora 41, this seems to be the upper limit.  Used
+	   ;; to be 1024 before.
+	   (async-shell-command-width 512)
 	   (default-directory ert-remote-temporary-file-directory)
 	   (cols (ignore-errors
 		   (read (tramp--test-shell-command-to-string-asynchronously
@@ -6464,6 +6468,7 @@ INPUT, if non-nil, is a string sent to the process."
 	   (tmp-name1 (tramp--test-make-temp-name nil quoted))
 	   (tmp-name2 (expand-file-name "foo" tmp-name1))
 	   (tramp-remote-process-environment tramp-remote-process-environment)
+	   ;; Suppress nasty messages.
            (inhibit-message t)
 	   (vc-handled-backends
 	    (cond
@@ -6486,9 +6491,7 @@ INPUT, if non-nil, is a string sent to the process."
 	      (tramp-cleanup-connection
 	       tramp-test-vec 'keep-debug 'keep-password)
 	      '(Bzr))
-	     (t nil)))
-	   ;; Suppress nasty messages.
-	   (inhibit-message t))
+	     (t nil))))
       (skip-unless vc-handled-backends)
       (unless quoted (tramp--test-message "%s" vc-handled-backends))
 
@@ -8258,7 +8261,6 @@ If INTERACTIVE is non-nil, the tests are run interactively."
 ;; * file-equal-p (partly done in `tramp-test21-file-links')
 ;; * file-in-directory-p
 ;; * file-name-case-insensitive-p
-;; * memory-info
 ;; * tramp-get-home-directory
 ;; * tramp-set-file-uid-gid
 

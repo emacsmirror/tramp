@@ -1,3 +1,12 @@
+2024-11-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-enabled): Cleanup also
+	`tramp-compat-temporary-file-directory'.
+	(tramp--test-deftest-direct-async-process): Skip if underlying
+	test didn't run or lasted too long.
+	(tramp-test32-shell-command): Use `async-shell-command-width' of 512.
+	(tramp-test36-vc-registered): Remove double let* entry.
+
 2024-10-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el: Use `when-let*', `if-let*' and `and-let*'
