@@ -5406,7 +5406,7 @@ If UNSTABLE is non-nil, the test is tagged as `:unstable'."
 		direct-async-process-profile)
 	      connection-local-criteria-alist)))
        (skip-unless (tramp-direct-async-process-p))
-       (when-let ((result (ert-test-most-recent-result ert-test)))
+       (when-let* ((result (ert-test-most-recent-result ert-test)))
 	 (skip-unless (< (ert-test-result-duration result) 300)))
        ;; We do expect an established connection already,
        ;; `file-truename' does it by side-effect.  Suppress
