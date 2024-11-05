@@ -1,3 +1,15 @@
+2024-11-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-convert-file-attributes): Don't cache
+	"file-attributes-ID-FORMAT".
+
+	* tramp-adb.el (tramp-adb-maybe-open-connection): Move setting of
+	sentinel up.
+
+	* tramp-cache.el (tramp-get-connection-property)
+	(tramp-set-connection-property): Don't raise a debug message for
+	the `tramp-cache-version' key.
+
 2024-10-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-adb.el:
