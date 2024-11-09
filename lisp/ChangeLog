@@ -1,3 +1,15 @@
+2024-11-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-make-tramp-file-name): Don't call
+	`tramp-add-hops' during file name completion.
+	(tramp-handle-file-name-as-directory)
+	(tramp-handle-file-name-directory): Use `tramp-cache-undefined'
+	for an empty `tramp-default-proxies-alist'.
+	(tramp-add-hops): Extend.  Remove existing entries with same
+	target and different proxy, if needed.  (Bug#74219)
+
+	* tramp-cmds.el (tramp-cleanup-connection): Fix docstring.
+
 2024-11-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-convert-file-attributes): Don't cache
