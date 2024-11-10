@@ -1,3 +1,9 @@
+2024-11-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Password handling):
+	Describe auth-source-cache-expiry and auth-source-do-cache instead
+	of password-cache-expiry and password-cache.  (Bug#74105)
+
 2024-11-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Ad-hoc multi-hops): New subsection "Using different
