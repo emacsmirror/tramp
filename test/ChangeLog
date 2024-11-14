@@ -6,11 +6,6 @@
 	messages when calling `tramp-cleanup-connection'.
 	(tramp-test47-read-password): Test also `tramp-session-timeout'.
 
-2024-11-10  Michael Albinus  <michael.albinus@gmx.de>
-
-	* tramp-tests.el (tramp--test-deftest-direct-async-process):
-	Make check for duration of initial test more robust.
-
 2024-11-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-enabled): Cleanup also
