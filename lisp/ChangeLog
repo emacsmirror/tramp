@@ -1,13 +1,17 @@
 2024-11-14  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp.el (tramp-compute-multi-hops): Check for
+	* tramp-adb.el (tramp-adb-maybe-open-connection): Rename file
+	property "process-attributes" to connection property
+	" process-attributes".
+
+	* tramp.el (tramp-get-process-attributes)
+	(tramp-handle-list-system-processes): Rename file property
+	"process-attributes" to connection property " process-attributes".
+	(tramp-compute-multi-hops): Check for
 	`tramp-sh-file-name-handler-p', it works only for this.
 	(tramp-action-password, tramp-process-actions): Use connection
 	property "hop-vector".
 	(tramp-read-passwd, tramp-clear-passwd): Rewrite.  (Bug#74105)
-
-	* tramp-cache.el (tramp-dump-connection-properties): Don't save
-	connection property "pw-spec".
 
 	* tramp-sh.el (tramp-maybe-open-connection): Use connection
 	property "hop-vector".

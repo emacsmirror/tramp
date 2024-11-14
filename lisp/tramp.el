@@ -4707,7 +4707,7 @@ Parsing the remote \"ps\" output is controlled by
 It is not guaranteed, that all process attributes as described in
 `process-attributes' are returned.  The additional attribute
 `pid' shall be returned always."
-  (with-tramp-file-property vec "/" "process-attributes"
+  (with-tramp-connection-property vec " process-attributes"
     (ignore-errors
       (with-temp-buffer
         (hack-connection-local-variables-apply
@@ -4754,7 +4754,7 @@ It is not guaranteed, that all process attributes as described in
 (defun tramp-handle-list-system-processes ()
   "Like `list-system-processes' for Tramp files."
   (let ((v (tramp-dissect-file-name default-directory)))
-    (tramp-flush-file-property v "/" "process-attributes")
+    (tramp-flush-connection-property v " process-attributes")
     (mapcar (lambda (x) (cdr (assq 'pid x))) (tramp-get-process-attributes v))))
 
 (defun tramp-get-lock-file (file)
@@ -6921,7 +6921,7 @@ Consults the auth-source package."
   (when-let* ((hop (cadr (reverse (tramp-compute-multi-hops vec)))))
     ;; Clear also the passwords of the hops.
     (tramp-clear-passwd hop))
-  (when-let* ((pw-spec (tramp-get-connection-property vec "pw-spec")))
+  (when-let* ((pw-spec (tramp-get-connection-property vec " pw-spec")))
     (auth-source-forget pw-spec)))
 
 (defun tramp-time-diff (t1 t2)
