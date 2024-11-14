@@ -128,7 +128,8 @@
        (tramp-dissect-file-name ert-remote-temporary-file-directory))
   "The used `tramp-file-name' structure.")
 
-(setq auth-source-save-behavior nil
+(setq auth-source-cache-expiry nil
+      auth-source-save-behavior nil
       password-cache-expiry nil
       remote-file-name-inhibit-cache nil
       tramp-allow-unsafe-temporary-files t
@@ -167,7 +168,7 @@ being the result.")
 	    (delete-file file)))))
     ;; Cleanup connection.
     (ignore-errors
-      (tramp-cleanup-connection tramp-test-vec nil 'keep-password)))
+      (tramp-cleanup-connection tramp-test-vec 'keep-debug 'keep-password)))
 
   ;; Return result.
   (cdr tramp--test-enabled-checked))
@@ -2126,7 +2127,7 @@ is greater than 10.
     (when (assoc m tramp-methods)
       (let (tramp-connection-properties tramp-default-proxies-alist)
 	(ignore-errors
-	  (tramp-cleanup-connection tramp-test-vec nil 'keep-password))
+	  (tramp-cleanup-connection tramp-test-vec 'keep-debug 'keep-password))
 	;; Single hop.  The host name must match `tramp-local-host-regexp'.
 	(should-error
 	 (find-file (format "/%s:foo:" m))
@@ -4874,7 +4875,7 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
 (ert-deftest tramp-test26-interactive-file-name-completion ()
   "Check interactive completion with different `completion-styles'."
   ;; Method, user and host name in completion mode.
-  (tramp-cleanup-connection tramp-test-vec nil 'keep-password)
+  (tramp-cleanup-connection tramp-test-vec 'keep-debug 'keep-password)
 
   (let ((method (file-remote-p ert-remote-temporary-file-directory 'method))
 	(user (file-remote-p ert-remote-temporary-file-directory 'user))
@@ -7937,7 +7938,7 @@ process sentinels.  They shall not disturb each other."
 
   (let ((pass "secret")
 	(mock-entry (copy-tree (assoc "mock" tramp-methods)))
-	mocked-input tramp-methods)
+	mocked-input tramp-methods auth-sources)
     ;; We must mock `read-string', in order to avoid interactive
     ;; arguments.
     (cl-letf* (((symbol-function #'read-string)
@@ -7981,7 +7982,36 @@ process sentinels.  They shall not disturb each other."
 		 "machine %s port mock password %s"
 		 (file-remote-p ert-remote-temporary-file-directory 'host) pass)
 	  (let ((auth-sources `(,netrc-file)))
-	    (should (file-exists-p ert-remote-temporary-file-directory)))))))))
+	    (should (file-exists-p ert-remote-temporary-file-directory))))))
+
+      ;; Checking session-timeout.
+      (with-no-warnings (when (symbol-plist 'ert-with-temp-file)
+	(tramp-cleanup-connection tramp-test-vec 'keep-debug)
+	(setcdr mock-entry
+		(append '((tramp-session-timeout 1))
+			(cdr mock-entry)))
+	(setq mocked-input nil)
+	(auth-source-forget-all-cached)
+	(ert-with-temp-file netrc-file
+	  :prefix "tramp-test" :suffix ""
+	  :text (format
+		 "machine %s port mock password %s"
+		 (file-remote-p ert-remote-temporary-file-directory 'host) pass)
+	  (let ((auth-sources `(,netrc-file)))
+	    (should (file-exists-p ert-remote-temporary-file-directory))))
+	;; Session established, password cached.
+	(should
+	 (password-in-cache-p
+	  (auth-source-format-cache-entry
+	   (tramp-get-connection-property tramp-test-vec "pw-spec"))))
+	;; We want to see the timeout message.
+	(tramp--test-instrument-test-case 3
+	  (sleep-for 2))
+	;; Session cancelled, no password in cache.
+	(should-not
+	 (password-in-cache-p
+	  (auth-source-format-cache-entry
+	   (tramp-get-connection-property tramp-test-vec "pw-spec")))))))))
 
 (ert-deftest tramp-test47-read-otp-password ()
   "Check Tramp one-time password handling."
