@@ -1,3 +1,8 @@
+2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Customizing Methods): Make sure @item comes after
+	@cindex.
+
 2024-11-15  Robert Pluim  <rpluim@gmail.com>
 
 	* tramp.texi (Inline methods):
