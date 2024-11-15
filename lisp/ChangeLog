@@ -1,3 +1,8 @@
+2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-fuse.el (tramp-fuse-name-prefix): New defconst.
+	(tramp-fuse-mount-point): Use it.
+
 2024-11-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-adb.el (tramp-adb-maybe-open-connection): Rename file

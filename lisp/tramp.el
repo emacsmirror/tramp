@@ -6893,7 +6893,7 @@ Consults the auth-source package."
 		 (password-read
 		  pw-prompt (auth-source-format-cache-entry pw-spec))
 		 tramp-password-save-function
- 		 (when auth-source-do-cache
+                 (when auth-source-do-cache
 		   (lambda ()
 		     (password-cache-add
 		      (auth-source-format-cache-entry pw-spec) auth-passwd))))
