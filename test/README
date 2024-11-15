@@ -12,6 +12,14 @@ tramp-tests.el
         the tests on another remote host, see
         `tramp-test-temporary-file-directory' for the default value.
 
+        All temporary Tramp test files are removed prior test run.
+        Therefore, two test runs cannot be performed in parallel.
+
+        The environment variable $TRAMP_TEST_CLEANUP_TEMP_FILES, when
+        set, forces the removal of all temporary Tramp files prior
+        test run.  This shouldn't be set if the test suite runs in
+        parallel using Tramp on a production system.
+
 tramp-time.el
         These are performance tests on Tramp.  Read the "Commentary"
         section for details.  These tests are not covered by the Makefile.

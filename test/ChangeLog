@@ -1,3 +1,20 @@
+2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* README: Explain removal of temp files.
+
+	* tramp-tests.el (tramp-test-name-prefix): New defconst.
+	(tramp--test-make-temp-name, tramp-test40-make-nearby-temp-file)
+	(tramp-test47-read-password, tramp-test47-read-otp-password):
+	Use it.
+	(tramp--test-enabled-checked): Move down.
+	(tramp--test-enabled): Delete all Tramp temp files when
+	environment variable $TRAMP_TEST_CLEANUP_TEMP_FILES is set.
+	(tramp-test02-file-name-dissect-separate):
+	Adapt `tramp-crypt-directories' according to syntax.
+	(tramp-test47-read-password):
+	Let-bind `tramp-connection-properties' instead of modifying
+	`tramp-methods'.
+
 2024-11-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (auth-source-cache-expiry): Set to nil.
