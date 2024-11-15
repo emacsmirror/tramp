@@ -1,5 +1,18 @@
 2024-11-15  Robert Pluim  <rpluim@gmail.com>
 
+	* tramp.texi (Inline methods):
+	(External methods):
+	(GVFS-based methods):
+	(FUSE-based methods):
+	(Customizing Methods):
+	(Remote shell setup):
+	(Change file name syntax):
+	(Archive file names):
+	(Frequently Asked Questions): Make sure @item comes after
+	@cindex and similar indexing commands.
+
+2024-11-15  Robert Pluim  <rpluim@gmail.com>
+
 	* tramp.texi (FUSE-based methods):
 	(Firewalls):
 	(Predefined connection information):
