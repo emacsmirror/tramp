@@ -1,3 +1,19 @@
+2024-11-15  Robert Pluim  <rpluim@gmail.com>
+
+	* tramp.texi (FUSE-based methods):
+	(Firewalls):
+	(Predefined connection information):
+	(Remote programs):
+	(Remote shell setup):
+	(Ssh setup):
+	(Home directories):
+	(Remote processes):
+	(Renaming remote files):
+	(Archive file names):
+	(Bug Reports):
+	(Frequently Asked Questions): Use "can" instead of "could" where
+	it makes sense.
+
 2024-11-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Password handling): Mention expiration of cached
