@@ -3,7 +3,7 @@
 	* README: More details added.
 
 	* tramp-tests.el (Commentary): Extend.
-	(tramp--test-enabled): Exclude also old FUSE mount point from
+	(tramp--test-enabled): Exclude also old FUSE mount points from
 	deletion.
 
 2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
