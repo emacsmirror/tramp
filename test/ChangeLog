@@ -1,3 +1,11 @@
+2024-11-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* README: More details added.
+
+	* tramp-tests.el (Commentary): Extend.
+	(tramp--test-enabled): Exclude also old FUSE mount point from
+	deletion.
+
 2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* README: Explain removal of temp files.
