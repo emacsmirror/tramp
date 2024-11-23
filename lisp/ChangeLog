@@ -1,3 +1,9 @@
+2024-11-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-initial-file-name-regexp)
+	(tramp-autoload-file-name-regexp): Don't use `rx' in autoloaded
+	objects.  (Bug#74490)
+
 2024-11-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-fuse.el (tramp-fuse-name-prefix): New defconst.
