@@ -1,3 +1,8 @@
+2024-11-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions): Speak about fingerprint
+	readers.
+
 2024-11-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions): Improve index.
