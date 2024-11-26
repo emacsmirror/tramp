@@ -1,3 +1,7 @@
+2024-11-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test47-read-fingerprint): New test.
+
 2024-11-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* README: More details added.

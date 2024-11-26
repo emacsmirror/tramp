@@ -8123,6 +8123,36 @@ process sentinels.  They shall not disturb each other."
 	    (should-error
 	     (file-exists-p ert-remote-temporary-file-directory)))))))))
 
+(ert-deftest tramp-test47-read-fingerprint ()
+  "Check Tramp fingerprint handling."
+  :tags '(:expensive-test)
+  (skip-unless (tramp--test-mock-p))
+
+  (let (;; Suppress "exec".
+	(tramp-restricted-shell-hosts-alist `(,tramp-system-name)))
+
+    ;; Reading fingerprint works.
+    (tramp-cleanup-connection tramp-test-vec 'keep-debug)
+    (let ((tramp-connection-properties
+	   `((nil "login-args"
+		  (("-c")
+		   (,(tramp-shell-quote-argument
+		      "echo -n Place your finger on the fingerprint reader"))
+		   (";") ("sleep" "1")
+		   (";") ("sh" "-i"))))))
+      (should (file-exists-p ert-remote-temporary-file-directory)))
+
+    ;; Fingerprint errors are detected.
+    (tramp-cleanup-connection tramp-test-vec 'keep-debug)
+    (let ((tramp-connection-properties
+	   `((nil "login-args"
+		  (("-c")
+		   (,(tramp-shell-quote-argument
+		      "echo -n Failed to match fingerprint"))
+		   (";") ("sleep" "1")
+		   (";") ("sh" "-i"))))))
+      (should-error (file-exists-p ert-remote-temporary-file-directory)))))
+
 ;; This test is inspired by Bug#29163.
 (ert-deftest tramp-test48-auto-load ()
   "Check that Tramp autoloads properly."
