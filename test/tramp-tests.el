@@ -8137,21 +8137,34 @@ process sentinels.  They shall not disturb each other."
 	   `((nil "login-args"
 		  (("-c")
 		   (,(tramp-shell-quote-argument
-		      "echo -n Place your finger on the fingerprint reader"))
+		      "echo Place your finger on the fingerprint reader"))
 		   (";") ("sleep" "1")
 		   (";") ("sh" "-i"))))))
       (should (file-exists-p ert-remote-temporary-file-directory)))
 
-    ;; Fingerprint errors are detected.
+    ;; Falling back after a timeout works.
     (tramp-cleanup-connection tramp-test-vec 'keep-debug)
     (let ((tramp-connection-properties
 	   `((nil "login-args"
 		  (("-c")
 		   (,(tramp-shell-quote-argument
-		      "echo -n Failed to match fingerprint"))
+		      "echo Place your finger on the fingerprint reader"))
 		   (";") ("sleep" "1")
+		   (";") ("echo" "Failed to match fingerprint")
 		   (";") ("sh" "-i"))))))
-      (should-error (file-exists-p ert-remote-temporary-file-directory)))))
+      (should (file-exists-p ert-remote-temporary-file-directory)))
+
+    ;; Interrupting the fingerprint handshaking works.
+    (tramp-cleanup-connection tramp-test-vec 'keep-debug)
+    (let ((tramp-connection-properties
+	   `((nil "login-args"
+		  (("-c")
+		   (,(tramp-shell-quote-argument
+		      "echo Place your finger on the fingerprint reader"))
+		   (";") ("sleep" "1")
+		   (";") ("sh" "-i")))))
+	  tramp-use-fingerprint)
+      (should (file-exists-p ert-remote-temporary-file-directory)))))
 
 ;; This test is inspired by Bug#29163.
 (ert-deftest tramp-test48-auto-load ()
