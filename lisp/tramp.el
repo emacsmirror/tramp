@@ -5784,7 +5784,8 @@ of."
 (defcustom tramp-use-fingerprint t
   "Whether fingerprint prompts shall be used for authentication."
   :version "30.2"
-  :type 'boolean)
+  :type 'boolean
+  :link '(tramp-info-link :tag "Tramp manual" tramp-use-fingerprint))
 
 (defun tramp-action-fingerprint (proc vec)
   "Query the user for a fingerprint verification.
