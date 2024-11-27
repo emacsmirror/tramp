@@ -1,3 +1,10 @@
+2024-11-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-warning): Fix `lwarn' call.
+
+	* tramp-sh.el (tramp-sh-handle-make-process): Don't set connection
+	property "remote-pid", it's unused.
+
 2024-11-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-wrong-passwd-regexp): Add fingerprint messages.
