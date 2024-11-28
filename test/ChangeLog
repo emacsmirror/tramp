@@ -1,3 +1,11 @@
+2024-11-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test47-read-password)
+	(tramp-test47-read-otp-password, tramp-test47-read-fingerprint):
+	Use `tramp-default-remote-shell' and
+	`tramp-connection-properties'.  Cleanup at the end.
+	(tramp-test47-read-security-key): New test.
+
 2024-11-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test47-read-fingerprint): New test.
