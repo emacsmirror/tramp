@@ -31,7 +31,7 @@ tramp-tests.el
         The following test tags are used: `:expensive-test',
         `:tramp-asynchronous-processes' and `:unstable'.
 
-tramp-time.el
+tramp-time.el (not on GNU ELPA)
         These are performance tests on Tramp.  Read the "Commentary"
         section for details.  These tests are not covered by the Makefile.
 
@@ -42,7 +42,7 @@ The Makefile in this directory supports the following targets:
   If $REMOTE_TEMPORARY_FILE_DIRECTORY is set, only tramp-tests.el is
   used.
 
-* make <filename>  -or-  make <filename>.log
+* make <filename>  -or-  make <filename>.log (not on GNU ELPA)
   Run all tests declared in <filename>.el.  <filename> can be either
   tramp-archive-tests or tramp-tests.  If the target is
   <filename>.log, the output of the test run will be redirected there.
