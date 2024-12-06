@@ -1,3 +1,10 @@
+2024-12-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-format-spec): New defun.
+	(tramp-dissect-file-name, tramp-compute-multi-hops)
+	(tramp-expand-args):
+	* tramp-cmds.el (tramp-default-rename-file): Use it.
+
 2024-11-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-message.el (tramp-warning): Fix `lwarn' call.
