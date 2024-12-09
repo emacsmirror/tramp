@@ -1,3 +1,7 @@
+2024-12-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (FUSE-based methods): Fix sshfs reference.
+
 2024-11-27  Robert Pluim  <rpluim@gmail.com>
 
 	* tramp.texi (Frequently Asked Questions): Minor edits.
