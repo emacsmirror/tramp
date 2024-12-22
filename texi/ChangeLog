@@ -1,3 +1,8 @@
+2024-12-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (GVFS-based methods): Describe, how the feature can
+	be checked at runtime.  (Bug#75004)
+
 2024-12-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (FUSE-based methods): Fix sshfs reference.
