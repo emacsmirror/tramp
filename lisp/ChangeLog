@@ -1,3 +1,9 @@
+2024-12-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-file-name-p):
+	Add ;;;###tramp-autoload cookie.
+	(tramp-archive-local-file-name): New defun.
+
 2024-12-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-gvfs.el (tramp-gvfs-local-file-name): New defun.
