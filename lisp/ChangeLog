@@ -1,3 +1,11 @@
+2024-12-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-string-empty-or-nil-p):
+	Declare `tramp-suppress-trace' property.
+	(tramp-skeleton-make-symbolic-link): Drop volume letter when flushing.
+
+	* tramp-sh.el (tramp-sh-handle-process-file): Do proper quoting.
+
 2024-12-28  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive.el (tramp-archive-file-name-p):
