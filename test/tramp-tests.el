@@ -6970,7 +6970,6 @@ INPUT, if non-nil, is a string sent to the process."
                    (set-visited-file-name tmp-name1)
 		   :type 'file-locked))))
 	    (should (stringp (file-locked-p tmp-name1))))
->>>>>>> cb355827 (* tramp-tests.el (tramp-test39-make-lock-file-name): Adapt test.)
 
 	;; Cleanup.
 	(ignore-errors (delete-file tmp-name1))
