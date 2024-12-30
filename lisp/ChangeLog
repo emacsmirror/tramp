@@ -1,5 +1,12 @@
 2024-12-30  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-handle-make-process):
+	* tramp-adb.el (tramp-adb-handle-make-process):
+	* tramp-androidsu.el (tramp-androidsu-handle-make-process):
+	* tramp-sh.el (tramp-sh-handle-make-process):
+	* tramp-smb.el (tramp-smb-handle-start-file-process): Don't use
+	connection property "remote-command", it's superfluous.
+
 	* tramp-archive.el (tramp-archive-local-file-name):
 	Add `tramp-archive-method' to `tramp-methods' temporarily.
 
