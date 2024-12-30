@@ -1,3 +1,8 @@
+2024-12-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-local-file-name):
+	Add `tramp-archive-method' to `tramp-methods' temporarily.
+
 2024-12-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-string-empty-or-nil-p):
@@ -2764,7 +2769,7 @@
 	(tramp-completion-file-name-regexp-simplified)
 	(tramp-completion-file-name-regexp-separate)
 	(tramp-completion-file-name-regexp-alist): Remove.
-	(tramp-build-completion-file-name-regexp): Rwrite.
+	(tramp-build-completion-file-name-regexp): Rewrite.
 	(tramp-make-tramp-file-name): Use `tramp-archive-method'.
 	(tramp-handle-file-directory-p): Ignore errors.
 	(tramp-handle-find-backup-file-name, tramp-handle-lock-file)
