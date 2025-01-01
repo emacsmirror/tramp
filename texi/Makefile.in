@@ -2,7 +2,7 @@
 # Emacs Makefile for Tramp
 # @configure_input@
 
-# Copyright (C) 1998-2024 Free Software Foundation, Inc.
+# Copyright (C) 1998-2025 Free Software Foundation, Inc.
 
 # Author: Kai Großjohann <kai.grossjohann@gmx.net>
 #         Michael Albinus <michael.albinus@gmx.de>
