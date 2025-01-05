@@ -1,3 +1,7 @@
+2025-01-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-get-remote-pipe-buf): Make it more robust.
+
 2024-12-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-make-process):
