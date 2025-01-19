@@ -2002,11 +2002,9 @@ Unless DONT-CREATE, the buffer is created when it doesn't exist yet."
   (or (get-buffer (tramp-buffer-name vec))
       (unless dont-create
 	(with-current-buffer (get-buffer-create (tramp-buffer-name vec))
-	  ;; We use the existence of connection property " process-buffer"
+	  ;; We use the existence of connection property " connected"
 	  ;; as indication, whether a connection is active.
-	  (tramp-set-connection-property
-	   vec " process-buffer"
-	   (tramp-get-connection-property vec " process-buffer"))
+	  (tramp-set-connection-property vec " connected" t)
 	  (setq buffer-undo-list t
 		default-directory
 		(tramp-make-tramp-file-name vec 'noloc))
