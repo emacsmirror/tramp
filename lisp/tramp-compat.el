@@ -243,6 +243,8 @@ value is the default binding of the variable."
 ;;   are developers using `outline-minor-mode' in Lisp files, we still
 ;;   keep this quoting.
 ;;
+;; * Use `with-environment-variables'.
+;;
 ;; * Starting with Emacs 29.1, use `buffer-match-p'.
 ;;
 ;; * Starting with Emacs 29.1, use `string-split'.
