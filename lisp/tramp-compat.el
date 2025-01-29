@@ -79,7 +79,7 @@
    (if-let* ((xdg (xdg-cache-home))
 	     ((file-directory-p xdg))
 	     ((file-writable-p xdg)))
-       (prog1 (setq xdg (file-name-concat xdg "emacs"))
+       (prog1 (setq xdg (expand-file-name "emacs" xdg))
 	 (make-directory xdg t))
      (eval (car (get 'temporary-file-directory 'standard-value)) t)))
   "The default value of `temporary-file-directory' for Tramp.")
