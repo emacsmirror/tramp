@@ -1,3 +1,11 @@
+2025-01-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Predefined connection information): Mention also
+	"androidsu" as special case of "tmpdir".
+	(Remote processes): Signals are not delivered to remote direct
+	async processes.  Say, that there are restrictions for transfer of
+	binary data to remote direct async processes.
+
 2024-12-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (GVFS-based methods): Describe, how the feature can
