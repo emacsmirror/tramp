@@ -1,7 +1,7 @@
 2025-02-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods, External methods): PuTTY must be at
-	least version 0.82.
+	least version 0.82.  (Bug#75746)
 
 2025-02-01  Michael Albinus  <michael.albinus@gmx.de>
 
