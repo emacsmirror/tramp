@@ -252,20 +252,20 @@ being the result.")
 	   (file-writable-p ert-remote-temporary-file-directory))))))
 
   (when (cdr tramp--test-enabled-checked)
-    ;; Remove old test files.
-    (dolist (dir `(,temporary-file-directory
-		   ,tramp-compat-temporary-file-directory
-		   ,ert-remote-temporary-file-directory))
-      (dolist (file (directory-files
-		     dir 'full
-		     (rx-to-string
-		      `(: bos (? ".#")
-			  (| ,tramp-test-name-prefix
-			     ,(if (getenv "TRAMP_TEST_CLEANUP_TEMP_FILES")
-				  tramp-temp-name-prefix 'unmatchable))))))
+    (ignore-errors
+      ;; Remove old test files.
+      (dolist (dir `(,temporary-file-directory
+		     ,tramp-compat-temporary-file-directory
+		     ,ert-remote-temporary-file-directory))
+	(dolist (file (directory-files
+		       dir 'full
+		       (rx-to-string
+			`(: bos (? ".#")
+			    (| ,tramp-test-name-prefix
+			       ,(if (getenv "TRAMP_TEST_CLEANUP_TEMP_FILES")
+				    tramp-temp-name-prefix 'unmatchable))))))
 
-	;; Exclude sockets and FUSE mount points.
-	(ignore-errors
+	  ;; Exclude sockets and FUSE mount points.
 	  (unless
 	      (or (string-prefix-p
 		   "srw" (file-attribute-modes (file-attributes file)))
