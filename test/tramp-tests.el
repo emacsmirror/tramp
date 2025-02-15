@@ -152,7 +152,8 @@
       tramp-copy-size-limit nil
       tramp-error-show-message-timeout nil
       tramp-persistency-file-name nil
-      tramp-verbose 0)
+      tramp-verbose 0
+      vc-handled-backends nil)
 
 (defconst tramp-test-name-prefix "tramp-test"
   "Prefix to use for temporary test files.")
