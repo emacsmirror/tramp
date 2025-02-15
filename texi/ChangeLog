@@ -1,3 +1,7 @@
+2025-02-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi: Revert last change.
+
 2025-02-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods, External methods): PuTTY must be at
