@@ -1,5 +1,7 @@
 2025-02-15  Michael Albinus  <michael.albinus@gmx.de>
 
+	* tramp.el (tramp-file-name-handler): Don't touch `tramp-verbose'.
+
 	* tramp-cache.el (with-tramp-saved-connection-properties):
 	Adapt `tramp-verbose' when completing host names.
 
