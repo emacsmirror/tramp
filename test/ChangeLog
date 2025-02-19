@@ -1,3 +1,9 @@
+2025-02-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-enabled)
+	(tramp-test03-file-name-host-rules): Don't wrap
+	`tramp-cleanup-connection' with `ignore-errors'.
+
 2025-02-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (top): Set `vc-handled-backends' to nil.
