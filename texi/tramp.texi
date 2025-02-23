@@ -3369,10 +3369,10 @@ Disabling backups can be targeted to just the @option{su} and
 @vindex tramp-backup-directory-alist
 Another option is to create better backup file naming with user and
 host names prefixed to the file name.  For example, transforming
-@file{/etc/secretfile} to @file{~/.emacs.d/backups/@c
-!su:root@@localhost:!etc!secretfile}, set the @value{tramp} user
-option @code{tramp-backup-directory-alist} from the existing user
-option @code{backup-directory-alist}.
+@file{/etc/secretfile} to
+@file{~/.emacs.d/backups/!su:root@@localhost:!etc!secretfile}, set the
+@value{tramp} user option @code{tramp-backup-directory-alist} from the
+existing user option @code{backup-directory-alist}.
 
 Then @value{tramp} backs up to a file name that is transformed with a
 prefix consisting of the DIRECTORY name.  This file name prefixing
