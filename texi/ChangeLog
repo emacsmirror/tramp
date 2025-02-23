@@ -1,3 +1,9 @@
+2025-02-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Ad-hoc multi-hops, Frequently Asked Questions):
+	Improve description how ad-hoc multi-hop file names can be made
+	persistent.  (Bug#65039, Bug#76457)
+
 2025-02-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi: Revert last change.
