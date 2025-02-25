@@ -1,3 +1,8 @@
+2025-02-25  shipmints  <shipmints@gmail.com>
+
+	* tramp.texi (Cleanup remote connections):
+	Add 'tramp-cleanup-bufferless-connections'.
+
 2025-02-23  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Ad-hoc multi-hops, Frequently Asked Questions):
