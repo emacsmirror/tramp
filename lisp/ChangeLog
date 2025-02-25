@@ -1,3 +1,9 @@
+2025-02-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-list-remote-buffers)
+	(tramp-list-remote-buffer-connections): Fix docstring.
+	(tramp-cleanup-bufferless-connections): Use `string-join'.
+
 2025-02-25  shipmints  <shipmints@gmail.com>
 
 	* tramp-cmds.el:
