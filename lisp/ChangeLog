@@ -1,3 +1,8 @@
+2025-02-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-find-executable): Use "command -pv", it
+	better supported in different shells.  (Bug#76521)
+
 2025-02-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-find-executable): Fix check.
