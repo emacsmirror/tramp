@@ -1,3 +1,10 @@
+2025-02-25  shipmints  <shipmints@gmail.com>
+
+	* tramp-cmds.el:
+	(tramp-list-remote-buffer-connections): New function.
+	(tramp-cleanup-bufferless-connections): New command.
+	(tramp-list-remote-buffers): Account for 'buffer-file-name'.
+
 2025-02-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-find-executable): Use "command -pv", it
