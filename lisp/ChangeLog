@@ -4,6 +4,9 @@
 	(tramp-list-remote-buffer-connections): Fix docstring.
 	(tramp-cleanup-bufferless-connections): Use `string-join'.
 
+	* tramp-sh.el (tramp-ssh-or-plink-options): Return always a
+	string.  (Bug#76553)
+
 2025-02-25  shipmints  <shipmints@gmail.com>
 
 	* tramp-cmds.el:
