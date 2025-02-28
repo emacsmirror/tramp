@@ -1,3 +1,7 @@
+2025-02-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-mode): Set to nil on MS-DOS.
+
 2025-02-25  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cmds.el (tramp-list-remote-buffers)
