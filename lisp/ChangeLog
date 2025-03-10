@@ -1,3 +1,8 @@
+2025-03-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el: Add Version, Package-Requires, Package-Type and URL
+	keywords.
+
 2025-02-28  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-mode): Set to nil on MS-DOS.
