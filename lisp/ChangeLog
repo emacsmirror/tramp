@@ -1,3 +1,15 @@
+2025-03-12  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cache.el (tramp-get-method-parameter): Declare.
+	(tramp-get-hash-table): Mark connection properties.
+	(tramp-dump-connection-properties): Remove empty lists.
+	(tramp-parse-connection-properties): Take connection property
+	"completion-use-cache" into account.  (Bug#76950)
+
+	* tramp-container.el (tramp-methods) <docker, dockercp, podman>
+	<podmancp, kubernetes, toolbox, distrobox, flatpak, apptainer, nspawn>:
+	Add `tramp-completion-use-cache' argument.
+
 2025-03-12  Sean  Whitton <spwhitton@spwhitton.name>
 
 	* tramp-message.el (tramp-debug-font-lock-keywords): Say "Lisp"
