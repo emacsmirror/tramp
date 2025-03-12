@@ -1,3 +1,8 @@
+2025-03-12  Sean  Whitton <spwhitton@spwhitton.name>
+
+	* tramp-message.el (tramp-debug-font-lock-keywords): Say "Lisp"
+	not "Elisp".
+
 2025-03-10  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el: Add Version, Package-Requires, Package-Type and URL
