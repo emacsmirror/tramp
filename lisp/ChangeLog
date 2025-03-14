@@ -1,3 +1,11 @@
+2025-03-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (dired-get-file-for-visit): Declare.
+	(with-tramp-file-name-with-method): New macro.
+	(tramp-revert-buffer-with-sudo): Autoload.  Preserve position.
+	Use `with-tramp-file-name-with-method'.
+	(tramp-dired-find-file-with-sudo): New command.
+
 2025-03-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (tramp-get-method-parameter): Declare.
