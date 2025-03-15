@@ -1,3 +1,7 @@
+2025-03-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* .gitignore: Add *.kys.
+
 2025-03-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Ad-hoc multi-hops): Extend wrt
