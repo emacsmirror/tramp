@@ -1,3 +1,7 @@
+2025-03-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* configure.ac (TRAMP_CLEAN_FILES): Add *.kys.
+
 2024-07-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* configure.ac: Bump version (to 2.8.0-pre).
