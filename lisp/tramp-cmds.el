@@ -708,10 +708,21 @@ If the buffer runs `dired', the buffer is reverted."
       (dired-advertise)
       (revert-buffer)))))
 
+;; This function takes action, when `read-extended-command-predicate'
+;; is set to `command-completion-default-include-p'.
+;;;###autoload
+(defun tramp-dired-buffer-command-completion-p (_symbol buffer)
+  "A predicate for Tramp interactive commands.
+They are completed by `M-x TAB' only in Dired buffers."
+  (declare (tramp-suppress-trace t))
+  (with-current-buffer buffer
+    (tramp-dired-buffer-p)))
+
 ;;;###autoload
 (defun tramp-dired-find-file-with-sudo ()
   "In Dired, visit the file or directory named on this line.
 This is performed with \"sudo\" permissions."
+  (declare (completion tramp-dired-buffer-command-completion-p))
   (interactive)
   (with-tramp-file-name-with-method
     (find-file (tramp-file-name-with-sudo (dired-get-file-for-visit)))))
