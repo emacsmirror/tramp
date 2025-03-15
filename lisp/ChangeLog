@@ -2,7 +2,8 @@
 
 	* tramp-cmds.el (tramp-dired-buffer-command-completion-p):
 	New defun.
-	(tramp-dired-find-file-with-sudo): Declare `completion'.
+	(tramp-dired-find-file-with-sudo): Add property
+	`completion-predicate'.
 
 2025-03-14  Michael Albinus  <michael.albinus@gmx.de>
 
