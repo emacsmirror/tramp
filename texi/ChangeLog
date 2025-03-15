@@ -1,3 +1,8 @@
+2025-03-15  Sean Whitton  <spwhitton@spwhitton.name>
+
+	* tramp.texi (Ad-hoc multi-hops): Touch up documentation of these
+	features.
+
 2025-03-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* .gitignore: Add *.kys.
