@@ -1,3 +1,22 @@
+2025-03-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-barf-if-file-missing): Accept also symlinks.
+	(tramp-skeleton-file-exists-p): Handle non-existing symlink targets.
+	(tramp-skeleton-set-file-modes-times-uid-gid): Fix typo.
+
+	* tramp-gvfs.el (tramp-gvfs-do-copy-or-rename-file): Don't use the
+	truename.
+
+	* tramp-sh.el (tramp-do-copy-or-rename-file): Refactor.  Handle
+	symlinks.  (Bug#76678)
+
+	* tramp-smb.el (tramp-smb-errors): Add string.
+	(tramp-smb-handle-copy-file, tramp-smb-handle-rename-file):
+	Refactor.
+
+	* tramp-sudoedit.el (tramp-sudoedit-do-copy-or-rename-file):
+	Don't use the truename.  Handle symlinks.
+
 2025-03-15  Sean Whitton  <spwhitton@spwhitton.name>
 
 	* tramp-cmds.el (tramp-revert-buffer-with-sudo)
