@@ -653,7 +653,7 @@ PRESERVE-UID-GID and PRESERVE-EXTENDED-ATTRIBUTES are completely ignored."
 	(set-file-times
 	 newname
 	 (file-attribute-modification-time (file-attributes filename))
-	 (unless ok-if-already-exists 'nofollow)))))
+	 (unless ok-if-already-exists 'nofollow))))))
 
 (defun tramp-smb-handle-delete-directory (directory &optional recursive trash)
   "Like `delete-directory' for Tramp files."

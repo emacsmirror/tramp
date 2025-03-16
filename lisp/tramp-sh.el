@@ -2225,10 +2225,10 @@ file names."
 		;; One of them must be a Tramp file.
 		(error "Tramp implementation says this cannot happen")))
 
-              ;; KEEP-DATE handling.
-              (when (and keep-date (not copy-keep-date))
-		(set-file-times
-		 newname file-times (unless ok-if-already-exists 'nofollow)))
+	      ;; In case of `rename', we must flush the cache of the source file.
+	      (when (and t1 (eq op 'rename))
+		(with-parsed-tramp-file-name filename v1
+		  (tramp-flush-file-properties v1 v1-localname)))
 
 	      ;; NEWNAME has wrong cached values.
 	      (when t2
