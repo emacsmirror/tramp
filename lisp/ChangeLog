@@ -1,3 +1,7 @@
+2025-03-18  Stefan Kangas  <stefankangas@gmail.com>
+
+	* tramp-cmds.el (tramp-rename-files): Prefer 'help-key' when available.
+
 2025-03-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-barf-if-file-missing): Accept also symlinks.
