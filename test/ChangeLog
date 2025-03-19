@@ -1,3 +1,7 @@
+2025-03-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test28-process-file): Adapt test.
+
 2025-03-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (vc-handled-backends): Suppress only if noninteractive.
