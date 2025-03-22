@@ -1,3 +1,11 @@
+2025-03-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-file-exists-p)
+	(tramp-handle-file-directory-p): Protect against cyclic symlinks.
+
+	* tramp-sh.el (tramp-sh-handle-file-ownership-preserved-p):
+	Add FIXME.
+
 2025-03-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-process-file): Raise a warning if
