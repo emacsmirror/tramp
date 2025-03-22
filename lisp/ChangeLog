@@ -2,6 +2,7 @@
 
 	* tramp.el (tramp-skeleton-file-exists-p)
 	(tramp-handle-file-directory-p): Protect against cyclic symlinks.
+	(tramp-skeleton-file-truename): Remove possible trailing slash.
 
 	* tramp-sh.el (tramp-sh-handle-file-ownership-preserved-p):
 	Add FIXME.
