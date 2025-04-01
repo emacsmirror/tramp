@@ -1,3 +1,28 @@
+2025-04-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-use-file-attributes): Fix docstring.
+	(tramp-handle-file-readable-p, tramp-handle-file-writable-p):
+	Force `file-attributes' check.  Use `file-truename' for symbolic links.
+	(tramp-check-cached-permissions): New optional argument FORCE.
+	Fix symlink check.  Check also for sticky bit.
+
+	* tramp-adb.el (tramp-adb-handle-file-executable-p): Check also
+	for sticky bit.
+	(tramp-adb-handle-file-readable-p): Simplify.
+
+	* tramp-gvfs.el (tramp-gvfs-handle-file-executable-p): Check also
+	for sticky bit.  Force `file-attributes' check.
+
+	* tramp-sh.el (tramp-sh-handle-file-executable-p): Check also for
+	sticky bit.
+	(tramp-sh-handle-file-readable-p)
+	(tramp-sh-handle-file-writable-p): Simplify.
+
+	* tramp-sudoedit.el (tramp-sudoedit-handle-file-executable-p):
+	Check also for sticky bit.
+	(tramp-sudoedit-handle-file-readable-p)
+	(tramp-sudoedit-handle-file-writable-p): Simplify.
+
 2025-03-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-file-exists-p)
