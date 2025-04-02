@@ -1,3 +1,8 @@
+2025-04-02  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions): Remove double item.
+	(Traces and Profiles): Mention `warning-suppress-types'.  (Bug#77422)
+
 2025-03-15  Sean Whitton  <spwhitton@spwhitton.name>
 
 	* tramp.texi (Ad-hoc multi-hops): Touch up documentation of these
