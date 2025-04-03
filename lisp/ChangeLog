@@ -1,10 +1,18 @@
+2025-04-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cache.el (tramp-dump-connection-properties): Adapt comment.
+
+	* tramp-compat.el (tramp-warning): Declare and use it.
+
+	* tramp-message.el (tramp-warning): Declare `indent'.
+
 2025-04-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-use-file-attributes): Fix docstring.
 	(tramp-handle-file-readable-p, tramp-handle-file-writable-p):
 	Force `file-attributes' check.  Use `file-truename' for symbolic links.
 	(tramp-check-cached-permissions): New optional argument FORCE.
-	Fix symlink check.  Check also for sticky bit.
+	Fix symlink check.  Check also for sticky bit.  (Bug#77402)
 
 	* tramp-adb.el (tramp-adb-handle-file-executable-p): Check also
 	for sticky bit.
