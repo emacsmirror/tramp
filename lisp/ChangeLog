@@ -1,3 +1,7 @@
+2025-04-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cache.el (with-tramp-saved-connection-property): Fix typo.
+
 2025-04-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-readlink-file-truename): New defconst.
@@ -5,7 +9,7 @@
 	(tramp-sh-handle-file-truename): Use `tramp-readlink-file-truename'.
 	(tramp-bundle-read-file-names, tramp-get-remote-readlink): Simplify.
 	(tramp-expand-script): Add format specifiers %m and %q for test
-	commands. Addapt readlink call.
+	commands.  Adapt readlink call.
 	Reported by Stacey Marshall <stacey.marshall@gmail.com>.
 
 2025-04-03  Michael Albinus  <michael.albinus@gmx.de>
