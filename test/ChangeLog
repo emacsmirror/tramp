@@ -1,3 +1,16 @@
+2025-05-02  Spencer Baugh  <sbaugh@janestreet.com>
+
+	Previously, we assumed (roughly) that substitute-in-file-name
+	always returns a suffix of the original string.  But
+	substitute-in-file-name on "/ssh:user@host:/~/" returns
+	"/ssh:user@host:~/", preserving the TRAMP magic prefix.  Weaken
+	the assertion in completion--sifn-boundaries to allow this; the
+	new assertion is more clear about the property we care about,
+	anyway.
+
+	* tramp-tests.el (tramp--test-emacs31-p, tramp--split-on-boundary)
+	(tramp-test51-file-name-completion-boundaries): Add.
+
 2025-04-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test20-file-modes-without-file-attributes)
