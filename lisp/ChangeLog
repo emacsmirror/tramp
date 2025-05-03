@@ -1,3 +1,9 @@
+2025-05-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-handle-directory-file-name):
+	* tramp-integration.el (tramp-rfn-eshadow-update-overlay):
+	Handle quoted local file name part.
+
 2025-04-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-cache.el (with-tramp-saved-connection-property): Fix typo.
