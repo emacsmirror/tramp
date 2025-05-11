@@ -1,3 +1,8 @@
+2025-05-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
+	Adapt test.
+
 2025-05-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test29-start-file-process)
