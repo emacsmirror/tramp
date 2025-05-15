@@ -1,3 +1,11 @@
+2025-05-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
+	Simplify.
+	(tramp--test-putty-p): Fix docstring.
+	(tramp--test-scp-p): New defun.
+	(tramp-test42-utf8): Use it.
+
 2025-05-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
