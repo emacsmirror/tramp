@@ -1,7 +1,30 @@
+2025-05-31  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-container.el (tramp-methods) <docker, dockercp, podman>
+	<podmancp, apptainer, nspawn>:
+	* tramp-sh.el (tramp-methods) <scp, scpx, rsync, ssh, sshx, sudo>:
+	* tramp-sshfs.el (tramp-methods) <sshfs>: Set TERM environment.
+	(Bug#78508)
+
+	* tramp.el (tramp-process-sentinel): Adapt docstring.
+	Set " process-exit-status" property.
+
+	* tramp-sh.el (tramp-find-executable): Handle superlong PATH.
+	(tramp-set-remote-path): Simplify command.
+	(tramp-timeout-session): Add ;;;###tramp-autoload cookie.
+
+	* tramp-smb.el (tramp-smb-errors): Add string.
+	(tramp-smb-winexe-program): Adapt docstring.
+	(tramp-smb-handle-copy-directory, tramp-smb-handle-file-acl)
+	(tramp-smb-handle-set-file-acl, tramp-smb-maybe-open-connection):
+	Simplify argument handling.
+	(tramp-smb-handle-process-file): Flush " process-exit-status" property.
+	(tramp-smb-call-winexe): Set $winsize.Width to 102 only.
+
 2025-05-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-find-executable): Use "command -v",
-	preserving non-standard PATH search. Bug#78633)
+	preserving non-standard PATH search.  (Bug#78633)
 
 2025-05-18  Michael Albinus  <michael.albinus@gmx.de>
 
