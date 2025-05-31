@@ -1,3 +1,11 @@
+2025-05-31  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-enabled): Make it more robust.
+	(tramp-test18-file-attributes)
+	(tramp-test26-interactive-file-name-completion)
+	(tramp-test26-file-name-completion-boundaries)
+	(tramp-test35-remote-path): Adapt tests.
+
 2025-05-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
