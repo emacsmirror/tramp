@@ -1,3 +1,11 @@
+2025-06-02  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (project-mode-line-format, project-mode-line): Declare.
+	(tramp-test48-session-timeout): New test.
+	(tramp-test49-auto-load, tramp-test49-delay-load)
+	(tramp-test49-recursive-load, tramp-test49-remote-load-path)
+	(tramp-test50-without-remote-files, tramp-test51-unload): Rename.
+
 2025-05-31  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-enabled): Make it more robust.
