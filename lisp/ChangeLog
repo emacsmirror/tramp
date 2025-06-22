@@ -10,7 +10,7 @@
 	`file-executable-p'.  Suggested by <mail@knazarov.com>.
 	(tramp-shell-file-name-all-completions): New script.
 	(tramp-bundle-read-file-names): Fix for special characters.  Cache
-	also `file-exists-p'.
+	also `file-executable-p'.
 	(tramp-sh-handle-file-name-all-completions): Unify different cases.
 
 2025-06-05  Michael Albinus  <michael.albinus@gmx.de>
