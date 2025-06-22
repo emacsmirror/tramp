@@ -7,7 +7,7 @@
 	Fix comment.
 
 	* tramp-sh.el (tramp-perl-file-name-all-completions): Cache also
-	`file-exists-p'.  Suggested by <mail@knazarov.com>.
+	`file-executable-p'.  Suggested by <mail@knazarov.com>.
 	(tramp-shell-file-name-all-completions): New script.
 	(tramp-bundle-read-file-names): Fix for special characters.  Cache
 	also `file-exists-p'.
