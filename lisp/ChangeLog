@@ -1,3 +1,18 @@
+2025-06-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-suspended-timers, without-remote-files):
+	Fix debug spec.
+
+	* tramp-archive.el (tramp-archive-autoload-file-name-regexp):
+	Fix comment.
+
+	* tramp-sh.el (tramp-perl-file-name-all-completions): Cache also
+	`file-exists-p'.  Suggested by <mail@knazarov.com>.
+	(tramp-shell-file-name-all-completions): New script.
+	(tramp-bundle-read-file-names): Fix for special characters.  Cache
+	also `file-exists-p'.
+	(tramp-sh-handle-file-name-all-completions): Unify different cases.
+
 2025-06-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-gvfs.el (tramp-gvfs-maybe-open-connection):
