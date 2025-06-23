@@ -1,3 +1,8 @@
+2025-06-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-shell-file-name-all-completions)
+	(tramp-bundle-read-file-names): Fix scripts.
+
 2025-06-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (with-tramp-suspended-timers, without-remote-files):
@@ -7,7 +12,8 @@
 	Fix comment.
 
 	* tramp-sh.el (tramp-perl-file-name-all-completions): Cache also
-	`file-executable-p'.  Suggested by <mail@knazarov.com>.
+	`file-executable-p'.  Suggested by Konstantin Nazarov
+	<mail@knazarov.com>.
 	(tramp-shell-file-name-all-completions): New script.
 	(tramp-bundle-read-file-names): Fix for special characters.  Cache
 	also `file-executable-p'.
