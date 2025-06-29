@@ -1,3 +1,7 @@
+2025-06-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.0 released
+
 2025-06-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (project-mode-line-format, project-mode-line): Declare.

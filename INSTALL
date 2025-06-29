@@ -1,8 +1,8 @@
 Installing Tramp into Emacs
 ***************************
 
-Tramp is part of Emacs since version 22.  This Tramp version, 2.8.0-pre,
-has been used successfully on Emacs 28, on Emacs 29, on Emacs 30, and on
+Tramp is part of Emacs since version 22.  This Tramp version, 2.8.0, has
+been used successfully on Emacs 28, on Emacs 29, on Emacs 30, and on
 Emacs 31.  If you use the version that comes with your Emacs, or the
 version from GNU ELPA, the following information is not necessary.
 
@@ -36,11 +36,11 @@ The easiest way to proceed is as follows:
 
    • Choose a directory, say ‘~/emacs/’.  Change into that directory and
      unpack the tarball.  This will give you a directory
-     ‘~/emacs/tramp-2.8.0-pre/’ which contains subdirectories ‘lisp’ for
-     the Lisp code, ‘texi’ for the documentation, and ‘test’ for code
+     ‘~/emacs/tramp-2.8.0/’ which contains subdirectories ‘lisp’ for the
+     Lisp code, ‘texi’ for the documentation, and ‘test’ for code
      running Tramp's test suite.  Make a symbolic link:
 
-          $ ln -s tramp-2.8.0-pre tramp
+          $ ln -s tramp-2.8.0 tramp
 
    • ‘cd’ to ‘~/emacs/tramp/’.  If you've taken Tramp from the Git
      sources, type ‘autoconf’ in order to get an up-to-date ‘configure’
@@ -215,11 +215,11 @@ Emacs 28 or older
 
    • Remove all byte-compiled Tramp files
 
-          $ rm -f ~/.emacs.d/elpa/tramp-2.8.0-pre/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.8.0/tramp*.elc
 
    • Start Emacs with Tramp's source files
 
-          $ emacs -L ~/.emacs.d/elpa/tramp-2.8.0-pre -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.8.0 -l tramp
 
      This should not give you the error.
 
@@ -233,7 +233,7 @@ Mitigation of a bug in Emacs 29.1
 ---------------------------------
 
 Due to a bug in Emacs 29.1, you must apply the following change prior
-installation or upgrading Tramp 2.8.0-pre from GNU ELPA:
+installation or upgrading Tramp 2.8.0 from GNU ELPA:
 
      (when (string-equal emacs-version "29.1")
        (with-current-buffer
