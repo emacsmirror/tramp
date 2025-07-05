@@ -1,3 +1,22 @@
+2025-07-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-directory-watched): New defun.
+	(tramp-accept-process-output, tramp-wait-for-regexp):
+	Improve debug message.
+
+	* tramp-gvfs.el (tramp-gvfs-handle-file-notify-add-watch):
+	* tramp-sh.el (tramp-sh-gio-monitor-process-filter):
+	Use connection property "file-monitor".
+
+	* tramp-smb.el (tramp-smb-file-name-handler-alist):
+	Use `tramp-smb-handle-file-notify-add-watch'.
+	(tramp-smb-handle-delete-directory): Do not error if there is a
+	pending deletion of a directory under file-watch.
+	(tramp-smb-handle-file-notify-add-watch)
+	(tramp-smb-notify-process-filter): New defuns.
+	(tramp-smb-send-command): New optional argument NOOUTPUT.
+	(tramp-smb-wait-for-output): Improve debug message.
+
 2025-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0 released
