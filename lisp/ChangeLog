@@ -1,3 +1,9 @@
+2025-07-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-get-file-name-with-method): New defun.
+	(with-tramp-file-name-with-method, tramp-file-name-with-sudo): Use it.
+	(tramp-dired-find-file-with-sudo): Fix docstring.
+
 2025-07-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-directory-watched): New defun.
