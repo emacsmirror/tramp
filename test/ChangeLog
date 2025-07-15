@@ -1,3 +1,12 @@
+2025-07-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (filenotify): Require.
+	(ert-remote-temporary-file-directory)
+	(tramp-test41-special-characters, tramp-test42-utf8)
+	(tramp-test45-asynchronous-requests): Do not check for
+	EMACS_HYDRA_CI environment variable.
+	(tramp-test46-file-notifications): New test.
+
 2025-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0 released
