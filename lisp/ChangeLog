@@ -1,3 +1,13 @@
+2025-07-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-integration.el (tramp-connection-local-default-system-variables):
+	Add also `exec-suffixes'.
+
+	* tramp-smb.el (tramp-smb-maybe-open-connection): Use default
+	values of `path-separator', `null-device' and `exec-suffixes'.
+	(tramp-smb-connection-local-default-system-variables):
+	New defconst.  Add it to connection-local profiles.
+
 2025-07-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-barf-if-file-missing)
