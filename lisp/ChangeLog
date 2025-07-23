@@ -1,3 +1,22 @@
+2025-07-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-local-environment): New defmacro.
+	(tramp-start-process): New defun.
+	(tramp-call-process, tramp-call-process-region)
+	(tramp-process-lines): Use `with-tramp-local-environment'.
+
+	* tramp-adb.el (tramp-adb-maybe-open-connection):
+	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-notify-add-watch):
+	* tramp-sh.el (tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-maybe-open-connection):
+	* tramp-smb.el (tramp-smb-handle-copy-directory)
+	(tramp-smb-handle-file-acl)
+	(tramp-smb-handle-file-notify-add-watch)
+	(tramp-smb-handle-set-file-acl, tramp-smb-maybe-open-connection):
+	* tramp-sudoedit.el (tramp-sudoedit-send-command):
+	Use `tramp-start-process'.  Do not call	`tramp-post-process-creation'.
+
 2025-07-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-integration.el (tramp-connection-local-default-system-variables):
