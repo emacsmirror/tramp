@@ -1,7 +1,7 @@
 2025-07-24  Michael Albinus  <michael.albinus@gmx.de>
 
-	* tramp-smb.el: Disable setting connection-local variables.
-	(Bug#78886)
+	* tramp-smb.el (tramp-connection-local-default-system-variables):
+	Add "" to `exec-suffixes'.  (Bug#78886)
 
 2025-07-23  Michael Albinus  <michael.albinus@gmx.de>
 
