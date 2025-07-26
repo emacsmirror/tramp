@@ -1,3 +1,7 @@
+2025-07-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test46-file-notifications): Tag it :unstable.
+
 2025-07-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (filenotify): Require.
