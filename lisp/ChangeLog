@@ -1,3 +1,8 @@
+2025-07-26  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-bundle-read-file-names): Fix docstring.
+	(tramp-sh-gio-monitor-process-filter): Extend error strings.
+
 2025-07-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-connection-local-default-system-variables):
