@@ -1,3 +1,14 @@
+2025-07-27  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-local-environment): Do not override
+	`process-environment'.  Set "TERM", "PROMPT_COMMAND", "PS1" and
+	"INSIDE_EMACS".  (Bug#79103)
+
+	* tramp-sh.el (tramp-maybe-open-connection): Do not set "TERM",
+	"PROMPT_COMMAND" and "PS1".
+
+	* trampver.el.in (tramp-inside-emacs): Remove duplicate entries.
+
 2025-07-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-bundle-read-file-names): Fix docstring.
