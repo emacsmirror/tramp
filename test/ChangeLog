@@ -1,3 +1,10 @@
+2025-07-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.0.1 released
+
+	* tramp-tests.el (tramp-test18-file-attributes)
+	(tramp-test19-directory-files-and-attributes): Extend tests.
+
 2025-07-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test46-file-notifications): Tag it :unstable.

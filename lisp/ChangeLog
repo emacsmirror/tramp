@@ -1,3 +1,10 @@
+2025-07-30  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.0.1 released
+
+	* tramp-smb.el (tramp-smb-handle-file-attributes):
+	Use `directory-file-name'.
+
 2025-07-27  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (with-tramp-local-environment): Do not override
