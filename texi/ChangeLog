@@ -1,3 +1,9 @@
+2025-08-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions): Mention tramp-hlo.
+	(New operations): New node.
+	(Top, Files directories and localnames):  Add it to @menu.
+
 2025-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.1 released
