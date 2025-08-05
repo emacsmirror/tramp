@@ -1,3 +1,16 @@
+2025-08-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test50-auto-load)
+	(tramp-archive-test50-delay-load)
+	(tramp-archive-test51-without-remote-files): Rename.
+
+	* tramp-tests.el (tramp--test-operation)
+	(tramp--handler-for-test-operation): New defuns.
+	(tramp-test49-external-backend-function): New test.
+	(tramp-test50-auto-load, tramp-test50-delay-load)
+	(tramp-test50-recursive-load, tramp-test50-remote-load-path)
+	(tramp-test51-without-remote-files, tramp-test52-unload): Rename.
+
 2025-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.1 released
