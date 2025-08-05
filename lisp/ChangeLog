@@ -1,3 +1,11 @@
+2025-08-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-file-name-for-operation-external): New defvar.
+	(tramp-file-name-for-operation): Use `memq'.  Handle external
+	operations.  Raise `remote-file-error' error in case of.
+	(tramp-add-external-operation, tramp-remove-external-operation):
+	New defuns.
+
 2025-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.1 released
