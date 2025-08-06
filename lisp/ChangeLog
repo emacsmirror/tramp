@@ -1,10 +1,18 @@
+2025-08-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-adb.el (tramp-adb-handle-set-file-times): Don't use UTC in
+	all cases.
+
+	* tramp-smb.el (tramp-smb-handle-set-file-times): New defun.
+	(tramp-smb-file-name-handler-alist): Use it.
+
 2025-08-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-file-name-for-operation-external): New defvar.
 	(tramp-file-name-for-operation): Use `memq'.  Handle external
 	operations.  Raise `remote-file-error' error in case of.
 	(tramp-add-external-operation, tramp-remove-external-operation):
-	New defuns.
+	New defuns.  (Bug#79094)
 
 2025-07-30  Michael Albinus  <michael.albinus@gmx.de>
 
