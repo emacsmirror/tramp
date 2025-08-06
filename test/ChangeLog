@@ -1,3 +1,7 @@
+2025-08-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test22-file-times): Adapt test.
+
 2025-08-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test50-auto-load)
