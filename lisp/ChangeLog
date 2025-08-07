@@ -1,3 +1,8 @@
+2025-08-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-file-name-all-completions): Filter out
+	"" hits.  (Bug#79173)
+
 2025-08-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-adb.el (tramp-adb-handle-set-file-times): Don't use UTC in
