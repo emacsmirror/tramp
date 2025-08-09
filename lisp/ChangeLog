@@ -1,3 +1,7 @@
+2025-08-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-sh-handle-vc-registered):  Suppress warning.
+
 2025-08-07  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-skeleton-file-name-all-completions): Filter out
