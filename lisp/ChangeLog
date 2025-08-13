@@ -1,3 +1,8 @@
+2025-08-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-debug-buffer-limit): New defcustom.
+	(tramp-debug-message): Use it.  (Bug#79182)
+
 2025-08-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-vc-registered):  Suppress warning.
