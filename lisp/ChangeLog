@@ -1,3 +1,7 @@
+2025-08-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-get-remote-touch): Simplify.
+
 2025-08-16  Toru TSUNEYOSHI  <t_tuneyosi@hotmail.com>
 
 	* tramp-sh.el (tramp-get-remote-touch): Set connection property
