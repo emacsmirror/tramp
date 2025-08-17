@@ -1,3 +1,8 @@
+2025-08-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-timeout-session): Do not timeout when buffer
+	is modified, or in auto-revert mode.
+
 2025-08-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-get-remote-touch): Simplify.
