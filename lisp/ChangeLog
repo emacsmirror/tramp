@@ -1,3 +1,14 @@
+2025-08-17  JD Smith  <93749+jdtsmith@users.noreply.github.com>
+
+	Adapt Tramp to new autoload-macro expand  Bug #78995.
+
+	* tramp-compat.el (tramp-loaddefs): suppress error on requiring
+	tramp-loaddef.
+
+	* tramp.el (tramp--with-startup): declare autoload-macro expand,
+	and suppress warnings about this declare form on older versions of
+	Emacs.
+
 2025-08-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-timeout-session): Do not timeout when buffer
