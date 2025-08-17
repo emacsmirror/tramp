@@ -3,7 +3,7 @@
 	* tramp.texi (Predefined connection information): A session
 	timeout is suppressed if there is a modified buffer, or a buffer
 	under auto-revert.
-	(Traces and Profiles): Tramp message are written to the *Messages*
+	(Traces and Profiles): Tramp messages are written to the *Messages*
 	buffer when level is less than or equal to 3.
 
 2025-08-13  Michael Albinus  <michael.albinus@gmx.de>
