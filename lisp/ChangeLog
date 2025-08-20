@@ -1,11 +1,16 @@
-2025-08-17  JD Smith  <93749+jdtsmith@users.noreply.github.com>
+2025-08-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-debug-buffer-limit): Change default to
+	100MB.  Suggested by Francesco Potortì <pot@potorti.it>.
+
+2025-08-17  John-David T. Smith  <jdsmith@alum.mit.edu>
 
 	Adapt Tramp to new autoload-macro expand  Bug #78995.
 
-	* tramp-compat.el (tramp-loaddefs): suppress error on requiring
+	* tramp-compat.el (tramp-loaddefs): Suppress error on requiring
 	tramp-loaddef.
 
-	* tramp.el (tramp--with-startup): declare autoload-macro expand,
+	* tramp.el (tramp--with-startup): Declare autoload-macro expand,
 	and suppress warnings about this declare form on older versions of
 	Emacs.
 
