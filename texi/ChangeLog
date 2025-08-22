@@ -1,3 +1,8 @@
+2025-08-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (File name syntax): Describe port for IPv6 address.
+	(Traces and Profiles): Fix default value of tramp-debug-buffer-limit.
+
 2025-08-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Predefined connection information): A session
