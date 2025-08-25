@@ -1,3 +1,8 @@
+2025-08-25  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Frequently Asked Questions): Comment out tramp-hlo.
+	It hasn't landed in GNU ELPA yet.
+
 2025-08-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (File name syntax): Describe port for IPv6 address.
