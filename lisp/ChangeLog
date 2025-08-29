@@ -1,3 +1,21 @@
+2025-08-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-user-regexp): Exclude "[" and "]".
+	(tramp-completion-make-tramp-file-name): Handle port for IPv6 hosts.
+	(tramp-completion-handle-file-directory-p)
+	(tramp-completion-handle-file-exists-p): Simplify.
+	(tramp-completion-handle-file-name-completion): Ignore PREDICATE.
+	(tramp-completion-dissect-file-name): Handle ports.
+	(tramp-parse-default-user-host): Suppress '(nil nil) result.
+	(tramp-parse-file): Delete duplicates.
+	(tramp-parse-shosts-group): Accept also IPv6 addresses.
+	(tramp-handle-file-directory-p): Return t for filenames
+	"/method:foo:".
+	(tramp-parse-auth-sources, tramp-parse-netrc):
+	* tramp-cache.el (tramp-parse-connection-properties):
+	* tramp-gvfs.el (tramp-gvfs-parse-device-names):
+	Use `tramp-compat-seq-keep'.
+
 2025-08-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-message.el (tramp-debug-buffer-limit): Change default to
