@@ -1,3 +1,8 @@
+2025-09-02  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (completions-max-height): Declare.
+	(tramp-test26-interactive-file-name-completion): Extend test.
+
 2025-08-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.2 released
