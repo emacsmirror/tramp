@@ -1,3 +1,7 @@
+2025-09-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Password handling): Fix default of auth-sources.
+
 2025-08-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.2 released
