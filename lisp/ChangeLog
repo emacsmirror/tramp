@@ -1,3 +1,7 @@
+2025-09-10  Stefan Monnier  <monnier@iro.umontreal.ca>
+
+	* tramp-compat.el (top): Use read syntax #' for `functionp'.
+
 2025-09-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-get-completion-methods):
@@ -233,7 +237,7 @@
 	Use `tramp-connectable-p'.
 
 	* tramp-cmds.el (tramp-cleanup-connection):
-	Use read syntax #' for `tramp-timeout-session',
+	Use read syntax #' for `tramp-timeout-session'.
 
 2025-05-31  Michael Albinus  <michael.albinus@gmx.de>
 
