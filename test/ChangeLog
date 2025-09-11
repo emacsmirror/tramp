@@ -1,3 +1,14 @@
+2025-09-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test99-libarchive-tests):
+	Use function read syntax.
+
+	* tramp-tests.el (tramp-test16-file-expand-wildcards)
+	(tramp-test26-interactive-file-name-completion):
+	Prefer #'string-lessp over 'string<.
+	(tramp--test-ange-ftp-p, tramp-test47-read-password)
+	(tramp-test47-read-otp-password): Use function read syntax.
+
 2025-09-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (completions-max-height): Declare.
