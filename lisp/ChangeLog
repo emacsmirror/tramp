@@ -1,3 +1,11 @@
+2025-09-11  Stefan Monnier  <monnier@iro.umontreal.ca>
+
+	* tramp.el (tramp-compat, tramp-message, tramp-integration)
+	(trampver): Require them later.
+	(top): Use `eval-and-compile' modifying `macro-declarations-alist'.
+	(tramp-register-file-name-handlers): Don't fail during bootstrap
+	before `tramp-loaddefs.el' is built.
+
 2025-09-10  Stefan Monnier  <monnier@iro.umontreal.ca>
 
 	* tramp-compat.el (top): Use read syntax #' for `functionp'.
