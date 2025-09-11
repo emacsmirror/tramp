@@ -988,7 +988,7 @@ This tests also `file-executable-p', `file-writable-p' and `set-file-modes'."
 	      'append
 	      (mapcar
 	       (lambda (x)
-		 (directory-files (concat dir x) 'full (rx "uu" eos) #'sort))
+		 (directory-files (concat dir x) 'full (rx "uu" eos) 'sort))
 	       '("~/src/libarchive-3.2.2/libarchive/test"
 		 "~/src/libarchive-3.2.2/cpio/test"
 		 "~/src/libarchive-3.2.2/tar/test"))))
