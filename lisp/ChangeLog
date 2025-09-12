@@ -1,3 +1,13 @@
+2025-09-12  Liu Hui  <liuhui1610@gmail.com>
+
+	* tramp.el (tramp-local-environment-variable-p):
+	New function.  (Bug#79413)
+	(tramp-handle-make-process):
+	* tramp-sh.el (tramp-sh-handle-make-process)
+	(tramp-sh-handle-process-file):
+	* tramp-androidsu.el (tramp-androidsu-handle-make-process):
+	Use `tramp-local-environment-variable-p'.
+
 2025-09-11  Stefan Monnier  <monnier@iro.umontreal.ca>
 
 	* tramp.el (tramp-compat, tramp-message, tramp-integration)
