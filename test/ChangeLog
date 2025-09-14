@@ -1,7 +1,8 @@
-2025-09-11  Michael Albinus  <michael.albinus@gmx.de>
+2025-09-14  Mattias Engdegård  <mattias.engdegard@gmail.com>
 
-	* tramp-archive-tests.el (tramp-archive-test99-libarchive-tests):
-	Use function read syntax.
+	* tramp-tests.el: Silence function-quoting warning.
+
+2025-09-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test16-file-expand-wildcards)
 	(tramp-test26-interactive-file-name-completion):
