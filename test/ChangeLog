@@ -1,3 +1,9 @@
+2025-09-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test17-insert-directory):
+	* tramp-tests.el (tramp-test17-insert-directory): Use `seq-union'.
+	(tramp-test42-utf8): Use `seq-uniq' and `tramp-compat-seq-keep'.
+
 2025-09-14  Mattias Engdegård  <mattias.engdegard@gmail.com>
 
 	* tramp-tests.el: Silence function-quoting warning.
