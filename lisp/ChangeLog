@@ -1,3 +1,15 @@
+2025-09-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-register-foreign-file-name-handler):
+	* tramp-fuse.el (tramp-fuse-handle-directory-files): Use `seq-union'.
+
+	* tramp.el (tramp-use-absolute-autoload-file-names)
+	(tramp-skeleton-file-name-all-completions)
+	(tramp-parse-auth-sources, tramp-parse-file, tramp-parse-netrc):
+	* tramp-cache.el (tramp-parse-connection-properties):
+	* tramp-gvfs.el (tramp-gvfs-parse-device-names):
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Use `seq-uniq'.
+
 2025-09-12  Liu Hui  <liuhui1610@gmail.com>
 
 	* tramp.el (tramp-local-environment-variable-p):
