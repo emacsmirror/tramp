@@ -1,3 +1,7 @@
+2025-09-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-cache): Require at bottom.
+
 2025-09-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-register-foreign-file-name-handler):
