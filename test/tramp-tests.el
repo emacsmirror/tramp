@@ -5198,7 +5198,7 @@ This tests also `make-symbolic-link', `file-truename' and `add-name-to-file'."
                     (setq test (car test-and-result)
                           unread-command-events
 			  (append test (if noninteractive '(tab tab)
-			   		 '(tab tab return)))
+                                         '(tab tab return)))
                           completions nil
                           result (read-file-name ": " nil nil nil nil predicate))
 
