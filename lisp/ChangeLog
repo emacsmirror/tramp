@@ -1,3 +1,8 @@
+2025-10-01  Renato Ferreira  <renatofdds@gmail.com>  (tiny change)
+
+	* tramp.el (tramp-process-running-p): Use 'compare-strings'
+	for matching PROCESS-NAME with process command.  (Bug#79545)
+
 2025-09-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.3 released
