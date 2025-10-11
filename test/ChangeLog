@@ -1,3 +1,34 @@
+2025-10-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test-file-archive-hexlified):
+	Move down.
+	(tramp-archive-test-cascaded-file-archive)
+	(tramp-archive-test-cascaded-archive, tramp-archive-test-cascaded):
+	New defvars.
+	(tramp-archive--test-deftest-cascaded): New defmacro.
+	(tramp-archive-test01-file-name-syntax)
+	(tramp-archive-test05-expand-file-name): Adapt tests.
+	(tramp-archive-test01-file-name-syntax-cascaded)
+	(tramp-archive-test05-expand-file-name-cascaded)
+	(tramp-archive-test06-directory-file-name-cascaded)
+	(tramp-archive-test07-file-exists-p-cascaded)
+	(tramp-archive-test08-file-local-copy-cascaded)
+	(tramp-archive-test09-insert-file-contents-cascaded)
+	(tramp-archive-test11-copy-file-cascaded)
+	(tramp-archive-test15-copy-directory-cascaded)
+	(tramp-archive-test16-directory-files-cascaded)
+	(tramp-archive-test17-insert-directory-cascaded)
+	(tramp-archive-test18-file-attributes-cascaded)
+	(tramp-archive-test19-directory-files-and-attributes-cascaded)
+	(tramp-archive-test20-file-modes-cascaded)
+	(tramp-archive-test21-file-links-cascaded)
+	(tramp-archive-test26-file-name-completion-cascaded)
+	(tramp-archive-test40-make-nearby-temp-file-cascaded)
+	(tramp-archive-test43-file-system-info-cascaded)
+	(tramp-archive-test44-user-group-ids-cascaded): New tests.
+
+	* resources/outer.zip: New test file.
+
 2025-09-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.3 released

@@ -1,3 +1,11 @@
+2025-10-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-file-name-handler): Move bindings
+	of `tramp-methods' and `tramp-gvfs-methods' up.
+	(tramp-archive-file-name-handler): Do not use
+	`tramp-archive-run-real-handler' for testing existence of
+	`archive'.  (Bug#79582)
+
 2025-10-01  Renato Ferreira  <renatofdds@gmail.com>  (tiny change)
 
 	* tramp.el (tramp-process-running-p): Use 'compare-strings'

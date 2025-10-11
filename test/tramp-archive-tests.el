@@ -105,8 +105,7 @@ the origin of the temporary TMPFILE, have no write permissions."
      :tags '(:expensive-test)
      ;(tramp--test-set-ert-test-documentation ',test "cascaded")
      (skip-unless tramp-archive-enabled)
-     (if-let* ((default-directory ert-remote-temporary-file-directory)
-	       (ert-test (ert-get-test ',test))
+     (if-let* ((ert-test (ert-get-test ',test))
 	       (result (ert-test-most-recent-result ert-test))
 	       (tramp-archive-test-file-archive
 		tramp-archive-test-cascaded-file-archive)
