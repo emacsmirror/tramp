@@ -1,3 +1,10 @@
+2025-10-14  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cache.el (tramp-verbose): Declare.
+	(tramp-connection-properties):
+	* tramp-message.el (tramp-verbose):
+	Remove ;;;###tramp-autoload cookie.
+
 2025-10-12  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-make-tramp-file-name): Do not use the hop for
