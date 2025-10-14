@@ -1,5 +1,9 @@
 2025-10-14  Michael Albinus  <michael.albinus@gmx.de>
 
+	Do not use the ;;;###tramp-autoload cookie for defcustoms.  This
+	damages the customisation when Tramp is autoloaded.  Reported by
+	Joel Reicher <joel.reicher@gmail.com>.
+
 	* tramp-cache.el (tramp-verbose): Declare.
 	(tramp-connection-properties):
 	* tramp-message.el (tramp-verbose):
