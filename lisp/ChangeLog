@@ -1,3 +1,14 @@
+2025-10-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-methods): Adapt docstring.
+
+	* tramp-cmds.el (tramp-file-name-with-method): Add "surs" and
+	"sudors" to :type.  Adapt :version.
+
+	* tramp-sh.el (tramp-enable-surs-method)
+	(tramp-enable-sudors-method): New defuns
+	(tramp-sh-handle-expand-file-name): Add "surs" and "sudors" in check.
+
 2025-10-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	Do not use the ;;;###tramp-autoload cookie for defcustoms.  This
