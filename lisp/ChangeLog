@@ -1,3 +1,17 @@
+2025-10-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-write-region):
+	* tramp-cache.el (tramp-flush-file-upper-properties):
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Use `when-let*'
+	consequently.
+
+	* tramp-cmds.el (tramp-file-name-with-method): Add :initialize and
+	:set functions.
+	(tramp-set-file-name-with-method): New defun.
+	(with-tramp-file-name-with-method): Filter out enabled methods.
+
+	* tramp-compat.el: Add TODO.
+
 2025-10-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-methods): Adapt docstring.
