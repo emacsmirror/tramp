@@ -1,3 +1,7 @@
+2025-10-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Configuration): Extend example.
+
 2025-10-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods): Add "surs" and "sudors" methods.
