@@ -35,6 +35,9 @@ tramp-time.el (not on GNU ELPA)
         These are performance tests on Tramp.  Read the "Commentary"
         section for details.  These tests are not covered by the Makefile.
 
+resources/
+	A directory containing test files for running tramp-archive-tests.el.
+
 The Makefile in this directory supports the following targets:
 
 * make all  -or-  make check

@@ -1,3 +1,15 @@
+2025-10-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* README: Mention resources/.
+
+	* resources/foo.zip: Renamed from outer.zip.
+
+	* tramp-archive-tests.el
+	(tramp-archive-test-cascaded-file-archive): Use "foo.zip".
+
+	* tramp-tests.el (tramp--test-instrument-test-case-p): Extend check.
+	(tramp-test48-session-timeout): Adapt test.
+
 2025-10-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive-tests.el (tramp-archive-test-file-archive-hexlified):
