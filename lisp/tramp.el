@@ -927,7 +927,7 @@ Customize.  See also `tramp-change-syntax'."
 		 (const :tag "Ange-FTP" simplified)
 		 (const :tag "XEmacs" separate))
   :require 'tramp
-  ;; Starting we Emacs 31.1, we can use `custom-initialize-after-file' instead.
+  ;; Starting with Emacs 31.1, we can use `custom-initialize-after-file' instead.
   :initialize #'custom-initialize-default
   :set #'tramp-set-syntax
   :link '(info-link :tag "Tramp manual" "(tramp) Change file name syntax"))
@@ -971,7 +971,7 @@ to be set, depending on VALUE."
 ;; Initialize the Tramp syntax variables.  We want to override initial
 ;; value of `tramp-file-name-regexp'.  We do not call
 ;; `custom-set-variable', this would load Tramp via custom.el.
-;; Starting we Emacs 31.1, we can use `custom-initialize-after-file' instead.
+;; Starting with Emacs 31.1, we can use `custom-initialize-after-file' instead.
 (tramp--with-startup
   (tramp-set-syntax 'tramp-syntax tramp-syntax))
 
