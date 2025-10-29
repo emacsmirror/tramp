@@ -1,3 +1,7 @@
+2025-10-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test49-external-backend-function): Extend test.
+
 2025-10-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* README: Mention resources/.
