@@ -1,3 +1,7 @@
+2025-11-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-expand-script): Handle "%%" format specifier better.
+
 2025-10-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.4 released
