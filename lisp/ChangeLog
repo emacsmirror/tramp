@@ -1,3 +1,25 @@
+2025-11-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-uudecode, tramp-readlink-file-truename)
+	(tramp-perl-file-truename, tramp-perl-file-name-all-completions)
+	(tramp-shell-file-name-all-completions)
+	(tramp-perl-file-attributes)
+	(tramp-perl-directory-files-and-attributes, tramp-perl-id)
+	(tramp-python-id, tramp-perl-encode, tramp-perl-decode)
+	(tramp-awk-encode, tramp-awk-decode)
+	(tramp-bundle-read-file-names): Indent script for better readability.
+	(tramp-perl-file-name-all-completions)
+	(tramp-shell-file-name-all-completions)
+	(tramp-ls-file-attributes, tramp-bundle-read-file-names):
+	Adapt docstring.
+	(tramp-shell-print-quoted-string): New defconst.
+	(tramp-shell-file-name-all-completions): Use "%b" format specifier.
+	(tramp-bundle-read-file-names):  Use "%k" format specifier.
+	(tramp-sh-handle-file-name-all-completions): Don't send
+	`tramp-bundle-read-file-names'.
+	(tramp-expand-script): Adapt docstring.  Apply always
+	`format-spec'.  Handle also "%b" and "%k" format specifiers.
+
 2025-11-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-expand-script): Handle "%%" format specifier better.
