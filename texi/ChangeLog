@@ -1,3 +1,7 @@
+2025-11-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (New operations): Mention tramp-expand-script.
+
 2025-11-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Frequently Asked Questions): Don't mention Windows
