@@ -1,3 +1,22 @@
+2025-11-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-encoding-shell): Fix docstring.
+	(tramp-keyboard-interactive-authentication-prompt-regexp): New defcustom.
+	(tramp-action-ignore-message): New defun.
+
+	* tramp-cache.el (with-tramp-saved-connection-properties):
+	Adapt `tramp-verbose' less aggressive.
+
+	* tramp-container.el (tramp-kubernetes--context-namespace):
+	Use `string-join'.
+
+	* tramp-message.el (tramp-get-debug-file-name): Modify debug file name.
+	(tramp-debug-message): Simplify.
+
+	* tramp-sh.el (tramp-actions-before-shell)
+	(tramp-actions-copy-out-of-band):
+	Add `tramp-keyboard-interactive-authentication-prompt-regexp'.
+
 2025-11-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-container.el (tramp-methods) <distrobox>:
@@ -1213,7 +1232,7 @@
 	(tramp-container-no-container-regexp): Remove.  Do not register them.
 	(tramp-distrobox-no-container-regexp): New defcustom.
 	(tramp-enable-distrobox-method): Add it to
-	`'tramp-actions-before-shell.  (Bug#71200)
+	`tramp-actions-before-shell'.  (Bug#71200)
 
 2024-05-30  Michael Albinus  <michael.albinus@gmx.de>
 
