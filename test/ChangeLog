@@ -1,3 +1,15 @@
+2025-11-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test10-write-region)
+	(tramp-test10-write-region-file-precious-flag)
+	(tramp-test10-write-region-other-file-name-handler)
+	(tramp-test27-load, tramp-test32-shell-command)
+	(tramp-test32-shell-command-dont-erase-buffer)
+	(tramp-test34-connection-local-variables)
+	(tramp-test36-vc-registered, tramp-test39-make-lock-file-name)
+	(tramp-test39-detect-external-change)
+	(tramp-test45-asynchronous-requests): Adapt tests.
+
 2025-10-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.4 released
