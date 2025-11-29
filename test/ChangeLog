@@ -1,3 +1,7 @@
+2025-11-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.0.5 released
+
 2025-11-28  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test10-write-region)
