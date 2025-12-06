@@ -1,3 +1,15 @@
+2025-12-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test28-process-file)
+	(tramp-test29-start-file-process, tramp-test30-make-process)
+	(tramp-test32-shell-command, tramp--test-async-shell-command)
+	(tramp--test-supports-processes-p): Adapt for "smb" method.
+	(tramp-test34-explicit-shell-file-name)
+	(tramp-test45-asynchronous-requests): Skip for "smb" method.
+	(tramp--test-check-files): Skip shell test for some special
+	characters in the "smb" case.
+	(tramp-test52-unload): Disable further tests.
+
 2025-11-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.5 released
