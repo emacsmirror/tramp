@@ -4504,7 +4504,7 @@ remote MS Windows host, and @value{tramp} uses it for
 Redirection from stdin and to sterr as well as process filters are not
 supported (yet).
 
-@c FIXME: Verify powershel version.
+@c FIXME: Verify powershell version.
 @vindex tramp-smb-winexe-program
 @code{tramp-smb-winexe-program} specifies the local @command{winexe}
 program.  Powershell V2.0 on the remote MS Windows host is required to
