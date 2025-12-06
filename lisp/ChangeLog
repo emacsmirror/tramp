@@ -1,3 +1,22 @@
+2025-12-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-file-name-handler-alist):
+	Use `tramp-smb-handle-make-process', `tramp-smb-handle-shell-command'
+	and `tramp-handle-start-file-process'.
+	(tramp-smb-matching-line): New defvar.
+	(tramp-smb-handle-make-process, tramp-smb-handle-shell-command)
+	(tramp-smb-shell-prompt): New defuns.
+	(tramp-smb-handle-process-file): Rewrite.
+	(tramp-smb-handle-start-file-process): Remove.
+	(tramp-smb-get-localname, tramp-smb-shell-quote-localname):
+	New optional argument SHARE.
+	(tramp-smb-send-command): Remove echoed command string.
+	(tramp-smb-maybe-open-connection): Initialize variables.
+	(tramp-smb-wait-for-output): Wait more robust.
+	(tramp-smb-call-winexe): Check for share.  Goto current directory.
+	(tramp-smb-connection-local-powershell-variables): New defconst.
+	Set it as connection local variables.
+
 2025-11-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.0.5 released
