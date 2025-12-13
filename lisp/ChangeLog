@@ -1,3 +1,9 @@
+2025-12-13  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-handle-make-process)
+	(tramp-smb-handle-process-file): Handle STDERR file.
+	(tramp-smb-call-winexe): Regroup sent commands.
+
 2025-12-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-file-name-handler-alist):
