@@ -1,3 +1,10 @@
+2025-12-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (auto-revert-notify-watch-descriptor)
+	(auto-revert-remote-files, auto-revert-use-notify): Declare.  Set
+	proper values.
+	(tramp-test30-make-process): Adapt test.
+
 2025-12-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test30-make-process): Adapt test.
