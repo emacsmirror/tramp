@@ -1,3 +1,8 @@
+2025-12-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-completion-handle-expand-file-name):
+	Expand FILENAME also when DIRECTORY is absolute.  (Bug#80031)
+
 2025-12-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-handle-make-process): Suppress lock files.
