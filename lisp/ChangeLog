@@ -1,3 +1,9 @@
+2026-01-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-get-ls-command): Prefer gnuls over ls.
+	(tramp-get-remote-readlink): Prefer gnureadlink over readlink.
+	(Bug#79956, Bug#80075)
+
 2026-01-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-completion-handle-file-name-all-completions):
