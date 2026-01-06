@@ -26,7 +26,7 @@ AC_PREREQ([2.50])
 
 # Initialize configure script.  This is the only place Tramp revision
 # needs to be set.
-AC_INIT([Tramp], [2.8.1], [tramp-devel@gnu.org], ,
+AC_INIT([Tramp], [2.8.2-pre], [tramp-devel@gnu.org], ,
 	[https://www.gnu.org/software/tramp/])
 AC_MSG_NOTICE([$PACKAGE_STRING])
 
