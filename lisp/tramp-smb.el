@@ -2230,10 +2230,6 @@ SHARE will be passed to the call of `tramp-smb-get-localname'."
  'tramp-smb-connection-local-default-system-profile
  tramp-smb-connection-local-default-system-variables)
 
-(connection-local-set-profiles
- `(:application tramp :protocol ,tramp-smb-method)
- 'tramp-smb-connection-local-default-system-profile)
-
 ;; (defconst tramp-smb-connection-local-bash-variables
 ;;   '((explicit-shell-file-name . "bash")
 ;;     (explicit-bash-args . ("--norc" "--noediting" "-i"))
@@ -2270,6 +2266,7 @@ SHARE will be passed to the call of `tramp-smb-get-localname'."
 
 (connection-local-set-profiles
  `(:application tramp :protocol ,tramp-smb-method)
+ 'tramp-smb-connection-local-default-system-profile
  'tramp-smb-connection-local-powershell-profile)
 
 (defun tramp-smb-shell-prompt ()
