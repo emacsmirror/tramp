@@ -1,3 +1,8 @@
+2026-01-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-debug-message): Change selection for
+	`trace-function-background'.
+
 2026-01-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-local-host-names): New defvar.
