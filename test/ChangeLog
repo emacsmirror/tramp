@@ -1,3 +1,19 @@
+2026-01-20  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test03-file-name-defaults)
+	(tramp-test10-write-region-file-precious-flag)
+	(tramp-test10-write-region-other-file-name-handler)
+	(tramp-test16-file-expand-wildcards)
+	(tramp-test17-dired-with-wildcards)
+	(tramp-test17-insert-directory-one-file)
+	(tramp-test33-environment-variables-and-port-numbers)
+	(tramp-test35-remote-path, tramp-test39-make-lock-file-name)
+	(tramp-test39-detect-external-change, tramp-test42-utf8)
+	(tramp-test43-file-system-info)
+	(tramp-test44-file-user-group-ids, tramp-test48-session-timeout)
+	(tramp-test49-external-backend-function)
+	(tramp-test50-recursive-load): Tag them as :expensive-test.  (Bug#80164)
+
 2026-01-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test03-file-name-defaults): Adapt test.
