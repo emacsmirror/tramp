@@ -1,3 +1,9 @@
+2026-01-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cache.el (tramp-cache-unload-hook):
+	* tramp-cmds.el (tramp-enable-method, tramp-bug):
+	* tramp-compat.el: Simplify retrieving proper function symbols.
+
 2026-01-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-message.el (tramp-debug-message): Change selection for
