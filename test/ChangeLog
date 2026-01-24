@@ -1,3 +1,8 @@
+2026-01-24  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
+	Simplify retrieving proper function symbols.
+
 2026-01-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test03-file-name-defaults)
