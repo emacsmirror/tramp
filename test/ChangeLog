@@ -1,3 +1,7 @@
+2026-01-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test45-force-remote-file-error): New test.
+
 2026-01-24  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test26-interactive-file-name-completion):
