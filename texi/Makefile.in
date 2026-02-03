@@ -60,9 +60,10 @@ PLAINTEXT_FILES	= trampinst.texi trampelpa.texi trampver.texi
 # To be used by maintainer only.
 NONGNU		= ../../tramp-web
 
-.PHONY: all install clean distclean tramp dvi pdf html plaintext savannah
+.PHONY: all install clean distclean tramp dvi pdf ps html plaintext savannah
 
-all: tramp dvi pdf html plaintext
+# Don't create dvi and ps be default.
+all: tramp pdf html plaintext
 
 tramp: $(INFO_FILES) $(localinfodir)/dir
 
@@ -99,7 +100,7 @@ $(localinfodir)/dir $(DESTDIR)$(infodir)/dir: $(INFO_FILES)
 			$(INSTALL_INFO) --info-dir=$(dir $@) \
 			    $(subst $(dir $(file)), $(dir $@), $(file))))))
 
-# Suppress dvi and pdf if needed.
+# Suppress dvi, pdf and ps if needed.
 ifeq (no, @TEXI2DVI@)
 dvi: APPLY_MAKEINFO =
 endif
@@ -108,12 +109,17 @@ ifeq (no, @TEXI2PDF@)
 pdf: APPLY_MAKEINFO =
 endif
 
+ifeq (no, @TEXI2PS@)
+ps: APPLY_MAKEINFO =
+endif
+
 dvi: tramp.dvi
 pdf: tramp.pdf
+ps: tramp.ps
 html: tramp.html
 plaintext: ../INSTALL
 
-tramp.dvi tramp.pdf tramp.html: $(TEXI_FILES)
+tramp.dvi tramp.pdf tramp.ps tramp.html: $(TEXI_FILES)
 	$(if $(APPLY_MAKEINFO), \
 	    -$(MAKEINFO) --$(subst tramp.,,$@) -o $@ $<, \
 	    $(info $@ not generated))

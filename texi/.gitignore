@@ -11,6 +11,7 @@
 *.log
 *.pdf
 *.pg
+*.ps
 *.tmp
 *.toc
 *.tp
