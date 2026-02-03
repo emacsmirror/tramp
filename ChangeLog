@@ -1,3 +1,8 @@
+2026-02-03  Michael Albinus  <michael.albinus@gmx.de>
+
+	* configure.ac: Provide also TEXI2PS.
+	Add *.orig and *.ps to TRAMP_CLEAN_FILES.
+
 2026-01-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.1.1 released

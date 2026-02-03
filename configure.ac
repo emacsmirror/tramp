@@ -79,7 +79,7 @@ if test "${MAKEINFO}" != no; then
    test -e test.log && rm -f test.log
    test -e test.dvi && rm -f test.dvi
 
-AC_MSG_CHECKING([for reasonable makeinfo --pdf])
+   AC_MSG_CHECKING([for reasonable makeinfo --pdf])
    # "-o /dev/null" changes permissions of /dev/null. Not applicable.
    ${MAKEINFO} --pdf texi/test.texi 2>/dev/null >/dev/null
    if test $? -eq 0; then
@@ -93,7 +93,22 @@ AC_MSG_CHECKING([for reasonable makeinfo --pdf])
    AC_SUBST(TEXI2PDF)
    test -e test.log && rm -f test.log
    test -e test.pdf && rm -f test.pdf
-fi
+
+   AC_MSG_CHECKING([for reasonable makeinfo --ps])
+   # "-o /dev/null" changes permissions of /dev/null. Not applicable.
+   ${MAKEINFO} --ps texi/test.texi 2>/dev/null >/dev/null
+   if test $? -eq 0; then
+      TEXI2PS="yes"
+      AC_MSG_RESULT([ok])
+   else
+      TEXI2PS="no"
+      AC_MSG_RESULT([nok])
+      AC_MSG_WARN([makeinfo --ps doesn't work])
+   fi
+   AC_SUBST(TEXI2PS)
+   test -e test.log && rm -f test.log
+   test -e test.ps && rm -f test.ps
+fi # test "${MAKEINFO}" != no
 
 # Check existence of install-info.  Again, we produce a warning only,
 # because this shouldn't prevent Tramp exploitation.
@@ -130,7 +145,8 @@ AC_SUBST(infodir_default)
 TRAMP_CLEAN_FILES=".\\\\\#* \\\\\#* .*~ *~"
 TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.aux *.cp *.cps *.diff *.dvi *.elc"
 TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.fn *.fns *.html *.info *.ky *.kys *.log"
-TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.pdf *.pg *.tmp *.toc *.tp *.vr *.vrs"
+TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.orig *.pdf *.pg *.ps *.tmp *.toc *.tp"
+TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.vr *.vrs"
 AC_SUBST([TRAMP_CLEAN_FILES])
 # *.elc files must be removed always.  Otherwise, there could be problems
 # if they are created with the wrong Emacs flavor.
