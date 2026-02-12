@@ -1,3 +1,44 @@
+2026-02-12  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-process-file)
+	(tramp-handle-make-symbolic-link, tramp-process-actions)
+	(tramp-wait-for-regexp, tramp-send-string):
+	* tramp-adb.el (tramp-adb-get-device)
+	(tramp-adb-send-command-and-check, tramp-adb-barf-unless-okay)
+	(tramp-adb-wait-for-output, tramp-adb-maybe-open-connection):
+	* tramp-archive.el (tramp-archive-handle-not-implemented):
+	* tramp-crypt.el (tramp-crypt-do-encrypt-or-decrypt-file-name)
+	(tramp-crypt-do-encrypt-or-decrypt-file):
+	* tramp-gvfs.el (tramp-gvfs-dbus-event-error)
+	(tramp-gvfs-maybe-open-connection):
+	* tramp-sh.el (tramp-do-directory-files-and-attributes-with-perl)
+	(tramp-do-copy-or-rename-file-directly)
+	(tramp-do-copy-or-rename-file-out-of-band)
+	(tramp-sh-handle-file-local-copy, tramp-sh-handle-write-region)
+	(tramp-bundle-read-file-names, tramp-maybe-send-script)
+	(tramp-find-file-exists-command, tramp-barf-if-no-shell-prompt)
+	(tramp-maybe-open-connection, tramp-wait-for-output)
+	(tramp-send-command-and-check, tramp-barf-unless-okay)
+	(tramp-send-command-and-read, tramp-get-ls-command):
+	* tramp-smb.el (tramp-smb-handle-file-attributes)
+	(tramp-smb-handle-make-symbolic-link)
+	(tramp-smb-maybe-open-connection, tramp-smb-call-winexe):
+	* tramp-sshfs.el (tramp-sshfs-maybe-open-connection):
+	* tramp-sudoedit.el (tramp-sudoedit-send-command-and-read):
+	Raise a `remote-file-error' in case of connection problems.
+
+	* tramp.el (tramp-compute-multi-hops): Check for cycle proxy definition.
+
+	* tramp-rclone.el (tramp-rclone-maybe-open-connection): Improve
+	check for host.
+
+	* tramp-smb.el (tramp-smb-get-localname): Improve error message.
+
+	* tramp-sudoedit.el (tramp-default-host-alist): Set a default for
+	"sudoedit" method.
+	(tramp-sudoedit-maybe-open-connection): Check for proper host name.
+	(tramp-sudoedit-send-command): Do not expand ?h.
+
 2026-01-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.1.1 released
