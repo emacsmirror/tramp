@@ -1,3 +1,10 @@
+2026-05-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-enable-method): Upcase prompt.
+
+	* tramp-sh.el (tramp-sh-handle-make-process)
+	(tramp-sh-handle-process-file): Improve setting of environment variables.
+
 2026-05-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-unquote-shell-quote-argument): Do not expand
