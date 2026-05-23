@@ -1,3 +1,10 @@
+2026-05-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-methods) <mock>: Add `tramp-tmpdir'.
+	Adapt `tramp-login-program'.
+	(ert-remote-temporary-file-directory): Improve expansion.
+	(tramp-test35-remote-path): Adapt test.
+
 2026-05-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-supports-environment-variables-p):
