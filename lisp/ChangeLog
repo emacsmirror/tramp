@@ -3,6 +3,9 @@
 	* tramp.el (tramp-yesno-prompt-regexp): Fix docstring.
 	(tramp-yn-prompt-regexp): Fix docstring.  Extend.  Add :version.
 
+	* tramp-sh.el (tramp-sh-handle-make-process): Do not use a
+	hard-coded directory in PS1.  (Bug#81177)
+
 2026-05-30  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.1.5 released
