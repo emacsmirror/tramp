@@ -1,3 +1,9 @@
+2026-06-05  Augusto Stoffel  <arstoffel@gmail.com>
+
+	* tramp.el (tramp-local-environment-variable-p):
+	Check buffer-local value in tramp-local-environment-variable-p.
+	(Bug#81175)
+
 2026-06-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-yesno-prompt-regexp): Fix docstring.
