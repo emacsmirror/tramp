@@ -4264,9 +4264,8 @@ Let-bind it when necessary.")
             (tramp-get-connection-property vec "~"))))
     (when home-dir
       (setq home-dir
-	    (tramp-compat-funcall
-	     'directory-abbrev-apply
-	     (tramp-make-tramp-file-name vec home-dir))))
+	    (tramp-compat-funcall 'directory-abbrev-apply
+	      (tramp-make-tramp-file-name vec home-dir))))
     ;; If any elt of `directory-abbrev-alist' matches this name,
     ;; abbreviate accordingly.
     (setq filename (tramp-compat-funcall 'directory-abbrev-apply filename))
@@ -4864,22 +4863,21 @@ existing) are returned."
 		      (setq remote-copy (tramp-make-tramp-temp-file v))
 		      ;; This is defined in tramp-sh.el.  Let's assume
 		      ;; this is loaded already.
-		      (tramp-compat-funcall
-		       'tramp-send-command
-		       v
-		       (cond
-			((and beg end)
-			 (format "dd bs=1 skip=%d if=%s count=%d of=%s"
-				 beg (tramp-shell-quote-argument localname)
-				 (- end beg) remote-copy))
-			(beg
-			 (format "dd bs=1 skip=%d if=%s of=%s"
-				 beg (tramp-shell-quote-argument localname)
-				 remote-copy))
-			(end
-			 (format "dd bs=1 count=%d if=%s of=%s"
-				 end (tramp-shell-quote-argument localname)
-				 remote-copy))))
+		      (tramp-compat-funcall 'tramp-send-command
+			v
+			(cond
+			 ((and beg end)
+			  (format "dd bs=1 skip=%d if=%s count=%d of=%s"
+				  beg (tramp-shell-quote-argument localname)
+				  (- end beg) remote-copy))
+			 (beg
+			  (format "dd bs=1 skip=%d if=%s of=%s"
+				  beg (tramp-shell-quote-argument localname)
+				  remote-copy))
+			 (end
+			  (format "dd bs=1 count=%d if=%s of=%s"
+				  end (tramp-shell-quote-argument localname)
+				  remote-copy))))
 		      (setq tramp-temp-buffer-file-name nil beg nil end nil))
 
 		    ;; `insert-file-contents-literally' takes care to
@@ -5478,8 +5476,10 @@ should be set connection-local.")
   "Return non-nil if ARG exists in default `process-environment'.
 Tramp does not propagate local environment variables in remote
 processes."
-  (or (ignore-error void-variable
-        (member arg (buffer-local-toplevel-value 'process-environment)))
+  (or ;; `buffer-local-toplevel-value' has been defined in Emacs 31.1.
+      (ignore-error (void-variable void-function)
+        (member arg (tramp-compat-funcall 'buffer-local-toplevel-value
+		      'process-environment)))
       (member arg (default-toplevel-value 'process-environment))))
 
 (defun tramp-handle-make-process (&rest args)
@@ -5563,12 +5563,10 @@ processes."
 		(tramp-compat-make-temp-name))))
 	   (options
 	    (when sh-file-name-handler-p
-	      (tramp-compat-funcall
-		  'tramp-ssh-controlmaster-options v)))
+	      (tramp-compat-funcall 'tramp-ssh-controlmaster-options v)))
 	   (device
 	    (when adb-file-name-handler-p
-	      (tramp-compat-funcall
-		  'tramp-adb-get-device v)))
+	      (tramp-compat-funcall 'tramp-adb-get-device v)))
            (pta (unless (eq connection-type 'pipe) "-t"))
 	   login-args p)
 
@@ -7473,13 +7471,12 @@ name of a process or buffer, or nil to default to the current buffer."
 	;; This is for tramp-sh.el.  Other backends do not support this (yet).
 	;; Not all "kill" implementations support process groups by
 	;; negative pid, so we try both variants.
-	(tramp-compat-funcall
-	 'tramp-send-command
-	 (process-get proc 'tramp-vector)
-	 (format "(\\kill -2 -%d || \\kill -2 %d) 2>%s"
-                 pid pid
-                 (tramp-get-remote-null-device
-		  (process-get proc 'tramp-vector))))
+	(tramp-compat-funcall 'tramp-send-command
+	  (process-get proc 'tramp-vector)
+	  (format "(\\kill -2 -%d || \\kill -2 %d) 2>%s"
+                  pid pid
+                  (tramp-get-remote-null-device
+		   (process-get proc 'tramp-vector))))
 	;; Wait, until the process has disappeared.  If it doesn't,
 	;; fall back to the default implementation.
         (while (tramp-accept-process-output proc))
@@ -7529,9 +7526,8 @@ SIGCODE may be an integer, or a symbol whose name is a signal name."
       (tramp-message
        vec 5 "Send signal %s to process %s with pid %s" sigcode process pid)
       ;; This is for tramp-sh.el.  Other backends do not support this (yet).
-      (if (tramp-compat-funcall
-           'tramp-send-command-and-check
-           vec (format "\\kill -%s %d" sigcode pid))
+      (if (tramp-compat-funcall 'tramp-send-command-and-check
+            vec (format "\\kill -%s %d" sigcode pid))
           0 -1))))
 
 ;; `signal-process-functions' exists since Emacs 29.1.
