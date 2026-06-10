@@ -1,3 +1,7 @@
+2026-06-10  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp-test49-external-backend-function):  Extend test.
+
 2026-06-04  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test03-file-error): Adapt test.
