@@ -1,3 +1,11 @@
+2026-06-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-ignore-make-symbolic-link-error):
+	Use `file-error' instead of `remote-file-error'
+	(tramp--test-instrument-test-case-p): Fix doxstring.
+	(tramp-test10-write-region-other-file-name-handler)
+	(tramp-test49-external-backend-function): Adapt tests.
+
 2026-06-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test49-external-backend-function):
