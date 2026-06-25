@@ -1,3 +1,8 @@
+2026-06-25  Stéphane Marks  <shipmints@gmail.com>
+
+	* tramp.el (tramp-progress-reporter-update): Update function
+	signature.
+
 2026-06-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-restricted-shell-hosts-alist):
