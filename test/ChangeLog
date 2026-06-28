@@ -1,3 +1,7 @@
+2026-06-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (RM): Declare.
+
 2026-06-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-ignore-make-symbolic-link-error):

@@ -28,6 +28,7 @@ TESTS		= $(if ${REMOTE_TEMPORARY_FILE_DIRECTORY},, tramp-archive-tests)
 TESTS		+= tramp-tests
 builddir        = @abs_builddir@
 EM		= $(EMACS) -Q -batch -L $(builddir)/../lisp
+RM		= -rm -f
 
 TRAMP_TEST_ARGS ?=
 SELECTOR	?= t
