@@ -113,7 +113,7 @@ MANIFEST: configure distclean
 	./config.status
 
 tar: MANIFEST
-	rm -rf $(TARNAME)
+	$(RM) -r $(TARNAME)
 	mkdir $(TARNAME)
 	tar cpfT - MANIFEST | ( cd $(TARNAME) ; tar xpf - )
 	chmod -R a+r $(TARNAME)

@@ -76,8 +76,6 @@ if test "${MAKEINFO}" != no; then
       AC_MSG_WARN([makeinfo --dvi doesn't work])
    fi
    AC_SUBST(TEXI2DVI)
-   test -e test.log && rm -f test.log
-   test -e test.dvi && rm -f test.dvi
 
    AC_MSG_CHECKING([for reasonable makeinfo --pdf])
    # "-o /dev/null" changes permissions of /dev/null. Not applicable.
@@ -91,8 +89,6 @@ if test "${MAKEINFO}" != no; then
       AC_MSG_WARN([makeinfo --pdf doesn't work])
    fi
    AC_SUBST(TEXI2PDF)
-   test -e test.log && rm -f test.log
-   test -e test.pdf && rm -f test.pdf
 
    AC_MSG_CHECKING([for reasonable makeinfo --ps])
    # "-o /dev/null" changes permissions of /dev/null. Not applicable.
@@ -106,8 +102,6 @@ if test "${MAKEINFO}" != no; then
       AC_MSG_WARN([makeinfo --ps doesn't work])
    fi
    AC_SUBST(TEXI2PS)
-   test -e test.log && rm -f test.log
-   test -e test.ps && rm -f test.ps
 fi # test "${MAKEINFO}" != no
 
 # Check existence of install-info.  Again, we produce a warning only,
@@ -148,9 +142,6 @@ TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.fn *.fns *.html *.info *.ky *.kys *.log"
 TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.orig *.pdf *.pg *.ps *.tmp *.toc *.tp"
 TRAMP_CLEAN_FILES="$TRAMP_CLEAN_FILES *.vr *.vrs"
 AC_SUBST([TRAMP_CLEAN_FILES])
-# *.elc files must be removed always.  Otherwise, there could be problems
-# if they are created with the wrong Emacs flavor.
-rm -f lisp/*.elc test/*.elc
 
 # Produce the Makefiles.
 TRAMP_CONFIG_FILES="Makefile test/Makefile"
@@ -160,6 +151,11 @@ AC_SUBST(TRAMP_CONFIG_FILES)
 AC_CONFIG_FILES([$TRAMP_CONFIG_FILES])
 
 AC_OUTPUT
+
+# *.elc files must be removed always.  Otherwise, there could be problems
+# if they are created with the wrong Emacs flavor.
+AC_MSG_NOTICE([cleanup])
+make -s clean
 
 # Regenerate autoloads.
 AC_MSG_NOTICE([regenerate autoloads])

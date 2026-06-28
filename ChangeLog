@@ -1,3 +1,10 @@
+2026-06-28  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (tar): Use "$(RM) -r".
+
+	* configure.ac (top, TEXI2DVI): Don't run explicit "rm -f ...".
+	(top_CLEAN_FILES): Call "make -s clean".
+
 2026-06-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* configure.ac: Bump version.
