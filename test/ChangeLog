@@ -1,3 +1,7 @@
+2026-06-29  Michael Albinus  <michael.albinus@gmx.de>
+
+	Version 2.8.2 released
+
 2026-06-28  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (RM): Declare.
@@ -5,7 +9,7 @@
 2026-06-22  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-ignore-make-symbolic-link-error):
-	Use `file-error' instead of `remote-file-error'
+	Use `file-error' instead of `remote-file-error'.
 	(tramp--test-instrument-test-case-p): Fix doxstring.
 	(tramp-test10-write-region-other-file-name-handler)
 	(tramp-test49-external-backend-function): Adapt tests.
