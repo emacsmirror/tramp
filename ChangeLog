@@ -1,3 +1,9 @@
+2026-07-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* configure.ac: Bump version (to 2.8.3-pre).
+
+	* INSTALL: Regenerate.
+
 2026-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2 released
