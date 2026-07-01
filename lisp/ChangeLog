@@ -1,3 +1,13 @@
+2026-07-01  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-handle-delete-directory):
+	* tramp.el (tramp-skeleton-delete-directory): Fail if DIRECTORY is
+	missing.
+	(tramp-skeleton-delete-file): Don't fail if DIRECTORY is missing.
+
+	* trampver.el.in (customize-package-emacs-version-alist):
+	Change Tramp version integrated in Emacs 31.1.
+
 2026-06-29  Michael Albinus  <michael.albinus@gmx.de>
 
 	Version 2.8.2 released
