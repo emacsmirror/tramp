@@ -1,3 +1,9 @@
+2026-07-03  Samuele FAVAZZA  <sfavazza.github@gmail.com>  (tiny change)
+
+	* tramp-container.el (tramp-container--completion-function):
+	Use "<>" as separator instead of "\t", which could be modified in
+	the shell.
+
 2026-07-01  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-handle-delete-directory):
