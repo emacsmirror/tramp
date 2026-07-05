@@ -1,3 +1,8 @@
+2026-07-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive.el (tramp-archive-handle-insert-file-contents):
+	Ensure, that `buffer-file-name' is expanded.
+
 2026-07-03  Samuele FAVAZZA  <sfavazza.github@gmail.com>  (tiny change)
 
 	* tramp-container.el (tramp-container--completion-function):
