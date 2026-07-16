@@ -1,3 +1,9 @@
+2026-07-16  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-local-environment): Do not change the
+	global environment.  Reported by Daniel Kraus <daniel@kraus.my>.
+	(Bug#81409)
+
 2026-07-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-archive.el (tramp-archive-handle-insert-file-contents):
@@ -14,7 +20,7 @@
 	* tramp-smb.el (tramp-smb-handle-delete-directory):
 	* tramp.el (tramp-skeleton-delete-directory): Fail if DIRECTORY is
 	missing.
-	(tramp-skeleton-delete-file): Don't fail if DIRECTORY is missing.
+	(tramp-skeleton-delete-file): Don't fail if FILENAME is missing.
 
 	* trampver.el.in (customize-package-emacs-version-alist):
 	Change Tramp version integrated in Emacs 31.1.
