@@ -1,3 +1,20 @@
+2026-07-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (with-tramp-progress-reporter):
+	Deactivate `progress-reporter-echo-area' when calling
+	`progress-reporter-done'.  We call `tramp-message' instead.
+
+	* tramp-fuse.el (tramp-fuse-handle-insert-directory):
+	* tramp-sh.el (tramp-sh-handle-insert-directory): Use progress
+	reporter.
+
+2026-07-23  Stéphane Marks  <shipmints@gmail.com>
+
+	Clear stateful progress reporters like 'system-taskbar'.
+
+	* tramp.el (with-tramp-progress-reporter):
+	Call 'progress-reporter-done' in 'unwind-protect'.  (Bug#81455)
+
 2026-07-16  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (with-tramp-local-environment): Do not change the
