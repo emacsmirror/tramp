@@ -1,3 +1,8 @@
+2026-08-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-sh.el (tramp-remote-inotifywait-with-P): New defun.
+	(tramp-sh-handle-file-notify-add-watch): Use it.
+
 2026-08-05  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-sh.el (tramp-sh-handle-file-notify-add-watch): Use -P and
@@ -526,7 +531,7 @@
 2025-10-14  Michael Albinus  <michael.albinus@gmx.de>
 
 	Do not use the ;;;###tramp-autoload cookie for defcustoms.  This
-	damages the customisation when Tramp is autoloaded.  Reported by
+	damages the customization when Tramp is autoloaded.  Reported by
 	Joel Reicher <joel.reicher@gmail.com>.
 
 	* tramp-cache.el (tramp-verbose): Declare.
