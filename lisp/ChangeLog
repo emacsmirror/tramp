@@ -1,3 +1,7 @@
+2026-08-20  Sean Whitton  <spwhitton@spwhitton.name>
+
+	* tramp.el (tramp-file-name-for-operation): Use and-let*.
+
 2026-08-20  Alexey Lebedev  <binarin@binarin.info>
 
 	* tramp.el (tramp-file-name-for-operation): Fix the case, that the
