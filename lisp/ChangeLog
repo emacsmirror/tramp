@@ -1,3 +1,24 @@
+2026-08-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-prefix-regexp): Adapt docstring.
+	(tramp-user-regexp): Exclude shell meta characters.
+	(tramp-dissect-file-name, tramp-file-name-handler):
+	Expand environment variable.
+	(tramp-convert-file-attributes):
+	* tramp-gvfs.el (tramp-gvfs-handle-file-attributes): Quote
+	symbolic link target with remote file name syntax.
+
+	* tramp.el (tramp-build-prefix-regexp):
+	* tramp-gvfs.el (tramp-gvfs-handle-expand-file-name)
+	(tramp-gvfs-get-file-attributes, tramp-gvfs-file-name)
+	(tramp-gvfs-url-host, tramp-gvfs-handler-mounted-unmounted)
+	(tramp-gvfs-connection-mounted-p, tramp-gvfs-mount-spec-entry)
+	(tramp-gvfs-mount-spec):
+	* tramp-rclone.el (tramp-rclone-parse-device-names)
+	(tramp-rclone-remote-file-name):
+	* tramp-smb.el (tramp-smb-get-share, tramp-smb-get-localname): Use
+	string-anchored regexp, not line-anchored.
+
 2026-08-20  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-handle-find-backup-file-name):
