@@ -1,3 +1,8 @@
+2026-08-23  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-cmds.el (tramp-file-name-with-sudo): Expand the result for
+	consistency.  (Bug#81622)
+
 2026-08-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-prefix-regexp): Adapt docstring.
