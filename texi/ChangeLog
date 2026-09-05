@@ -1,3 +1,8 @@
+2026-09-05  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Multi-hops, File name syntax): Use "localname".
+	(Home directories): Discuss missing remote home directory.  (Bug#81799)
+
 2026-08-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (File name syntax): The user name can also be an
