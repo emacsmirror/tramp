@@ -1,3 +1,23 @@
+2026-09-07  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-archive-tests.el (tramp-archive-test51-auto-load)
+	(tramp-archive-test51-delay-load)
+	(tramp-archive-test52-without-remote-files): Rename.
+
+	* tramp-tests.el (tramp--test-box-p): Adapt docstring.
+	(tramp-test45-home-directory): New test.
+	(tramp-test46-asynchronous-requests)
+	(tramp-test46-force-remote-file-error)
+	(tramp-test47-dired-compress-file)
+	(tramp-test47-dired-compress-dir)
+	(tramp-test47-file-notifications, tramp-test48-read-password)
+	(tramp-test48-read-otp-password, tramp-test48-read-security-key)
+	(tramp-test48-read-fingerprint, tramp-test49-session-timeout)
+	(tramp-test50-external-backend-function, tramp-test51-auto-load)
+	(tramp-test51-delay-load, tramp-test51-recursive-load)
+	(tramp-test51-remote-load-path)
+	(tramp-test52-without-remote-files, tramp-test53-unload): Rename.
+
 2026-08-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test01-file-name-syntax)
