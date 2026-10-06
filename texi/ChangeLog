@@ -1,3 +1,7 @@
+2026-10-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (Inline methods):  Add "wslc" method.
+
 2026-09-26  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (FUSE-based methods): Fix wording.
