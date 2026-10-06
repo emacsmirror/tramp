@@ -1,3 +1,8 @@
+2026-10-06  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-container-p)
+	(tramp--test-container-oob-p): Check als for "wslc*" methods.
+
 2026-09-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test05-expand-file-name-tilde): Adapt test.
