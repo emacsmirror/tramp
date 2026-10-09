@@ -1,3 +1,7 @@
+2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi: Remove prepared text about "wslccp" method.
+
 2026-10-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (Inline methods):  Add "wslc" method.
