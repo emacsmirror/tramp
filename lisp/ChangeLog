@@ -1,3 +1,15 @@
+2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-compat.el (parse-time): Require.  (Bug#82024)
+
+	* tramp-container.el (tramp-wslccp-method): Remove.
+	(tramp-wslc-completion-function): Rename from
+	`tramp-wslc--completion-function'.  Adapt callee.
+	(top): Don't set completion function for `tramp-wslccp-method'.
+	Don't define alias `tramp-enable-wslccp-method'.
+
+	* tramp-sh.el (tramp-make-copy-file-name): Don't check for "wslccp".
+
 2026-10-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-container.el (tramp-wslc-program): New defcustom.
