@@ -7558,8 +7558,7 @@ This does not support some special file names."
 (defun tramp--test-container-oob-p ()
   "Check, whether the dockercp or podmancp method is used.
 They does not support wildcard copy."
-  (string-match-p
-   (rx bol (| "dockercp" "podmancp") eol)
+  (string-match-p (rx bol (| "dockercp" "podmancp") eol)
    (file-remote-p ert-remote-temporary-file-directory 'method)))
 
 (defun tramp--test-crypt-p ()
