@@ -1,7 +1,14 @@
+2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-instrument-test-case):
+	Use `with-local-quit'.
+	(tramp--test-container-oob-p): Don't check for "wslccp" method.
+	(tramp-test49-session-timeout): Adapt test.
+
 2026-10-06  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-container-p)
-	(tramp--test-container-oob-p): Check als for "wslc*" methods.
+	(tramp--test-container-oob-p): Check also for "wslc*" methods.
 
 2026-09-19  Michael Albinus  <michael.albinus@gmx.de>
 
