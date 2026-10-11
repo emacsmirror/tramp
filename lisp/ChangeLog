@@ -1,3 +1,18 @@
+2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	Reported by Wonyoung Jung <wonyoung.jung@78researchlab.com> of
+	78ResearchLab, assisted by PatchHawk.
+
+	* tramp.el (tramp-user-regexp): Extend the exclusion list.
+	(tramp-allow-double-percent): New defvar.
+	(tramp-dissect-file-name): Add sanity checks.
+
+	* tramp-archive.el
+	(tramp-archive-connection-local-default-variables): New defconst.
+	Add it to connection-local profiles.
+
+	This is CVE-2026-79992.
+
 2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-compat.el (parse-time): Require.  (Bug#82024)
@@ -18,21 +33,6 @@
 	(tramp-enable-wslc-method, tramp-enable-wslccp-method): New defaliases.
 
 	* tramp-sh.el (tramp-make-copy-file-name): Check also for "wslccp".
-
-2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
-
-	Reported by Wonyoung Jung <wonyoung.jung@78researchlab.com> of
-	78ResearchLab, assisted by PatchHawk.
-
-	* tramp.el (tramp-user-regexp): Extend the exclusion list.
-	(tramp-allow-double-percent): New defvar.
-	(tramp-dissect-file-name): Add sanity checks.
-
-	* tramp-archive.el
-	(tramp-archive-connection-local-default-variables): New defconst.
-	Add it to connection-local profiles.
-
-	This is CVE-2026-79992.
 
 2026-10-02  Michael Albinus  <michael.albinus@gmx.de>
 
