@@ -19,6 +19,21 @@
 
 	* tramp-sh.el (tramp-make-copy-file-name): Check also for "wslccp".
 
+2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	Reported by Wonyoung Jung <wonyoung.jung@78researchlab.com> of
+	78ResearchLab, assisted by PatchHawk.
+
+	* tramp.el (tramp-user-regexp): Extend the exclusion list.
+	(tramp-allow-double-percent): New defvar.
+	(tramp-dissect-file-name): Add sanity checks.
+
+	* tramp-archive.el
+	(tramp-archive-connection-local-default-variables): New defconst.
+	Add it to connection-local profiles.
+
+	This is CVE-2026-79992.
+
 2026-10-02  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.el (tramp-get-connection-local-criteria): Move up.  Use
@@ -224,6 +239,8 @@
 	(tramp-rclone-remote-file-name):
 	* tramp-smb.el (tramp-smb-get-share, tramp-smb-get-localname): Use
 	string-anchored regexp, not line-anchored.
+
+	This is CVE-2026-79992.
 
 2026-08-20  Michael Albinus  <michael.albinus@gmx.de>
 
@@ -13754,6 +13771,7 @@
 	(tramp-remote-coding-commands): Enhance docstring.
 	(tramp-find-inline-encoding): Replace "%t" by a temporary file
 	name.  (Bug#17415)
+
 	This is CVE-2014-3424.
 
 2014-05-05  Michael Albinus  <michael.albinus@gmx.de>
