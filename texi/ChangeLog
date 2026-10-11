@@ -1,3 +1,7 @@
+2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi (File name syntax): Explain tramp-allow-double-percent.
+
 2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi: Remove prepared text about "wslccp" method.
