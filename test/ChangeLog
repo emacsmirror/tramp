@@ -4,7 +4,7 @@
 	(tramp-test02-file-name-dissect-simplified)
 	(tramp-test02-file-name-dissect-separate): Extend tests.
 
-2026-09-29  Michael Albinus  <michael.albinus@gmx.de>
+2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp--test-instrument-test-case):
 	Use `with-local-quit'.
