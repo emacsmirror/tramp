@@ -1,3 +1,7 @@
+2026-10-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.texi: Adapt some comments.
+
 2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp.texi (File name syntax): Explain tramp-allow-double-percent.
