@@ -1,3 +1,16 @@
+2026-10-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp.el (tramp-skeleton-expand-file-name): Improve tilde handling.
+
+	* tramp-adb.el (tramp-adb-maybe-open-connection):
+	* tramp-androidsu.el (tramp-androidsu-maybe-open-connection):
+	Improve quoting.
+
+	* tramp-container.el (tramp-wslc-completion-function): Check for JSON.
+
+	* tramp-sh.el (tramp-sh-handle-get-home-directory): Make command robust.
+	(tramp-maybe-open-connection): Quote user.
+
 2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	Reported by Wonyoung Jung <wonyoung.jung@78researchlab.com> of
@@ -11,7 +24,7 @@
 	(tramp-archive-connection-local-default-variables): New defconst.
 	Add it to connection-local profiles.
 
-	This is CVE-2026-79992.
+	This is CVE-2026-108976.
 
 2026-10-09  Michael Albinus  <michael.albinus@gmx.de>
 
