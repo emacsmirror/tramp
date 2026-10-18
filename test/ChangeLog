@@ -1,3 +1,10 @@
+2026-10-18  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-tests.el (tramp--test-rpc-p): New defun.
+	(tramp-test05-expand-file-name-tilde)
+	(tramp-test18-file-attributes, tramp-test31-process-attributes):
+	Extend tests.
+
 2026-10-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-tests.el (tramp-test02-file-name-dissect)
