@@ -1,3 +1,11 @@
+2026-11-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* Makefile.in (elnclean): New target.
+	(.PHONY, distclean): Use it as prerequisite.
+
+	* tramp.el (tramp-handle-make-process): Do not check command length.
+	It is applied directly, w/o a shell in beetween.  (Bug#82230)
+
 2026-11-13  Michelangelo Rodriguez  <michelangelo.rodriguez@gmail.com>
 
 	* tramp-rclone.el (tramp-rclone-maybe-open-connection):

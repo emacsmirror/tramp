@@ -57,7 +57,7 @@ INSTALL_FILES	= $(LISP_FILES) tramp-loaddefs.el			\
 		  $(ELC_FILES) tramp-loaddefs.elc
 EM		= $(EMACS) -Q -batch -L $(builddir)
 
-.PHONY: all autoloads install clean distclean tramp
+.PHONY: all autoloads install clean elnclean distclean tramp
 
 .SUFFIXES: .elc .el
 
@@ -78,7 +78,10 @@ install: all
 clean:
 	$(RM) $(CLEAN_FILES)
 
-distclean: clean
+elnclean:
+	$(EM) --eval '(dolist (file (directory-files (expand-file-name comp-native-version-dir (car native-comp-eln-load-path)) t "^tramp")) (delete-file file))'
+
+distclean: clean elnclean
 	$(RM) tramp-loaddefs.el
 
 # Maintainer targets.
