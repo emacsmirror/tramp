@@ -1,3 +1,7 @@
+2026-11-15  Michael Albinus  <michael.albinus@gmx.de>
+
+	* README: Fix test name.
+
 2026-11-11  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (TESTS):

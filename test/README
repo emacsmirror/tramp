@@ -16,7 +16,7 @@ tramp-tests.el
         parallel using Tramp on a production system.
 
         For slow remote connections, the test
-        `tramp-test45-asynchronous-requests' might be too heavy.
+        `tramp-test46-asynchronous-requests' might be too heavy.
         Setting $REMOTE_PARALLEL_PROCESSES to a proper value less than
         10 could help.
 
