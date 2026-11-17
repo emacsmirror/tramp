@@ -1,3 +1,8 @@
+2026-11-17  Michelangelo Rodriguez  <michelangelo.rodriguez@gmail.com>
+
+	* tramp-rclone.el (tramp-rclone-maybe-open-connection): Unmount in
+	case the mount has appeared meanwhile.
+
 2026-11-15  Michael Albinus  <michael.albinus@gmx.de>
 
 	* Makefile.in (elnclean): New target.
