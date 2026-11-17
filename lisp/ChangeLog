@@ -1,3 +1,8 @@
+2026-11-17  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-fuse.el (tramp-fuse-get-fuse-program): New defun.
+	(tramp-fuse-unmount): Kill also mount process.
+
 2026-11-17  Michelangelo Rodriguez  <michelangelo.rodriguez@gmail.com>
 
 	* tramp-rclone.el (tramp-rclone-maybe-open-connection): Unmount in
