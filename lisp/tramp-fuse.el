@@ -211,25 +211,20 @@ It has the same meaning as `remote-file-name-inhibit-cache'.")
   "Unmount fuse volume determined by VEC."
   (let ((default-directory tramp-compat-temporary-file-directory))
     ;; Check, whether there is still a mount process.  Kill it.
-    ;; Starting with Emacs 29.1, we can use `while-let'.
-    (catch 'done
-      (while t
-        (if-let*
-	    ((program (tramp-fuse-get-fuse-program vec))
-	     (prefix (format "%s mount %s" program (tramp-fuse-mount-spec vec)))
-	     (pid (car (seq-filter
-			(lambda (pid)
-			  (when-let* ((attr (process-attributes pid))
-				      (args (assoc-default 'args attr))
-				      ((string-prefix-p prefix args)))
-			    pid))
-			(list-system-processes)))))
-	    (progn
-	      (tramp-message
-	       vec 6
-	       "Kill mount process %d for %s" pid (tramp-fuse-mount-spec vec))
-	      (signal-process pid 'SIGTERM))
-          (throw 'done nil))))
+    (while-let
+	((program (tramp-fuse-get-fuse-program vec))
+	 (prefix (format "%s mount %s" program (tramp-fuse-mount-spec vec)))
+	 (pid (car (seq-filter
+		    (lambda (pid)
+		      (when-let* ((attr (process-attributes pid))
+				  (args (assoc-default 'args attr))
+				  ((string-prefix-p prefix args)))
+			pid))
+		    (list-system-processes)))))
+      (tramp-message
+       vec 6
+       "Kill mount process %d for %s" pid (tramp-fuse-mount-spec vec))
+      (signal-process pid 'SIGTERM))
 
     ;; Unmount.
     (let* ((mount-point (tramp-fuse-mount-point vec))
