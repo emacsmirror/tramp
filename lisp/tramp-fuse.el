@@ -210,7 +210,6 @@ It has the same meaning as `remote-file-name-inhibit-cache'.")
   "Unmount fuse volume determined by VEC."
   (let ((default-directory tramp-compat-temporary-file-directory))
     ;; Check, whether there is still a mount process.  Kill it.
-    ;; Starting with Emacs 29.1, we can use `while-let'.
     (while-let
 	((program (tramp-fuse-get-fuse-program vec))
 	 ;; rclone uses `rclone mount <mount-spec> <mount-point> ...'
