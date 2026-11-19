@@ -1,3 +1,13 @@
+2026-11-19  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-fuse.el (tramp-fuse-mount-spec): Use `tramp-mount-prefix'.
+	(tramp-fuse-mounted-p): Fix `mount-spec' regexp.
+	(tramp-fuse-unmount): Fix `prefix' regexp.
+
+	* tramp-rclone.el (tramp-methods) <rclone>: Add `tramp-mount-prefix'.
+
+	* tramp-sshfs.el (tramp-methods) <sshfs>: Add `tramp-mount-prefix'.
+
 2026-11-17  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-fuse.el (tramp-fuse-get-fuse-program): New defun.
