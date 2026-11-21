@@ -1,3 +1,8 @@
+2026-11-21  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-smb.el (tramp-smb-maybe-open-connection): Check, whether
+	the root directory of the share is writable.  (Bug#82254)
+
 2026-11-19  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-fuse.el (tramp-fuse-mount-spec): Use `tramp-mount-prefix'.
