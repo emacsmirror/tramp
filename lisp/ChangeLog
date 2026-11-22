@@ -1,3 +1,11 @@
+2026-11-22  Michael Albinus  <michael.albinus@gmx.de>
+
+	* tramp-message.el (tramp-get-trace-file-name)
+	(tramp-advice-trace--insert, tramp-remove-advice-trace--insert):
+	New functions.
+	(tramp-debug-message): Write trace buffer to file if indicated.
+	(tramp-test-message): Let-bind `inhibit-message' to nil.
+
 2026-11-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-maybe-open-connection): Check, whether
