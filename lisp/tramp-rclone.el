@@ -444,7 +444,6 @@ connection if a previous connection has died for some reason."
 (defun tramp-rclone-send-command (vec &rest args)
   "Send a command to connection VEC.
 The command is the list of strings ARGS."
-  (tramp-test-message "%s" args)
   (with-current-buffer (tramp-get-connection-buffer vec)
     (erase-buffer)
     (let ((flags (tramp-get-method-parameter
