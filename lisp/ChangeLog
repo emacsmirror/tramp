@@ -6,6 +6,8 @@
 	(tramp-debug-message): Write trace buffer to file if indicated.
 	(tramp-test-message): Let-bind `inhibit-message' to nil.
 
+	* tramp-rclone.el (tramp-rclone-remote-file-name): Respect mount prefix.
+
 2026-11-21  Michael Albinus  <michael.albinus@gmx.de>
 
 	* tramp-smb.el (tramp-smb-maybe-open-connection): Check, whether
